@@ -3,6 +3,8 @@
 $tablet: 1179px;
 $mobile: 539px;
 @import url('https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Lora:wght@400;500;600;700&family=Oswald:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap');
+
 @import "reset.scss";
 @import "sub_layout.scss";
 @import "new.scss";
@@ -15,7 +17,6 @@ $mobile: 539px;
 /* header ------------------------------------------- */
 #header{
   width: 100%;
-  border-bottom: 1px solid #ddd;
   box-sizing: border-box;
   .inner{
     width: 1180px;
@@ -185,12 +186,49 @@ $mobile: 539px;
 /* visual --------------------------------------------- */
 #visual{
   width: 100%;
-  height: calc(100vh - 91px);
+  height: calc(100vh - 90px);
   position: relative;
-  img{
+  .swiper-wrapper{
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    position: relative;
+    img{
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0; left: 0;
+    }
+  }
+  .swiper-button-next{
+    color: #fff;
+    margin-right: 10px;
+    transform: scale(0.7);
+  } 
+  .swiper-button-prev{
+    color: #fff;
+    margin-left: 10px;
+    transform: scale(0.7);
+  }
+  .swiper-pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .swiper-pagination-bullet { 
+    width: 10px; height: 10px; 
+    border: 1px solid #fff; 
+    background: transparent;
+    opacity: 0.8; 
+    margin: 10px;
+  }
+  .swiper-pagination-bullet-active { 
+    transform: scale(1.2);
+    transition: 0.5s; 
+    border-radius:50%; 
+    background: #fff;
+    opacity: 1;
   }
   .inner{
     width: 1180px;
@@ -199,7 +237,7 @@ $mobile: 539px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    span{
+    p{
       display: block;
       font: normal 21px/1 'Baskervville';
       color: #fff;
@@ -214,6 +252,17 @@ $mobile: 539px;
       margin-bottom: 30px;
       font-weight: 500;
       text-align: center;
+    }
+    .h1-2{
+      font: 60px/1 'Work Sans';
+      color: #fff;
+      margin-bottom: 30px;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+    span{
+      margin-left: 80px;
+      margin-right: -45px;
     }
     a{
       display: block;
@@ -246,9 +295,9 @@ $mobile: 539px;
     transition: 0.3s;
     .wrap{
       width: 100%;
+      position: relative;
       .group {
-        position: relative;
-        margin-top: 200px;
+        margin-top: 220px;
         a:hover{
           background-color: #fff;
           color: #000;
@@ -301,19 +350,21 @@ $mobile: 539px;
     }
     .wrap1{
       margin-bottom: 100px;
-      .group a{
-        display: block;
-        width: 180px;
-        height: 55px;
-        background-color: #000;
-        font: 16px/55px 'Lora';
-        color: #fff;
-        text-align: center;
-        transition: all 0.3s;
-        letter-spacing: 0.3px;
-        position: absolute;
-        left: 0;
-        margin-top: 40px;
+      .group1{
+        a{
+          display: block;
+          width: 180px;
+          height: 55px;
+          background-color: #000;
+          font: 16px/55px 'Lora';
+          color: #fff;
+          text-align: center;
+          transition: all 0.3s;
+          letter-spacing: 0.3px;
+          position: absolute;
+          left: 0;
+          margin-top: 40px;
+        }
       }
     }
     .wrap2{
@@ -328,18 +379,20 @@ $mobile: 539px;
         text-align: right;
       }
     }
-    .group a{
-      display: block;
-      width: 180px;
-      height: 55px;
-      background-color: #000;
-      font: 16px/55px 'Lora';
-      color: #fff;
-      text-align: center;
-      transition: all 0.3s;
-      margin-top: 40px;
-      position: absolute;
-      right: 0;
+    .group2 {
+      a{
+        display: block;
+        width: 180px;
+        height: 55px;
+        background-color: #000;
+        font: 16px/55px 'Lora';
+        color: #fff;
+        text-align: center;
+        transition: all 0.3s;
+        margin-top: 40px;
+        position: absolute;
+        right: 0;
+      }
     }
    }
   }
@@ -652,12 +705,32 @@ $mobile: 539px;
     }
   }
   /* visual ---------------------------- */
-  #visual .inner {
-    width: 100%;
-    margin-bottom: 0;
-    h1 {
-      font: bold 9vmin/1 'Lora';
-      font-weight: 500;
+  #visual {
+    .inner {
+      width: 100%;
+      margin-bottom: 0;
+      p{
+        font: 2.5vmin/1 'Baskervville';
+        font-style: italic;
+      }
+      h1 {
+        font: 7vmin/1 'Lora';
+        font-weight: 500;
+      }
+      .h1-2{
+        font: 5.5vmin/1 'Work Sans';
+        margin-bottom: 30px;
+        text-align: center;
+        letter-spacing: 1px;
+      }
+    }
+    .swiper-button-next{
+      transform: scale(0.5);
+      margin-right: -10px;
+    } 
+    .swiper-button-prev{
+      transform: scale(0.5);
+      margin-left: -10px;
     }
   }
 
@@ -675,6 +748,9 @@ $mobile: 539px;
         }
         .pic{
           height: 550px;
+        }
+        .pic1{
+          float: right;
         }
         span {
           font: 2.5vmin/1 'Baskervville';
@@ -812,6 +888,7 @@ $mobile: 539px;
  }
 }
 
+
 /* mobile ---------------------------------------------- */
 @media screen and (max-width:$mobile){
   /* header ------------------------- */
@@ -833,10 +910,32 @@ $mobile: 539px;
   }
 
   /* visual -------------------------- */
-  #visual{
-    height: calc(100vh - 91px);
+  #visual {
     .inner {
-      width: 100%;
+      p{
+        font: 3vmin/1 'Baskervville';
+        margin-bottom: 20px;
+        text-align: center;
+        font-style: italic;
+        font-weight: lighter;
+      }
+      h1 {
+        font: 7vmin/1 'Lora';
+      }
+      .h1-2{
+        font: 6.5vmin/1 'Work Sans';
+        margin-bottom: 30px;
+        text-align: center;
+        letter-spacing: 1px;
+      }
+    }
+    .swiper-button-next{
+      transform: scale(0.5);
+      margin-right: -10px;
+    } 
+    .swiper-button-prev{
+      transform: scale(0.5);
+      margin-left: -10px;
     }
   }
 

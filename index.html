@@ -8,6 +8,9 @@
     <title>ZARA</title>
     <link rel="shortcut icon" href="favicon/android-icon-36x36.png" image/x-icon">
     <script src="https://kit.fontawesome.com/de418517c9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <script defer src="js/main.js"></script>
 </head>
@@ -54,14 +57,41 @@
         </div>
     </header>
 
-    <figure id="visual">
-        <img src="img/main2.jpg" alt="main pic">
-
-        <div class="inner">
-            <span>As Time Goes By</span>
-            <h1>NEW COLLECTION</h1>
-            <a href="#">View More</a>
+    <figure id="visual" class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="img/main1.jpg" alt="main pic">
+                <div class="inner">
+                    <p>As Time Goes By</p>
+                    <h1>NEW COLLECTION</h1>
+                    <a href="#">View More</a>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="img/main2.png" alt="main pic">
+                <div class="inner">
+                    <h1 class="h1-2">S/S 2022 Lookbook</h1>
+                    <a href="#">View More</a>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="img/main3.png" alt="main pic">
+                <div class="inner">
+                    <h1 class="h1-2">WOMEN S/S 22 Lookbook</h1>
+                    <a href="#">View More</a>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="img/main4.png" alt="main pic">
+                <div class="inner">
+                    <h1 class="h1-2">MEN S/S22<span></span>Lookbook</h1>
+                    <a href="#">View More</a>
+                </div>
+            </div>
         </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
     </figure>
 
 
