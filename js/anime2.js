@@ -1,4 +1,4 @@
-class Anim {
+class Anime {
     constructor(selector, option){
         this.selector = selector;
         this.option = option;
@@ -39,11 +39,7 @@ class Anim {
             this.timer = requestAnimationFrame(time => {this.run(time)});
         }else {
             cancelAnimationFrame(this.timer);
-            if(this.option.callback) {
-                setTimeout(()=>{
-                    this.option.callback();
-                },0);
-            }
+            if(this.option.callback) this.option.callback();
         }
 
         let result = this.currentValue + ((this.option.value- this.currentValue)*progress);

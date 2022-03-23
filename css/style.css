@@ -494,68 +494,125 @@ fieldset {
   margin-right: 20px;
   margin-left: 20px;
 }
-.community table {
+.community .inner #tab {
+  width: 100%;
+  position: relative;
+  margin-top: 50px;
+}
+.community .inner #tab dt {
+  width: 33.3333333333%;
+  height: 50px;
+  border: 1px solid #ddd;
+  position: absolute;
+  top: 0;
+  margin-top: -90px;
+  transition: 0.3s;
+}
+.community .inner #tab dt:nth-of-type(1) {
+  left: 0%;
+}
+.community .inner #tab dt:nth-of-type(2) {
+  left: 33.3333333333%;
+  border-left: none;
+  border-right: none;
+}
+.community .inner #tab dt:nth-of-type(3) {
+  left: 66.6666666667%;
+}
+.community .inner #tab dt:hover a {
+  font: bold 15px/50px "Noto Sans KR";
+  color: #000;
+}
+.community .inner #tab dt a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  font: 14px/50px "Noto Sans KR";
+  color: #222;
+  text-align: center;
+  transition: 0.3s;
+}
+.community .inner #tab dt.on {
+  border-bottom: 3px solid #088D4E;
+}
+.community .inner #tab dt.on a {
+  font: bold 15px/40px "Noto Sans KR";
+  color: #000;
+}
+.community .inner #tab dd {
+  width: 100%;
+  display: none;
+  position: relative;
+  margin-top: 50px;
+}
+.community .inner #tab dd.on {
+  display: block;
+}
+.community .inner #tab dd table {
   border-collapse: collapse;
-  margin: 0 auto;
+  margin: 0 auto 50px;
   width: 100%;
   border-bottom: 2px solid #111;
-  margin-bottom: 50px;
 }
-.community table thead {
+.community .inner #tab dd table thead {
   width: 100%;
 }
-.community table thead tr th {
+.community .inner #tab dd table thead tr th {
   background: #eee;
   padding: 15px;
   color: #000;
 }
-.community table thead tr th:nth-of-type(1) {
+.community .inner #tab dd table thead tr th:nth-of-type(1) {
   width: 10%;
 }
-.community table thead tr th:nth-of-type(3) {
+.community .inner #tab dd table thead tr th:nth-of-type(3) {
   width: 15%;
 }
-.community table thead tr th:nth-of-type(4) {
+.community .inner #tab dd table thead tr th:nth-of-type(4) {
   width: 15%;
 }
-.community table tbody tr:hover {
-  background: #000;
+.community .inner #tab dd table tbody tr {
+  transition: 0.2s;
+}
+.community .inner #tab dd table tbody tr:hover {
+  background: #777;
   color: #fff;
 }
-.community table tbody tr:hover a {
+.community .inner #tab dd table tbody tr:hover a {
   color: #fff;
   border-bottom: 1px solid #fff;
 }
-.community table tbody td {
+.community .inner #tab dd table tbody td {
   padding: 13px;
   border-bottom: 1px solid #ddd;
+  font-size: 14px;
   text-align: center;
 }
-.community table tbody td:nth-of-type(2) {
+.community .inner #tab dd table tbody td:nth-of-type(2) {
   text-align: left;
 }
-.community table tbody td:nth-of-type(3) {
-  font-family: "맑은 고딕";
+.community .inner #tab dd table tbody td:nth-of-type(3) {
+  font-family: "Noto Sans Kr";
 }
-.community table tbody td a {
+.community .inner #tab dd table tbody td a {
   color: #333;
   font-family: "arial";
   line-height: 1.4;
 }
-
-.pagination {
+.community .inner .pagination {
   width: 100%;
   text-align: center;
 }
-.pagination::after {
+.community .inner .pagination::after {
   content: "";
   display: block;
   clear: both;
 }
-.pagination span::before {
+.community .inner .pagination span::before {
   display: none;
 }
-.pagination .prev {
+.community .inner .pagination .prev {
   float: left;
   width: 30px;
   height: 30px;
@@ -566,12 +623,12 @@ fieldset {
   line-height: 30px;
   transition: background 0.3s;
 }
-.pagination .prev:hover {
+.community .inner .pagination .prev:hover {
   color: #088D4E;
   border: 1px solid #088D4E;
   background: #fff;
 }
-.pagination .next {
+.community .inner .pagination .next {
   float: right;
   width: 30px;
   height: 30px;
@@ -582,16 +639,16 @@ fieldset {
   line-height: 30px;
   transition: background 0.3s;
 }
-.pagination .next:hover {
+.community .inner .pagination .next:hover {
   color: #088D4E;
   border: 1px solid #088D4E;
   background: #fff;
 }
-.pagination .numbers {
+.community .inner .pagination .numbers {
   display: inline-block;
   font-size: 0%;
 }
-.pagination .numbers a {
+.community .inner .pagination .numbers a {
   display: inline-block;
   width: 30px;
   height: 30px;
@@ -601,11 +658,11 @@ fieldset {
   margin: 0 5px;
   transition: 0.5s;
 }
-.pagination .numbers a:hover {
+.community .inner .pagination .numbers a:hover {
   background: #088D4E;
   color: #fff;
 }
-.pagination .numbers a:nth-of-type(1) {
+.community .inner .pagination .numbers a:nth-of-type(1) {
   background: #088D4E;
   color: #fff;
 }
@@ -2119,68 +2176,125 @@ fieldset {
   margin-right: 20px;
   margin-left: 20px;
 }
-.community table {
+.community .inner #tab {
+  width: 100%;
+  position: relative;
+  margin-top: 50px;
+}
+.community .inner #tab dt {
+  width: 33.3333333333%;
+  height: 50px;
+  border: 1px solid #ddd;
+  position: absolute;
+  top: 0;
+  margin-top: -90px;
+  transition: 0.3s;
+}
+.community .inner #tab dt:nth-of-type(1) {
+  left: 0%;
+}
+.community .inner #tab dt:nth-of-type(2) {
+  left: 33.3333333333%;
+  border-left: none;
+  border-right: none;
+}
+.community .inner #tab dt:nth-of-type(3) {
+  left: 66.6666666667%;
+}
+.community .inner #tab dt:hover a {
+  font: bold 15px/50px "Noto Sans KR";
+  color: #000;
+}
+.community .inner #tab dt a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  font: 14px/50px "Noto Sans KR";
+  color: #222;
+  text-align: center;
+  transition: 0.3s;
+}
+.community .inner #tab dt.on {
+  border-bottom: 3px solid #088D4E;
+}
+.community .inner #tab dt.on a {
+  font: bold 15px/40px "Noto Sans KR";
+  color: #000;
+}
+.community .inner #tab dd {
+  width: 100%;
+  display: none;
+  position: relative;
+  margin-top: 50px;
+}
+.community .inner #tab dd.on {
+  display: block;
+}
+.community .inner #tab dd table {
   border-collapse: collapse;
-  margin: 0 auto;
+  margin: 0 auto 50px;
   width: 100%;
   border-bottom: 2px solid #111;
-  margin-bottom: 50px;
 }
-.community table thead {
+.community .inner #tab dd table thead {
   width: 100%;
 }
-.community table thead tr th {
+.community .inner #tab dd table thead tr th {
   background: #eee;
   padding: 15px;
   color: #000;
 }
-.community table thead tr th:nth-of-type(1) {
+.community .inner #tab dd table thead tr th:nth-of-type(1) {
   width: 10%;
 }
-.community table thead tr th:nth-of-type(3) {
+.community .inner #tab dd table thead tr th:nth-of-type(3) {
   width: 15%;
 }
-.community table thead tr th:nth-of-type(4) {
+.community .inner #tab dd table thead tr th:nth-of-type(4) {
   width: 15%;
 }
-.community table tbody tr:hover {
-  background: #000;
+.community .inner #tab dd table tbody tr {
+  transition: 0.2s;
+}
+.community .inner #tab dd table tbody tr:hover {
+  background: #777;
   color: #fff;
 }
-.community table tbody tr:hover a {
+.community .inner #tab dd table tbody tr:hover a {
   color: #fff;
   border-bottom: 1px solid #fff;
 }
-.community table tbody td {
+.community .inner #tab dd table tbody td {
   padding: 13px;
   border-bottom: 1px solid #ddd;
+  font-size: 14px;
   text-align: center;
 }
-.community table tbody td:nth-of-type(2) {
+.community .inner #tab dd table tbody td:nth-of-type(2) {
   text-align: left;
 }
-.community table tbody td:nth-of-type(3) {
-  font-family: "맑은 고딕";
+.community .inner #tab dd table tbody td:nth-of-type(3) {
+  font-family: "Noto Sans Kr";
 }
-.community table tbody td a {
+.community .inner #tab dd table tbody td a {
   color: #333;
   font-family: "arial";
   line-height: 1.4;
 }
-
-.pagination {
+.community .inner .pagination {
   width: 100%;
   text-align: center;
 }
-.pagination::after {
+.community .inner .pagination::after {
   content: "";
   display: block;
   clear: both;
 }
-.pagination span::before {
+.community .inner .pagination span::before {
   display: none;
 }
-.pagination .prev {
+.community .inner .pagination .prev {
   float: left;
   width: 30px;
   height: 30px;
@@ -2191,12 +2305,12 @@ fieldset {
   line-height: 30px;
   transition: background 0.3s;
 }
-.pagination .prev:hover {
+.community .inner .pagination .prev:hover {
   color: #088D4E;
   border: 1px solid #088D4E;
   background: #fff;
 }
-.pagination .next {
+.community .inner .pagination .next {
   float: right;
   width: 30px;
   height: 30px;
@@ -2207,16 +2321,16 @@ fieldset {
   line-height: 30px;
   transition: background 0.3s;
 }
-.pagination .next:hover {
+.community .inner .pagination .next:hover {
   color: #088D4E;
   border: 1px solid #088D4E;
   background: #fff;
 }
-.pagination .numbers {
+.community .inner .pagination .numbers {
   display: inline-block;
   font-size: 0%;
 }
-.pagination .numbers a {
+.community .inner .pagination .numbers a {
   display: inline-block;
   width: 30px;
   height: 30px;
@@ -2226,11 +2340,11 @@ fieldset {
   margin: 0 5px;
   transition: 0.5s;
 }
-.pagination .numbers a:hover {
+.community .inner .pagination .numbers a:hover {
   background: #088D4E;
   color: #fff;
 }
-.pagination .numbers a:nth-of-type(1) {
+.community .inner .pagination .numbers a:nth-of-type(1) {
   background: #088D4E;
   color: #fff;
 }
@@ -3608,8 +3722,6 @@ aside {
   background-color: rgba(241, 241, 241, 0.8);
   z-index: 10;
   display: none;
-  /* tablet ------------------------------------------------ */
-  /* mobile ---------------------------------------------- */
 }
 aside .popUp {
   width: 600px;
@@ -3687,10 +3799,10 @@ aside .popUp .inner p img {
 }
 aside .popUp .inner form {
   margin: 30px auto 0;
-  width: 100%;
+  width: 70%;
 }
 aside .popUp .inner form #email {
-  width: 220px;
+  width: 65%;
   height: 40px;
   border: none;
   margin-right: 10px;
@@ -3699,377 +3811,541 @@ aside .popUp .inner form #email::placeholder {
   font: 11px/1 "arial";
   color: #bbb;
   letter-spacing: 1px;
-  padding-left: 10px;
+  padding-left: 15px;
 }
 aside .popUp .inner form #subsc {
-  width: 100px;
+  width: 25%;
   height: 40px;
-  padding: 10px;
-  box-sizing: border-box;
+  text-align: center;
   background: #848383;
-  font: 12px/1 "arial";
+  font: 12px/1 "Noto Sans KR";
   color: #fff;
   border: none;
   cursor: pointer;
 }
-aside .popUp .inner a img {
+aside .popUp .inner .close_img {
   transform: scale(0.8);
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 3vw;
+  right: 3vw;
 }
+
+/* green ------------------------------------- */
+#green {
+  width: 100%;
+  padding-top: 100px;
+  overflow: hidden;
+}
+#green .inner {
+  width: 1180px;
+  margin: 0 auto;
+}
+#green .inner h1 {
+  font: 35px/1.3 "Oswald";
+  color: #000;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+#green .inner .prev img {
+  transform: scale(0.3);
+  transition: 0.3s;
+}
+#green .inner .prev:hover img {
+  transform: scale(0.4);
+}
+#green .inner .next img {
+  transform: scale(0.3);
+  transition: 0.3s;
+}
+#green .inner .next:hover img {
+  transform: scale(0.4);
+}
+#green .inner #slider {
+  width: 350px;
+  height: 400px;
+  margin: 0px auto 50px;
+  position: relative;
+  left: -5vw;
+}
+#green .inner #slider ul {
+  position: absolute;
+  top: 0;
+  left: 0%;
+  width: 400%;
+  height: 100%;
+}
+#green .inner #slider ul li {
+  width: 25%;
+  height: 100%;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  color: #fff;
+}
+#green .inner #slider ul li[data-index="1"] {
+  background: url(../img/solution1.jpg) no-repeat center/contain;
+}
+#green .inner #slider ul li[data-index="2"] {
+  background: url(../img/solution2.jpg) no-repeat center/contain;
+}
+#green .inner #slider ul li[data-index="3"] {
+  background: url(../img/solution3.jpg) no-repeat center/contain;
+}
+#green .inner #slider ul li[data-index="4"] {
+  background: url(../img/solution4.jpg) no-repeat center/contain;
+}
+#green .inner #slider ul li[data-index="5"] {
+  background: url(../img/solution5.jpg) no-repeat center/contain;
+}
+
+/* tablet ----------------------------------------- */
 @media screen and (max-width: 1179px) {
-  aside {
-    /* header ------------------------------- */
-    /* visual ---------------------------- */
-    /* news -------------------------------- */
-    /* collection -------------------------- */
-    /* banner -------------------------- */
-    /* magazine --------------------------------------------- */
-    /* footer -------------------------- */
-  }
-  aside #header .inner {
+  /* header ------------------------------- */
+  #header .inner {
     width: 100%;
     /* 햄버거 버튼 & 모바일메뉴 ---- */
   }
-  aside #header .inner > h1 {
+  #header .inner > h1 {
     left: 30px;
   }
-  aside #header .inner #gnbWeb {
+  #header .inner #gnbWeb {
     display: none;
   }
-  aside #header .inner .btnCall {
+  #header .inner .btnCall {
     opacity: 1;
   }
-  aside #header .inner .menuMo {
+  #header .inner .menuMo {
     display: block;
   }
-  aside #visual .inner {
+
+  /* visual ---------------------------- */
+  #visual .inner {
     width: 100%;
     margin-bottom: 0;
   }
-  aside #visual .inner p {
+  #visual .inner p {
     font: 2.5vmin/1 "Baskervville";
     font-style: italic;
   }
-  aside #visual .inner h1 {
+  #visual .inner h1 {
     font: 7vmin/1 "Lora";
     font-weight: 500;
   }
-  aside #visual .inner .h1-2 {
+  #visual .inner .h1-2 {
     font: 5.5vmin/1 "Work Sans";
     margin-bottom: 30px;
     text-align: center;
     letter-spacing: 1px;
   }
-  aside #visual .swiper-button-next {
+  #visual .swiper-button-next {
     transform: scale(0.5);
     margin-right: -10px;
   }
-  aside #visual .swiper-button-prev {
+  #visual .swiper-button-prev {
     transform: scale(0.5);
     margin-left: -10px;
   }
-  aside #news {
+
+  /* news -------------------------------- */
+  #news {
     padding: 100px 30px;
   }
-  aside #news .inner {
+  #news .inner {
     width: 100%;
   }
-  aside #news .inner .wrap article {
+  #news .inner .wrap article {
     width: 48%;
     margin-right: 4%;
   }
-  aside #news .inner .wrap article:last-of-type {
+  #news .inner .wrap article:last-of-type {
     margin-right: 0%;
   }
-  aside #news .inner .wrap article .pic {
+  #news .inner .wrap article .pic {
     height: 550px;
   }
-  aside #news .inner .wrap article .pic1 {
+  #news .inner .wrap article .pic1 {
     float: right;
   }
-  aside #news .inner .wrap article span {
+  #news .inner .wrap article span {
     font: 2.5vmin/1 "Baskervville";
   }
-  aside #news .inner .wrap article h1 {
+  #news .inner .wrap article h1 {
     font: 4vmin/1 "Lora";
     font-weight: 500;
   }
-  aside #news .inner .wrap article p {
+  #news .inner .wrap article p {
     font: 1.6vmin/1.5 "arial";
   }
-  aside #news .inner .wrap .group {
+  #news .inner .wrap .group {
     margin-top: 130px;
   }
-  aside #news .inner .wrap .group a {
+  #news .inner .wrap .group a {
     font: 15px/55px "Lora";
     margin-top: 30px;
   }
-  aside #collection {
+
+  /* collection -------------------------- */
+  #collection {
     padding: 0 30px 75px;
   }
-  aside #collection .inner {
+  #collection .inner {
     width: 100%;
     margin: 0 auto;
   }
-  aside #collection .inner span {
+  #collection .inner span {
     font: 2.5vmin/1 "Baskervville";
   }
-  aside #collection .inner h1 {
+  #collection .inner h1 {
     font: 4vmin/1 "Lora";
     font-weight: 500;
   }
-  aside #collection .inner p {
+  #collection .inner p {
     font: 1.6vmin/1.5 "arial";
     margin-bottom: 40px;
   }
-  aside #collection .inner p:last-child {
+  #collection .inner p:last-child {
     margin-bottom: 0%;
   }
-  aside #collection .inner .wrap {
+  #collection .inner .wrap {
     width: 100%;
   }
-  aside #collection .inner .wrap article {
+  #collection .inner .wrap article {
     width: 48.5%;
     margin-right: 3%;
   }
-  aside #collection .inner .wrap article:nth-of-type(2n) {
+  #collection .inner .wrap article:nth-of-type(2n) {
     margin-right: 0%;
   }
-  aside #collection .inner .wrap article .pic {
+  #collection .inner .wrap article .pic {
     padding-top: 140%;
     max-width: 100%;
   }
-  aside #collection .inner .wrap article .pic img {
+  #collection .inner .wrap article .pic img {
     position: absolute;
     right: 0;
     bottom: 0;
   }
-  aside #collection .inner .wrap article a {
+  #collection .inner .wrap article a {
     font: 3vmin/1 "Oswald";
     margin-top: 20px;
   }
-  aside #collection .inner .wrap article p {
+  #collection .inner .wrap article p {
     margin: 10px 0 45px;
     font: 2.5vmin/1 "arial";
   }
-  aside #banner {
+
+  /* banner -------------------------- */
+  #banner {
     padding: 100px 30px;
     margin-bottom: 120px;
   }
-  aside #banner .inner {
+  #banner .inner {
     width: 100%;
     margin: 0 auto;
   }
-  aside #banner .inner h1 {
+  #banner .inner h1 {
     font: bold 4vmin/1 "Lora";
     color: #000;
     text-align: center;
     margin-bottom: 30px;
   }
-  aside #magazine {
+
+  /* magazine --------------------------------------------- */
+  #magazine {
     padding: 80px 30px;
   }
-  aside #magazine .inner {
+  #magazine .inner {
     width: 100%;
   }
-  aside #magazine .inner span {
+  #magazine .inner span {
     font: 2.5vmin/1 "Baskervville";
   }
-  aside #magazine .inner h1 {
+  #magazine .inner h1 {
     font: 4vmin/1 "Lora";
   }
-  aside #magazine .inner p {
+  #magazine .inner p {
     font: 1.6vmin/1.2 "arial";
   }
-  aside #magazine .inner .gap {
+  #magazine .inner .gap {
     font: 1.6vmin/1.5 "arial";
   }
-  aside #magazine .inner .wrap article {
+  #magazine .inner .wrap article {
     width: 32%;
     margin-right: 2%;
   }
-  aside #magazine .inner .wrap article a {
+  #magazine .inner .wrap article a {
     font: bold 2vmin/1 "Lora";
   }
-  aside #magazine .inner .wrap article .read {
+  #magazine .inner .wrap article .read {
     font: 1.5vmin/30px "Lora";
   }
-  aside #magazine .inner .wrap .no {
+  #magazine .inner .wrap .no {
     margin-right: 0;
   }
-  aside #footer {
+
+  /* footer -------------------------- */
+  #footer {
     padding: 75px 30px;
   }
-  aside #footer .inner {
+  #footer .inner {
     width: 100%;
   }
-}
-@media screen and (max-width: 539px) {
-  aside {
-    /* header ------------------------- */
-    /* visual -------------------------- */
-    /* news ------------------------------ */
-    /* collection ---------------------------------------- */
-    /* banner ------------------------ */
-    /* magazine ------------------- */
-    /*footer -------------------------- */
+
+  /* aside -------------------------- */
+  aside .popUp {
+    width: 70%;
   }
-  aside #header .inner {
+  aside .popUp h2 {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  aside .popUp h2 img {
+    width: 80%;
+  }
+  aside .popUp p {
+    width: 100%;
+  }
+  aside .popUp p img {
+    width: 40%;
+  }
+  aside .popUp .close_img {
+    top: 6vw;
+    right: 10%;
+  }
+
+  /* green -------------------------- */
+  #green {
+    padding: 100px 30px 0;
+  }
+  #green .inner {
+    width: 100%;
+  }
+  #green .inner #slider {
+    left: -10%;
+  }
+}
+/* mobile ---------------------------------------------- */
+@media screen and (max-width: 539px) {
+  /* header ------------------------- */
+  #header .inner {
     width: 100%;
     /* 햄버거 버튼 & 모바일메뉴 ------ */
   }
-  aside #header .inner > h1 {
+  #header .inner > h1 {
     left: 30px;
   }
-  aside #header .inner #gnbWeb {
+  #header .inner #gnbWeb {
     display: none;
   }
-  aside #header .inner .btnCall {
+  #header .inner .btnCall {
     opacity: 1;
   }
-  aside #header .inner .menuMo {
+  #header .inner .menuMo {
     display: block;
   }
-  aside #visual .inner p {
+
+  /* visual -------------------------- */
+  #visual .inner p {
     font: 3vmin/1 "Baskervville";
     margin-bottom: 20px;
     text-align: center;
     font-style: italic;
     font-weight: lighter;
   }
-  aside #visual .inner h1 {
+  #visual .inner h1 {
     font: 7vmin/1 "Lora";
   }
-  aside #visual .inner .h1-2 {
+  #visual .inner .h1-2 {
     font: 6.5vmin/1 "Work Sans";
     margin-bottom: 30px;
     text-align: center;
     letter-spacing: 1px;
   }
-  aside #visual .swiper-button-next {
+  #visual .swiper-button-next {
     transform: scale(0.5);
     margin-right: -10px;
   }
-  aside #visual .swiper-button-prev {
+  #visual .swiper-button-prev {
     transform: scale(0.5);
     margin-left: -10px;
   }
-  aside #news {
+
+  /* news ------------------------------ */
+  #news {
     padding: 0px 30px;
   }
-  aside #news .inner .wrap .group1 {
+  #news .inner .wrap .group1 {
     margin-top: 80px;
   }
-  aside #news .inner .wrap .group2 {
+  #news .inner .wrap .group2 {
     margin-top: 50px;
   }
-  aside #news .inner .wrap article {
+  #news .inner .wrap article {
     width: 100%;
   }
-  aside #news .inner .wrap article .pic {
+  #news .inner .wrap article .pic {
     height: 400px;
   }
-  aside #news .inner .wrap article .pic1 {
+  #news .inner .wrap article .pic1 {
     margin-top: 130px;
   }
-  aside #news .inner .wrap article .pic2 {
+  #news .inner .wrap article .pic2 {
     margin-top: -40px;
   }
-  aside #news .inner .wrap article span {
+  #news .inner .wrap article span {
     font: 4vmin/1 "Baskervville";
   }
-  aside #news .inner .wrap article h1 {
+  #news .inner .wrap article h1 {
     font: 5.5vmin/1 "Lora";
     font-weight: 500;
   }
-  aside #news .inner .wrap article p {
+  #news .inner .wrap article p {
     font: 2vmin/1.5 "arial";
   }
-  aside #collection {
+
+  /* collection ---------------------------------------- */
+  #collection {
     padding: 170px 30px 50px;
   }
-  aside #collection .inner span {
+  #collection .inner span {
     font: 4vmin/1 "Baskervville";
   }
-  aside #collection .inner h1 {
+  #collection .inner h1 {
     font: 5.5vmin/1 "Lora";
     font-weight: 500;
   }
-  aside #collection .inner p {
+  #collection .inner p {
     font: 2vmin/1.5 "arial";
   }
-  aside #collection .inner .wrap article {
+  #collection .inner .wrap article {
     width: 100%;
     margin-right: 0;
   }
-  aside #collection .inner .wrap article .pic {
+  #collection .inner .wrap article .pic {
     width: 100%;
     height: 450px;
   }
-  aside #collection .inner .wrap article .pic img {
+  #collection .inner .wrap article .pic img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
-  aside #collection .inner .wrap article a {
+  #collection .inner .wrap article a {
     font: 4.5vmin/1 "Oswald";
   }
-  aside #collection .inner .wrap article p {
+  #collection .inner .wrap article p {
     font: 3.5vmin/1 "arial";
   }
-  aside #banner {
+
+  /* banner ------------------------ */
+  #banner {
     padding: 100px 0px;
     background-position: left;
   }
-  aside #banner .inner {
+  #banner .inner {
     width: 100%;
   }
-  aside #banner .inner h1 {
+  #banner .inner h1 {
     font: bold 4vmin/1 "Lora";
     color: #000;
     text-align: center;
     margin-bottom: 30px;
   }
-  aside #banner .inner p {
+  #banner .inner p {
     font: 2.5vmin/1.3 "arial";
     color: #fff;
     text-align: center;
   }
-  aside #magazine {
+
+  /* magazine ------------------- */
+  #magazine {
     padding: 50px 30px;
   }
-  aside #magazine .inner span {
+  #magazine .inner span {
     font: 3.5vmin/1 "Baskervville";
   }
-  aside #magazine .inner h1 {
+  #magazine .inner h1 {
     font: 6vmin/1 "Lora";
   }
-  aside #magazine .inner p {
+  #magazine .inner p {
     font: 1vmin/1.2 "arial";
   }
-  aside #magazine .inner .gap {
+  #magazine .inner .gap {
     font: 1vmin/1 "arial";
   }
-  aside #magazine .inner .wrap article {
+  #magazine .inner .wrap article {
     width: 100%;
     margin-bottom: 50px;
   }
-  aside #magazine .inner .wrap article:last-child {
+  #magazine .inner .wrap article:last-child {
     margin-bottom: 0%;
   }
-  aside #magazine .inner .wrap article a {
+  #magazine .inner .wrap article a {
     font: bold 4vmin/1 "Lora";
   }
-  aside #magazine .inner .wrap article .read {
+  #magazine .inner .wrap article .read {
     font: 2vmin/30px "Lora";
   }
-  aside #footer .inner ul li {
+
+  /*footer -------------------------- */
+  #footer .inner ul li {
     margin-left: 30px;
   }
-  aside #footer .inner ul li a {
+  #footer .inner ul li a {
     font-size: 15px;
+  }
+
+  /* aside -------------------------- */
+  aside .popUp {
+    width: calc(100% - 90px);
+    height: 400px;
+  }
+  aside .popUp p {
+    margin-top: -10px;
+  }
+  aside .popUp p img {
+    width: 50%;
+  }
+  aside .popUp form {
+    margin: 0px auto;
+    width: 100%;
+  }
+  aside .popUp form #email {
+    width: 50px;
+    height: 40px;
+    border: none;
+    margin-right: 10px;
+  }
+  aside .popUp form #email::placeholder {
+    font: 10px/1 "arial";
+    color: #bbb;
+    letter-spacing: 0.5px;
+    padding-left: 10px;
+  }
+  aside .popUp form #subsc {
+    width: 50px;
+    height: 40px;
+    padding: 10px;
+    box-sizing: border-box;
+    background: #848383;
+    font: 12px/1 "arial";
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  aside .popUp .close_img {
+    top: 6vw;
+    right: 10%;
+  }
+
+  /* green -------------------------- */
+  #green .inner {
+    width: 100%;
+  }
+  #green .inner #slider {
+    left: -10%;
   }
 }
 

@@ -754,10 +754,10 @@ aside{
     }
     form{
       margin: 30px auto 0;
-      width: 100%;
+      width: 70%;
 
       #email{
-        width: 220px;
+        width: 65%;
         height: 40px;
         border: none;
         margin-right: 10px;
@@ -766,26 +766,93 @@ aside{
           font: 11px/1 'arial';
           color: #bbb;
           letter-spacing: 1px;
-          padding-left: 10px;
+          padding-left: 15px;
         }
       }
       #subsc{
-        width: 100px;
+        width: 25%;
         height: 40px;
-        padding: 10px;
-        box-sizing: border-box;
+        text-align: center;
         background: rgb(132, 131, 131);
-        font: 12px/1 'arial';
+        font: 12px/1 'Noto Sans KR';
         color: #fff;
         border: none;
         cursor: pointer;
       }
     }
-    a{
-      img{
+    .close_img{
         transform: scale(0.8);
         position: absolute;
-        top: 20px; right: 20px;
+        top: 3vw; right: 3vw;
+    }
+  }
+ }
+}
+
+/* green ------------------------------------- */
+#green{
+  width: 100%;
+  padding-top: 100px;
+  overflow: hidden;
+  .inner{
+    width: 1180px; 
+    margin: 0 auto;
+    h1{
+      font: 35px/1.3 'Oswald';
+      color: #000;
+      font-weight: 400;
+      letter-spacing: 1px;
+    }
+    .prev{
+      
+      img{
+        transform: scale(0.3);
+        transition: 0.3s;
+      }
+      &:hover img{
+        transform: scale(0.4);
+      }
+    }
+    .next{
+        
+        img{
+          transform: scale(0.3);
+          transition: 0.3s;
+        }
+        &:hover img{
+          transform: scale(0.4);
+        }
+    }
+    #slider{
+      width:350px; 
+      height:400px; 
+      margin: 0px auto 50px; 
+      position:relative;
+      left: -5vw;
+      // overflow:hidden; 
+    
+      ul{
+          position:absolute; 
+          top:0; left:0%; 
+          width:calc(100% *4); 
+          height:100%; 
+          
+          li{
+              width:calc(100% / 4); 
+              height:100%; 
+              float:left; 
+              display:flex; 
+              justify-content:center; 
+              align-items:center; 
+              font-size:40px; 
+              color:#fff; 
+    
+              &[data-index="1"]{ background:url(../img/solution1.jpg) no-repeat center/contain;}
+              &[data-index="2"]{ background:url(../img/solution2.jpg) no-repeat center/contain;}
+              &[data-index="3"]{background:url(../img/solution3.jpg) no-repeat center/contain;}
+              &[data-index="4"]{background:url(../img/solution4.jpg) no-repeat center/contain;}
+              &[data-index="5"]{background:url(../img/solution5.jpg) no-repeat center/contain;}
+          }
       }
     }
   }
@@ -794,7 +861,8 @@ aside{
 
 
 
-/* tablet ------------------------------------------------ */
+
+/* tablet ----------------------------------------- */
 @media screen and (max-width:$tablet){
   /* header ------------------------------- */
   #header .inner{
@@ -995,7 +1063,43 @@ aside{
     width: 100%;
   }
  }
+
+ /* aside -------------------------- */
+  aside{
+
+    .popUp {
+        width: calc(100% - 30%);
+
+        h2{
+          width: 100%;
+          margin-bottom: 10px;
+          img{
+            width: 80%;
+          }
+        }
+        p{
+          width: 100%;
+          img{
+            width: 40%;
+          }
+        }
+        .close_img{
+          top: 6vw; right: 10%;
+       }
+    }
+  }
+  /* green -------------------------- */
+  #green{
+    padding: 100px 30px 0;
+    .inner{
+      width: 100%;
+      #slider{
+        left: -10%;
+      }
+    }
+  } 
 }
+
 
 
 /* mobile ---------------------------------------------- */
@@ -1177,5 +1281,61 @@ aside{
       font-size: 15px;
     }
   }
- }
+
+  /* aside -------------------------- */
+  aside{
+    .popUp {
+        width: calc(100% - 90px);
+        height: 400px;
+
+        p{
+          margin-top: -10px;
+          img{
+            width: 50%;
+          }
+        }
+        form{
+          margin: 0px auto;
+          width: 100%;
+    
+          #email{
+            width: 50px;
+            height: 40px;
+            border: none;
+            margin-right: 10px;
+    
+            &::placeholder{
+              font: 10px/1 'arial';
+              color: #bbb;
+              letter-spacing: 0.5px;
+              padding-left: 10px;
+            }
+          }
+          #subsc{
+            width: 50px;
+            height: 40px;
+            padding: 10px;
+            box-sizing: border-box;
+            background: rgb(132, 131, 131);
+            font: 12px/1 'arial';
+            color: #fff;
+            border: none;
+            cursor: pointer;
+          }
+        }
+        .close_img{
+          top: 6vw; right: 10%;
+       }
+    }
+  }
+  /* green -------------------------- */
+  #green{
+
+    .inner{
+      width: 100%;
+      #slider{
+        left: -10%;
+      }
+    }
+  } 
 }

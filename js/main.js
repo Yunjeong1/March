@@ -127,3 +127,71 @@ btnClose.addEventListener("click", e=>{
     }
 })
 })
+
+
+//Green영역 slider 적용
+const slider = document.querySelector("#slider"); 
+const ul = slider.querySelector("ul"); 
+const lis = ul.querySelectorAll("li"); 
+const len = lis.length; 
+const prev = document.querySelector(".prev"); 
+const next = document.querySelector(".next"); 
+let enableClick = true; 
+
+
+init();
+
+
+next.addEventListener("click", e=>{
+    e.preventDefault(); 
+
+    if(enableClick){
+        enableClick = false; 
+        nextSlide();
+    }  
+});
+
+prev.addEventListener("click", e=>{
+    e.preventDefault(); 
+
+    if(enableClick){
+        enableClick = false; 
+        prevSlide();
+    }
+    
+}); 
+
+function init(){
+    ul.style.left = "-100%"; 
+    ul.prepend(ul.lastElementChild); 
+    ul.style.width = `${100 * len}%`;  
+    lis.forEach((li)=>{ 
+        li.style.width = `${100 / len}%`
+    })
+}
+
+function prevSlide(){
+    new Anim(ul,{
+        prop:"left", 
+        value :"0%", 
+        duration:speed,
+        callback :()=>{
+            ul.prepend(ul.lastElementChild); 
+            ul.style.left = "-100%"; 
+            enableClick = true; 
+        }
+    })
+}
+
+function nextSlide(){
+    new Anim(ul, {
+        prop:"left", 
+        value : "-200%", 
+        duration: speed,
+        callback :()=>{
+            ul.append(ul.firstElementChild);
+            ul.style.left = "-100%";  
+            enableClick = true;              
+        }
+    })
+}

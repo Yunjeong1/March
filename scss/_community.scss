@@ -12,7 +12,7 @@
             font: bold 60px/1 'arial'; color: #000;
         }
       }
-      .inner{
+    .inner{
         width: 1180px;
         >h2{
           font: 30px/1 'Noto Sans KR';
@@ -21,67 +21,121 @@
           letter-spacing: 1px;
           padding: 80px 0 70px;
 
-      }
-      span{
-          font: 18px/1 'Noto Sans KR';
-          font-weight: 400;
-          color: #088D4E;
-          &::before{
-              content: '/'; 
-              font-size: 20px;
-              margin-right:20px;
-              margin-left:20px;
-          }
-      }
         }
-        table{
-          //table 간격 없애주는 속성
-          border-collapse: collapse;
-          margin: 0 auto;
-          width: 100%; 
-          border-bottom: 2px solid #111;
-          margin-bottom: 50px;
-          thead{
-            width: 100%;
-            tr{
-              th{
-                  background: #eee;
-                  padding: 15px; 
-                  color: #000;
-                  &:nth-of-type(1){ width: 10%; }
-                  &:nth-of-type(3){ width: 15%; }
-                  &:nth-of-type(4){ width: 15%; }
-              }
+        span{
+            font: 18px/1 'Noto Sans KR';
+            font-weight: 400;
+            color: #088D4E;
+            &::before{
+                content: '/'; 
+                font-size: 20px;
+                margin-right:20px;
+                margin-left:20px;
             }
-           }
-           tbody{
-             tr{
-                &:hover{
-                  background: #000;
-                  color: #fff;
-                  a{
-                    color: #fff;
-                    border-bottom: 1px solid #fff;
-                  }
-                }
-             }
-            td{
-              padding: 13px;
-              border-bottom: 1px solid #ddd;
-              text-align: center;
-              &:nth-of-type(2){text-align: left;}
-              &:nth-of-type(3){font-family: "맑은 고딕";}
-              a{
-                  color: #333;
-                  font-family: 'arial';
-                  line-height: 1.4;
-              }
-            }
-           }
-         }
         }
 
-      .pagination{
+        #tab{
+          width: 100%;
+          position: relative;
+          margin-top: 50px;
+
+          dt{
+            width: calc(100%/3);
+            height: 50px;
+            border: 1px solid #ddd;
+            position: absolute;
+            top: 0; 
+            margin-top: -90px;
+            transition: 0.3s;
+            &:nth-of-type(1){left: calc(100%/3)*0;}
+            &:nth-of-type(2){
+              left: calc(100%/3)*1;
+              border-left: none;
+              border-right: none;
+            }
+            &:nth-of-type(3){left: calc(100%/3)*2;}
+
+            &:hover a{
+              font: bold 15px/50px 'Noto Sans KR';
+              color: #000;
+            }
+            
+            a{
+              display: block;
+              width: 100%; height: 100%;
+              background: #fff;
+              font: 14px/50px 'Noto Sans KR';
+              color: #222;
+              text-align: center;
+              transition: 0.3s;
+            }
+            &.on {
+              border-bottom: 3px solid  #088D4E;
+              a{
+                font: bold 15px/40px 'Noto Sans KR';
+                color: #000;
+              }
+            }
+          }
+          dd{
+            width: 100%; 
+            display: none;
+            position: relative;
+            margin-top: 50px;
+
+            &.on{
+              display: block;
+            }
+            table{
+              //table 간격 없애주는 속성
+              border-collapse: collapse;
+              margin: 0 auto 50px;
+              width: 100%; 
+              border-bottom: 2px solid #111;
+              thead{
+                width: 100%;
+                tr{
+                  th{
+                      background: #eee;
+                      padding: 15px; 
+                      color: #000;
+                      &:nth-of-type(1){ width: 10%; }
+                      &:nth-of-type(3){ width: 15%; }
+                      &:nth-of-type(4){ width: 15%; }
+                  }
+                }
+              }
+              tbody{
+                tr{
+                  transition: 0.2s;
+                    &:hover{
+                      background: #777;
+                      color: #fff;
+                      a{
+                        color: #fff;
+                        border-bottom: 1px solid #fff;
+                      }
+                    }
+                }
+              td{
+                padding: 13px;
+                border-bottom: 1px solid #ddd;
+                font-size: 14px;
+                text-align: center;
+                &:nth-of-type(2){text-align: left;}
+                &:nth-of-type(3){font-family: "Noto Sans Kr";}
+                a{
+                    color: #333;
+                    font-family: 'arial';
+                    line-height: 1.4;
+                }
+               }
+             }
+           }
+          }
+        }
+        
+       .pagination{
         width: 100%; text-align: center;
 
         &::after{
@@ -142,7 +196,9 @@
               }
             }
         }
+      }
     }
+  }
 
     .inner2{
       padding-top: 50px;
