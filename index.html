@@ -15,88 +15,94 @@
     <script defer src="js/anime.js"></script>
     <script defer src="js/anime2.js"></script>
     <script defer src="js/main.js"></script>
+    <script defer src="js/slider.js"></script>
+    <script defer src="js/scroll.js"></script>
 </head>
 
 <body>
-    <header id="header">
-        <div class="inner">
-            <h1><a href="index.html"><img src="img/logo.png" alt="logo"></a></h1>
-
-            <nav class="menuWeb">
-                <ul id="gnbWeb">
-                    <li><a href="new.html">NEW</a></li>
-                    <li><a href="women.html">WOMEN</a></li>
-                    <li><a href="men.html">MEN</a></li>
-                    <li><a href="community.html">COMMUNITY</a></li>
-                    <li><a href="joinLife.html">JOIN LIFE</a></li>
-                    <li class="search"><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
-                    <li class="cart"><a href="#"><i class="fa-solid fa-cart-arrow-down"></i></a></li>
-                </ul>
-            </nav>
-
-            <!-- 햄버거 버튼 & 모바일 버튼-->
-            <a href="#" class="btnCall">
-                <span>메뉴호출</span>
+    <section class="on" id="first">
+        <header id="header">
+            <div class="inner">
+                <h1><a href="index.html"><img src="img/logo.png" alt="logo"></a></h1>
+    
+                <nav class="menuWeb">
+                    <ul id="gnbWeb">
+                        <li><a href="new.html">NEW</a></li>
+                        <li><a href="women.html">WOMEN</a></li>
+                        <li><a href="men.html">MEN</a></li>
+                        <li><a href="community.html">COMMUNITY</a></li>
+                        <li><a href="joinLife.html">JOIN LIFE</a></li>
+                        <li class="search"><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                        <li class="cart"><a href="#"><i class="fa-solid fa-cart-arrow-down"></i></a></li>
+                    </ul>
+                </nav>
+    
+                <!-- 햄버거 버튼 & 모바일 버튼-->
+                <a href="#" class="btnCall">
+                    <span>메뉴호출</span>
+                </a>
+    
+                <nav class="menuMo">
+                    <h1>
+                        <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+                        <span>
+                            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                            <a href="#"><i class="fa-solid fa-cart-arrow-down"></i></a>
+                        </span>
+                    </h1>
+                    
+                    <ul id="gnbMo">
+                        <li><a href="new.html">NEW</a></li>
+                        <li><a href="women.html">WOMEN</a></li>
+                        <li><a href="men.html">MEN</a></li>
+                        <li><a href="community.html">COMMUNITY</a></li>
+                        <li><a href="joinLife.html">JOIN LIFE</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    
+        <figure id="visual">
+            <ul>
+                <li data-index="1">
+                    <img src="img/main1.jpg" alt="main pic">
+                    <div class="inner">
+                        <p>As Time Goes By</p>
+                        <h1>NEW COLLECTION</h1>
+                        <a href="#" class="btnOpen">View More</a>
+                    </div>
+                </li>
+                <li data-index="2">
+                    <img src="img/main2.png" alt="main pic">
+                    <div class="inner">
+                        <h1 class="h1_2">S/S 2022 Lookbook</h1>
+                        <a href="#" class="btnOpen">View More</a>
+                    </div>
+                </li>
+                <li data-index="3">
+                    <img src="img/main3.png" alt="main pic">
+                    <div class="inner">
+                        <h1 class="h1_2">WOMEN S/S 22 Lookbook</h1>
+                        <a href="#" class="btnOpen">View More</a>
+                    </div>
+                </li>
+                <li data-index="4">
+                    <img src="img/main4.png" alt="main pic">
+                    <div class="inner">
+                        <h1 class="h1_2">MEN S/S22<span></span>Lookbook</h1>
+                        <a href="#" class="btnOpen">View More</a>
+                    </div>
+                </li>
+            </ul>
+            <a href="#" class="prev">
+                <img src="img/btnPrev2.png" alt="prev">
             </a>
-
-            <nav class="menuMo">
-                <h1>
-                    <a href="index.html"><img src="img/logo.png" alt="logo"></a>
-                    <span>
-                        <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-                        <a href="#"><i class="fa-solid fa-cart-arrow-down"></i></a>
-                    </span>
-                </h1>
-                
-                <ul id="gnbMo">
-                    <li><a href="new.html">NEW</a></li>
-                    <li><a href="women.html">WOMEN</a></li>
-                    <li><a href="men.html">MEN</a></li>
-                    <li><a href="community.html">COMMUNITY</a></li>
-                    <li><a href="joinLife.html">JOIN LIFE</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <figure id="visual" class="swiper mySwiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img src="img/main1.jpg" alt="main pic">
-                <div class="inner">
-                    <p>As Time Goes By</p>
-                    <h1>NEW COLLECTION</h1>
-                    <a href="#" class="btnOpen">View More</a>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <img src="img/main2.png" alt="main pic">
-                <div class="inner">
-                    <h1 class="h1-2">S/S 2022 Lookbook</h1>
-                    <a href="#" class="btnOpen">View More</a>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <img src="img/main3.png" alt="main pic">
-                <div class="inner">
-                    <h1 class="h1-2">WOMEN S/S 22 Lookbook</h1>
-                    <a href="#" class="btnOpen">View More</a>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <img src="img/main4.png" alt="main pic">
-                <div class="inner">
-                    <h1 class="h1-2">MEN S/S22<span></span>Lookbook</h1>
-                    <a href="#" class="btnOpen">View More</a>
-                </div>
-            </div>
-        </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-pagination"></div>
-    </figure>
-
-
+            <a href="#" class="next">
+                <img src="img/btnNext2.png" alt="next">
+            </a>
+        </figure>
+    </section>
+    
     <section id="news">
         <div class="inner">
 
@@ -214,12 +220,11 @@
         </div>
     </section>
 
-    <section id="banner">
+    <!-- <section id="banner">
         <div class="inner">
             <h1>" Lorem ipsum dolor sit amet consectetur. "</h1>
-            <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum qui quidem mollitia.</p> -->
         </div>
-    </section>
+    </section> -->
 
     <section id="magazine">
         <div class="inner">
@@ -259,31 +264,45 @@
         </div>
     </section>
 
-    <section id="green">
-        <div class="inner">
-            <h1>
-                Green Project With ZARA
-            </h1>
-            <a href="#" class="prev">
-                <img src="img/btnPrev.png" alt="prev">
-            </a>
-    
-            <a href="#" class="next">
-                <img src="img/btnNext.png" alt="next">
-            </a>
-            <article id="slider">
-                <ul>
-                    <li data-index="1"></li>
-                    <li data-index="2"></li>
-                    <li data-index="3"></li>
-                    <li data-index="4"></li>
-                    <li data-index="5"></li>
-                </ul>
-            </article>
-        </div>
+    <section id="green" class="swiper mySwiper">
+        <h1>
+            Green Project With ZARA
+        </h1>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="img/solution6.jpg" alt="solution">
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/solution7.jpg" alt="solution">
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/solution8.jpg" alt="solution">
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/solution9.jpg" alt="solution">
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/solution1.jpg" alt="solution">
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/solution2.jpg" alt="solution">
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/solution3.jpg" alt="solution">
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/solution4.jpg" alt="solution">
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/solution5.jpg" alt="solution">
+                </div>
+            </div>
+            
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
     </section>
 
-    <section id="footer">
+    <footer id="footer">
         <div class="inner">
             <h1><a href="index.html"><img src="img/logo.png" alt="logo"></a></h1>
 
@@ -302,7 +321,7 @@
                 Copyright &copy; 2022 ZARA All Right Reserved.
             </p>
         </div>
-    </section>
+    </footer>
 
     <aside>
         <div class="popUp">
@@ -321,6 +340,14 @@
             </div>
         </div>
     </aside>
+
+    <ul class="scroll_e">
+        <li class="on"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+     </ul>
 
 </body>
 

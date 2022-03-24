@@ -56,7 +56,7 @@
             &:nth-of-type(3){left: calc(100%/3)*2;}
 
             &:hover a{
-              font: bold 15px/50px 'Noto Sans KR';
+              font: bold 14.5px/50px 'Noto Sans KR';
               color: #000;
             }
             
@@ -71,6 +71,7 @@
             }
             &.on {
               border-bottom: 3px solid  #088D4E;
+              box-sizing: border-box;
               a{
                 font: bold 15px/40px 'Noto Sans KR';
                 color: #000;

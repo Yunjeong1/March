@@ -520,7 +520,7 @@ fieldset {
   left: 66.6666666667%;
 }
 .community .inner #tab dt:hover a {
-  font: bold 15px/50px "Noto Sans KR";
+  font: bold 14.5px/50px "Noto Sans KR";
   color: #000;
 }
 .community .inner #tab dt a {
@@ -535,6 +535,7 @@ fieldset {
 }
 .community .inner #tab dt.on {
   border-bottom: 3px solid #088D4E;
+  box-sizing: border-box;
 }
 .community .inner #tab dt.on a {
   font: bold 15px/40px "Noto Sans KR";
@@ -2202,7 +2203,7 @@ fieldset {
   left: 66.6666666667%;
 }
 .community .inner #tab dt:hover a {
-  font: bold 15px/50px "Noto Sans KR";
+  font: bold 14.5px/50px "Noto Sans KR";
   color: #000;
 }
 .community .inner #tab dt a {
@@ -2217,6 +2218,7 @@ fieldset {
 }
 .community .inner #tab dt.on {
   border-bottom: 3px solid #088D4E;
+  box-sizing: border-box;
 }
 .community .inner #tab dt.on a {
   font: bold 15px/40px "Noto Sans KR";
@@ -3039,7 +3041,7 @@ fieldset {
 /* header ------------------------------------------- */
 #header {
   width: 100%;
-  box-sizing: border-box;
+  background: transparent;
 }
 #header .inner {
   width: 1180px;
@@ -3228,52 +3230,30 @@ fieldset {
   width: 100%;
   height: calc(100vh - 90px);
   position: relative;
+  overflow: hidden;
 }
-#visual .swiper-wrapper {
-  width: 100%;
+#visual ul {
+  width: 400%;
   height: 100%;
-  position: relative;
-}
-#visual .swiper-wrapper img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
   position: absolute;
   top: 0;
   left: 0;
 }
-#visual .swiper-button-next {
-  color: #fff;
-  margin-right: 10px;
-  transform: scale(0.7);
-}
-#visual .swiper-button-prev {
-  color: #fff;
-  margin-left: 10px;
-  transform: scale(0.7);
-}
-#visual .swiper-pagination {
+#visual ul li {
+  width: 25%;
+  height: 100%;
+  float: left;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
-#visual .swiper-pagination-bullet {
-  width: 10px;
-  height: 10px;
-  border: 1px solid #fff;
-  background: transparent;
-  opacity: 0.8;
-  margin: 10px;
+#visual ul li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-#visual .swiper-pagination-bullet-active {
-  transform: scale(1.2);
-  transition: 0.5s;
-  border-radius: 50%;
-  background: #fff;
-  opacity: 1;
-}
-#visual .inner {
+#visual ul li .inner {
   width: 1180px;
   margin: 0 auto;
   position: absolute;
@@ -3281,7 +3261,7 @@ fieldset {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-#visual .inner p {
+#visual ul li .inner p {
   display: block;
   font: normal 21px/1 "Baskervville";
   color: #fff;
@@ -3290,25 +3270,25 @@ fieldset {
   font-style: italic;
   font-weight: lighter;
 }
-#visual .inner h1 {
+#visual ul li .inner h1 {
   font: bold 100px/1 "Lora";
   color: #fff;
   margin-bottom: 30px;
   font-weight: 500;
   text-align: center;
 }
-#visual .inner .h1-2 {
+#visual ul li .inner .h1_2 {
   font: 60px/1 "Work Sans";
   color: #fff;
   margin-bottom: 30px;
   text-align: center;
   letter-spacing: 1px;
 }
-#visual .inner span {
+#visual ul li .inner span {
   margin-left: 80px;
   margin-right: -45px;
 }
-#visual .inner a {
+#visual ul li .inner a {
   display: block;
   width: 180px;
   height: 55px;
@@ -3320,10 +3300,36 @@ fieldset {
   margin: 0 auto;
   letter-spacing: 0.3px;
 }
-#visual .inner a:hover {
+#visual ul li .inner a:hover {
   transition: all 0.3s;
   background-color: #000;
   color: #fff;
+}
+#visual .prev {
+  position: absolute;
+  left: 50px;
+  top: 50%;
+  margin-top: -50px;
+}
+#visual .prev img {
+  transform: scale(0.4);
+  transition: 0.5s;
+}
+#visual .prev:hover img {
+  transform: scale(0.3);
+}
+#visual .next {
+  position: absolute;
+  right: 50px;
+  top: 50%;
+  margin-top: -50px;
+}
+#visual .next img {
+  transform: scale(0.4);
+  transition: 0.5s;
+}
+#visual .next:hover img {
+  transform: scale(0.3);
 }
 
 /* news ------------------------------------------------- */
@@ -3476,9 +3482,34 @@ fieldset {
   width: 280px;
   float: left;
   margin-right: 20px;
-  transition: all 0.3s;
+  transition-duration: 0.5s;
+  opacity: 0;
+  transform: translateY(50px);
 }
-#collection .inner .wrap article:nth-of-type(4n) {
+#collection .inner .wrap article:nth-of-type(1) {
+  transition-delay: 0s;
+}
+#collection .inner .wrap article:nth-of-type(2) {
+  transition-delay: 0.2s;
+}
+#collection .inner .wrap article:nth-of-type(3) {
+  transition-delay: 0.4s;
+}
+#collection .inner .wrap article:nth-of-type(4) {
+  transition-delay: 0.6s;
+  margin-right: 0;
+}
+#collection .inner .wrap article:nth-of-type(5) {
+  transition-delay: 0s;
+}
+#collection .inner .wrap article:nth-of-type(6) {
+  transition-delay: 0.2s;
+}
+#collection .inner .wrap article:nth-of-type(7) {
+  transition-delay: 0.4s;
+}
+#collection .inner .wrap article:nth-of-type(8) {
+  transition-delay: 0.6s;
   margin-right: 0;
 }
 #collection .inner .wrap article:hover > p {
@@ -3530,6 +3561,10 @@ fieldset {
 #collection .inner .wrap article p {
   margin: 10px 0 45px;
   font: 15px/1 "arial";
+}
+#collection.on .inner article {
+  opacity: 1;
+  transform: translateY(0px);
 }
 
 /* banner ------------------------------------------------- */
@@ -3832,72 +3867,68 @@ aside .popUp .inner .close_img {
 
 /* green ------------------------------------- */
 #green {
-  width: 100%;
-  padding-top: 100px;
-  overflow: hidden;
-}
-#green .inner {
   width: 1180px;
-  margin: 0 auto;
+  height: 100%;
+  padding: 100px 0 0;
+  position: relative;
 }
-#green .inner h1 {
+#green h1 {
   font: 35px/1.3 "Oswald";
   color: #000;
   font-weight: 400;
   letter-spacing: 1px;
+  margin-bottom: 80px;
 }
-#green .inner .prev img {
-  transform: scale(0.3);
-  transition: 0.3s;
+#green .swiper-wrapper {
+  width: 1180px;
 }
-#green .inner .prev:hover img {
-  transform: scale(0.4);
-}
-#green .inner .next img {
-  transform: scale(0.3);
-  transition: 0.3s;
-}
-#green .inner .next:hover img {
-  transform: scale(0.4);
-}
-#green .inner #slider {
-  width: 350px;
+#green .swiper-wrapper .swiper-slide {
+  width: 100%;
   height: 400px;
-  margin: 0px auto 50px;
-  position: relative;
-  left: -5vw;
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
 }
-#green .inner #slider ul {
-  position: absolute;
-  top: 0;
-  left: 0%;
-  width: 400%;
+#green .swiper-wrapper .swiper-slide img {
+  display: block;
+  width: 100%;
   height: 100%;
+  object-fit: cover;
 }
-#green .inner #slider ul li {
-  width: 25%;
-  height: 100%;
-  float: left;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 40px;
-  color: #fff;
+#green .swiper-button-prev {
+  color: #000;
+  top: 30%;
+  left: 0;
+  transform: scale(0.7);
 }
-#green .inner #slider ul li[data-index="1"] {
-  background: url(../img/solution1.jpg) no-repeat center/contain;
+#green .swiper-button-next {
+  color: #000;
+  top: 30%;
+  left: 50px;
+  transform: scale(0.7);
 }
-#green .inner #slider ul li[data-index="2"] {
-  background: url(../img/solution2.jpg) no-repeat center/contain;
+
+/* scroll_e ----------------------------------------- */
+.scroll_e {
+  position: fixed;
+  right: 35px;
+  top: 50vh;
+  transform: translateY(-50%);
 }
-#green .inner #slider ul li[data-index="3"] {
-  background: url(../img/solution3.jpg) no-repeat center/contain;
+.scroll_e li {
+  width: 10px;
+  height: 10px;
+  border: 2px solid #000;
+  border-radius: 5px;
+  background: #eee;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: 0.5s;
 }
-#green .inner #slider ul li[data-index="4"] {
-  background: url(../img/solution4.jpg) no-repeat center/contain;
-}
-#green .inner #slider ul li[data-index="5"] {
-  background: url(../img/solution5.jpg) no-repeat center/contain;
+.scroll_e li.on {
+  height: 50px;
+  background: #111;
+  border: 2px solid #eee;
 }
 
 /* tablet ----------------------------------------- */
@@ -3925,27 +3956,9 @@ aside .popUp .inner .close_img {
     width: 100%;
     margin-bottom: 0;
   }
-  #visual .inner p {
-    font: 2.5vmin/1 "Baskervville";
-    font-style: italic;
-  }
   #visual .inner h1 {
-    font: 7vmin/1 "Lora";
+    font: bold 9vmin/1 "Lora";
     font-weight: 500;
-  }
-  #visual .inner .h1-2 {
-    font: 5.5vmin/1 "Work Sans";
-    margin-bottom: 30px;
-    text-align: center;
-    letter-spacing: 1px;
-  }
-  #visual .swiper-button-next {
-    transform: scale(0.5);
-    margin-right: -10px;
-  }
-  #visual .swiper-button-prev {
-    transform: scale(0.5);
-    margin-left: -10px;
   }
 
   /* news -------------------------------- */
@@ -4147,29 +4160,11 @@ aside .popUp .inner .close_img {
   }
 
   /* visual -------------------------- */
-  #visual .inner p {
-    font: 3vmin/1 "Baskervville";
-    margin-bottom: 20px;
-    text-align: center;
-    font-style: italic;
-    font-weight: lighter;
+  #visual {
+    height: calc(100vh - 91px);
   }
-  #visual .inner h1 {
-    font: 7vmin/1 "Lora";
-  }
-  #visual .inner .h1-2 {
-    font: 6.5vmin/1 "Work Sans";
-    margin-bottom: 30px;
-    text-align: center;
-    letter-spacing: 1px;
-  }
-  #visual .swiper-button-next {
-    transform: scale(0.5);
-    margin-right: -10px;
-  }
-  #visual .swiper-button-prev {
-    transform: scale(0.5);
-    margin-left: -10px;
+  #visual .inner {
+    width: 100%;
   }
 
   /* news ------------------------------ */
