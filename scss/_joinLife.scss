@@ -416,16 +416,16 @@
             }
         }
         .inner2{
-
+            width: 100%;
             .wrap{
 
                 .group{
                     width: 100%;
-                    margin-right: 0%;
+                    margin-right: 0;
                 }
             }
             #terms{
-                width: 70%;
+                width: 100%;
             }
             h2{
                 font: 25px/1 'Noto Sans KR';
@@ -453,9 +453,9 @@
                     label{
                         margin-right: 20px;
                     }
-                }
-                input[type=text],input[type=password],select{
-                    width: 90%;
+                    input[type=text],input[type=password],select{
+                        width: 100%;
+                    }
                 }
             }
         }

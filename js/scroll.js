@@ -3,6 +3,7 @@ const ul = document.querySelector(".scroll_e");
 const lis = ul.querySelectorAll("li");  
 const lis_arr = Array.from(lis); //배열로 바꿔줌
 let posArr = null; 
+let base = -400;
 
 
 //로딩시 세로위치값 구하기 
@@ -61,7 +62,7 @@ function activation(){
 
     sections.forEach((sec , index)=>{
 
-        if(scroll >= posArr[index]){
+        if(scroll >= posArr[index]+base){
 
             for(const li of lis) li.classList.remove("on"); 
 

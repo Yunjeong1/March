@@ -1321,12 +1321,15 @@ fieldset {
   .joinLife .inner1 .wrap article:nth-of-type(even) {
     height: 400px;
   }
+  .joinLife .inner2 {
+    width: 100%;
+  }
   .joinLife .inner2 .wrap .group {
     width: 100%;
-    margin-right: 0%;
+    margin-right: 0;
   }
   .joinLife .inner2 #terms {
-    width: 70%;
+    width: 100%;
   }
   .joinLife .inner2 h2 {
     font: 25px/1 "Noto Sans KR";
@@ -1351,8 +1354,8 @@ fieldset {
   .joinLife .inner2 table td label {
     margin-right: 20px;
   }
-  .joinLife .inner2 table input[type=text], .joinLife .inner2 table input[type=password], .joinLife .inner2 table select {
-    width: 90%;
+  .joinLife .inner2 table td input[type=text], .joinLife .inner2 table td input[type=password], .joinLife .inner2 table td select {
+    width: 100%;
   }
 }
 /* header ------------------------------------------- */
@@ -3004,12 +3007,15 @@ fieldset {
   .joinLife .inner1 .wrap article:nth-of-type(even) {
     height: 400px;
   }
+  .joinLife .inner2 {
+    width: 100%;
+  }
   .joinLife .inner2 .wrap .group {
     width: 100%;
-    margin-right: 0%;
+    margin-right: 0;
   }
   .joinLife .inner2 #terms {
-    width: 70%;
+    width: 100%;
   }
   .joinLife .inner2 h2 {
     font: 25px/1 "Noto Sans KR";
@@ -3034,8 +3040,8 @@ fieldset {
   .joinLife .inner2 table td label {
     margin-right: 20px;
   }
-  .joinLife .inner2 table input[type=text], .joinLife .inner2 table input[type=password], .joinLife .inner2 table select {
-    width: 90%;
+  .joinLife .inner2 table td input[type=text], .joinLife .inner2 table td input[type=password], .joinLife .inner2 table td select {
+    width: 100%;
   }
 }
 /* header ------------------------------------------- */
