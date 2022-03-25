@@ -39,7 +39,7 @@ const _left = popUp.querySelector(".left");
 const speed = 500;
 const btnClose = popUp.querySelector(".close");
 
-for(let i=0; i<6; i++){
+for(let i=0; i<2; i++){
   btnOpen[i].addEventListener("click", e=>{
     e.preventDefault();
     aside.style.display = "block";
