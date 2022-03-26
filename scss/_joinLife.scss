@@ -97,6 +97,12 @@
         margin: 0 auto;
         font-family: 'Noto Sans KR';
 
+        p{
+            font: 12px/1 'arial';
+            color:  red;
+            margin-top: 10px;
+        }
+
         .wrap{
 
             &::after{
@@ -158,7 +164,8 @@
                 background: #fff;
                 text-align: left;
                 padding-right: 60px;
-                padding-bottom: 20px;
+                padding-bottom: 30px;
+                box-sizing: border-box;
                 &:last-child{
                     border-right: none;
                     border-bottom: none;
@@ -196,7 +203,8 @@
             }
             td{
                 color: #333;
-                padding-bottom: 20px;
+                padding-bottom: 30px;
+                box-sizing: border-box;
 
                 input::placeholder{
                     color: #ccc;
@@ -222,12 +230,6 @@
                     resize: none;
                     border: 1px solid #ddd;
                     padding: 20px;
-                }
-                .interestTxt, .genderTxt{
-                    font: 12px/1 'arial';
-                    color:  #088D4E;
-                    margin-top: 10px;
-                    display: none;
                 }
             }
         }

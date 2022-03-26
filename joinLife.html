@@ -93,7 +93,7 @@
         <div class="inner2">
             <h2>Join Life <span>회원가입</span></h2>
 
-            <form action="result.html" method="get">
+            <form action="result.html" method="get" id="join">
                 <fieldset>
                     <legend class="h">회원가입양식</legend>
                     <div class="wrap">
@@ -112,9 +112,9 @@
                             <caption class="h">회원정보 입력 양식 테이블</caption>
     
                             <tr>
-                                <th scope="row"><label for="id">아이디</label></th>
+                                <th scope="row"><label for="userid">아이디</label></th>
                                 <td>
-                                    <input type="text" name="id" id="id" placeholder="아이디를 입력해주세요" required>
+                                    <input type="text" name="userid" id="userid" placeholder="아이디를 입력해주세요" required>
                                 </td>
                             </tr>
                             <tr>
@@ -141,7 +141,6 @@
                                     <label for="beauty">
                                         <input type="checkbox" name="interest" id="beauty" value="beauty">뷰티
                                     </label>
-                                    <p class="interestTxt">관심 분야를 한가지 이상 선택해주세요.</p>
                                 </td>
                             </tr>
                             <tr>
@@ -153,7 +152,6 @@
                                     <label for="male">
                                         <input type="radio" name="gender" id="male" value="male">남성
                                     </label>
-                                    <p class="genderTxt">성별을 선택해주세요.</p>
                                 </td>
                             </tr>
                             <tr>
