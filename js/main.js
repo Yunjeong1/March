@@ -6,6 +6,17 @@ var swiper = new Swiper(".mySwiper", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+  breakpoints: { //반응형 조건 속성
+    350: {  //350 이상일 경우
+      slidesPerView: 2, //레이아웃 2열
+    },
+    540: {
+      slidesPerView: 3, 
+    },
+    1180: {
+      slidesPerView: 4,
+    },
+  }
 });
 
 

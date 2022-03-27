@@ -2,52 +2,28 @@
 /* content ----------------------------------------- */
 .joinLife{
     padding-bottom: 70px;
-    .sub_visual{
-        background-image: url(../img/banner7.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center top;
 
-        .title{
-            
-            h1{
-                font: bold 60px/1 'arial'; color: #fff;
-                letter-spacing: 1px;
-                text-align: center;
-                position: absolute; top: 45%; left: 50%;
-                transform: translate(-50%,-50%);
-              }
-            p{
-                font: 15px/1.3 'arial'; color: #fff;
-                letter-spacing: 1px;
-                text-align: center;
-                position: absolute; top: 55%; left: 50%;
-                transform: translate(-50%,-20%);
-            }
-        }
-      }
     .inner1{
         width: 1180px; 
         margin: 0 auto;
-        padding: 0 0 200px;
-        border-bottom: 1px solid #eee;
+        padding: 80px 0 200px;
         h2{
             font: 30px/1 'Noto Sans KR';
             font-weight: 500;
             color: #000;
             letter-spacing: 1px;
-            padding: 70px 0;
+            padding: 50px 0;
         }
-        span{
-            font: 20px/1 'Noto Sans KR';
-            font-weight: 400;
-            color: #088D4E;
-            &::before{
-                content: '/'; 
-                margin-right:20px; 
-                margin-left:10px; 
-            }
-        }
+        // span{
+        //     font: 20px/1 'Noto Sans KR';
+        //     font-weight: 400;
+        //     color: #088D4E;
+        //     &::before{
+        //         content: '/'; 
+        //         margin-right:20px; 
+        //         margin-left:10px; 
+        //     }
+        // }
         .wrap{
             width: 100%;
             &::after{
@@ -122,22 +98,22 @@
             font-weight: 500;
             color: #000;
             letter-spacing: 1px;
-            padding: 80px 0 70px;
+            padding: 30px 0 50px;
         }
-        span{
-            font: 18px/1 'Noto Sans KR';
-            font-weight: 400;
-            color: #088D4E;
-            &::before{
-                content: '/'; 
-                margin-right:20px; 
-                margin-left:10px; 
-            }
-        }
+        // span{
+        //     font: 18px/1 'Noto Sans KR';
+        //     font-weight: 400;
+        //     color: #088D4E;
+        //     &::before{
+        //         content: '/'; 
+        //         margin-right:20px; 
+        //         margin-left:10px; 
+        //     }
+        // }
         h3{
-            font: 18px/1 'Noto Sans KR';
+            font: 16px/1 'Noto Sans KR';
             font-weight: 500;
-            color: #666;
+            color: #555;
             margin-bottom: 30px;
             text-align: left;
         }
@@ -161,7 +137,6 @@
                 font: 14px/1 'Noto Sans KR';
                 font-weight: 500;
                 color: #333;
-                background: #fff;
                 text-align: left;
                 padding-right: 60px;
                 padding-bottom: 30px;

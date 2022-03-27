@@ -8,8 +8,12 @@
     <title>New</title>
     <link rel="shortcut icon" href="favicon/android-icon-36x36.png" image/x-icon">
     <script src="https://kit.fontawesome.com/de418517c9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <script defer src="js/main.js"></script>
+    <script defer src="js/new.js"></script>
 </head>
 
 <body>
@@ -19,13 +23,15 @@
 
             <nav class="menuWeb">
                 <ul id="gnbWeb">
-                    <li><a href="new.html">NEW</a></li>
-                    <li><a href="women.html">WOMEN</a></li>
-                    <li><a href="men.html">MEN</a></li>
-                    <li><a href="community.html">COMMUNITY</a></li>
-                    <li><a href="joinLife.html">JOIN LIFE</a></li>
-                    <li class="search"><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
-                    <li class="cart"><a href="#"><i class="fa-solid fa-cart-arrow-down"></i></a></li>
+                    <div class="li_left">
+                        <li><a href="new.html">New</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="youtube.html">Youtube</a></li>
+                    </div>
+                    <div class="li_right">
+                        <li><a href="community.html">Community</a></li>
+                        <li><a href="joinLife.html">Join Life</a></li>
+                    </div>
                 </ul>
             </nav>
 
@@ -45,8 +51,8 @@
                 
                 <ul id="gnbMo">
                     <li><a href="new.html">NEW</a></li>
-                    <li><a href="women.html">WOMEN</a></li>
-                    <li><a href="men.html">MEN</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="youtube.html">YOUTUBE</a></li>
                     <li><a href="community.html">COMMUNITY</a></li>
                     <li><a href="joinLife.html">JOIN LIFE</a></li>
                 </ul>
@@ -56,12 +62,158 @@
 
     <section class="content new">
         <div class="sub_visual">
-            <h1>WOMEN A new spring</h1>
+            <div class="text">
+                <div class="small">
+                    <p>01</p>
+                </div>
+                <div class="title">
+                    <h1>
+                        New Collection
+                    </h1>
+                </div>
+            </div>
         </div>
         <div class="inner">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit dolores perferendis assumenda reprehenderit ipsum, voluptates nisi quasi amet facilis excepturi unde dolor consectetur? Magnam praesentium libero eius maiores iusto repellat.</p>
-            <!-- 컨텐츠가 들어갈 부분 -->
+            <ul>
+                <li class="on"><a href="*">ALL</a></li>
+                <li><a href=".outer">Outerwear</a></li>
+                <li><a href=".tops">Tops</a></li>
+                <li><a href=".trousers">Trousers</a></li>
+                <li><a href=".dresses">Dresses</a></li>
+                <li class="no"><a href=".acc">Acc</a></li>
+            </ul>
+            <div class="wrap">
+                    <article class="outer">
+                        <img src="img/out1-1.jpg" alt="">
+                        <img src="img/out1-2.jpg" alt="">   
+                        <div class="txt">
+                            <h2>웨이스티드 다운 재킷</h2>
+                            <p>275,000원</p>
+                        </div>
+                    </article>
+                <article class="outer">
+                    <img src="img/out3-1.jpg" alt="">
+                    <img src="img/out3-2.jpg" alt="">
+                    <div class="txt">
+                        <h2>코튼 리넨 코트</h2>
+                        <p>220,000원</p>
+                    </div>
+                </article>
+                <article class="outer">
+                    <img src="img/out4-1.jpg" alt="">
+                    <img src="img/out4-2.jpg" alt="">
+                    <div class="txt">
+                        <h2>리넨 코튼 트렌치코트</h2>
+                        <p>240,000원</p>
+                    </div>
+                </article>
+                <article class="tops">
+                    <img src="img/top1-1.jpg" alt="">
+                    <img src="img/top1-2.jpg" alt="">
+                    <div class="txt">
+                        <h2>헤비웨이트 티셔츠</h2>
+                        <p>60,000원</p>
+                    </div>
+                </article>
+                <article class="tops">
+                    <img src="img/top4-1.jpg" alt="">
+                    <img src="img/top4-2.jpg" alt="">
+                    <div class="txt">
+                        <h2>소프트 오버사이즈 스웻셔츠</h2>
+                        <p>69,000원</p>
+                    </div>
+                </article>
+                <article class="tops">
+                    <img src="img/top7-1.jpg" alt="">
+                    <img src="img/top7-2.jpg" alt="">
+                    <div class="txt">
+                        <h2>리브드 슬리브리스 탑</h2>
+                        <p>25,000원</p>
+                    </div>
+                </article>
+                <article class="trousers">
+                    <img src="img/trou1-1.jpg" alt="">
+                    <img src="img/trou1-2.jpg" alt="">
+                    <div class="txt">
+                        <h2>커브드 크롭트 논스트레치 진</h2>
+                        <p>89,000원</p>
+                    </div>
+                </article>
+                <article class="trousers">
+                    <img src="img/trou2-1.jpg" alt="">
+                    <img src="img/trou2-2.jpg" alt="">
+                    <div class="txt">
+                        <h2>스트레이트 논스트레치 진</h2>
+                        <p>100,000원</p>
+                    </div>
+                </article>
+                <article class="trousers">
+                    <img src="img/trou3-1.jpg" alt="">
+                    <img src="img/trou3-2.jpg" alt="">
+                    <div class="txt">
+                        <h2>우븐 디테일 스웨트 팬츠</h2>
+                        <p>89,000원</p>
+                    </div>
+                </article>
+                <article class="dresses">
+                    <img src="img/dress1-1.jpg" alt="">
+                    <img src="img/dress1-2.jpg" alt="">
+                    <div class="txt">
+                        <h2>A라인 티셔츠 미디 드레스</h2>
+                        <p>79,000원</p>
+                    </div>
+                </article>
+                <article class="dresses">
+                    <img src="img/dress2-1.jpg" alt="">
+                    <img src="img/dress2-2.jpg" alt="">
+                    <div class="txt">
+                        <h2>리넨 블렙드 랩 드레스</h2>
+                        <p>100,000원</p>
+                    </div>
+                </article>
+                <article class="dresses">
+                    <img src="img/dress4-1.jpg" alt="">
+                    <img src="img/dress4-2.jpg" alt="">
+                    <div class="txt">
+                        <h2>실크 슬립 드레스</h2>
+                        <p>170,000원</p>
+                    </div>
+                </article>
+                <article class="dresses">
+                    <img src="img/dress5-1.jpg" alt="">
+                    <img src="img/dress5-2.jpg" alt="">
+                    <div class="txt">
+                        <h2>올 오버 프린티드 드레스</h2>
+                        <p>140,000원</p>
+                    </div>
+                </article>
+                <article class="acc">
+                    <img src="img/acc1-1.jpg" alt="">
+                    <img src="img/acc1-2.jpg" alt="">
+                    <div class="txt">
+                        <h2>렉탱글 후프 이어링</h2>
+                        <p>35,000원</p>
+                    </div>
+                </article>
+                <article class="acc">
+                    <img src="img/acc4-1.jpg" alt="">
+                    <img src="img/acc4-2.jpg" alt="">
+                    <div class="txt">
+                        <h2>드롭 이어링</h2>
+                        <p>49,000원</p>
+                    </div>
+                </article>
+                <article class="acc">
+                    <img src="img/acc7-1.jpg" alt="">
+                    <img src="img/acc7-2.jpg" alt="">
+                    <div class="txt">
+                        <h2>스트로 선 햇</h2>
+                        <p>69,000원</p>
+                    </div>
+                </article>
+            </div>   
         </div>
+        
 
     </section>
 

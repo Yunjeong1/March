@@ -2,16 +2,7 @@
 
 /* content ----------------------------------------- */
 .community{
-    .sub_visual{
-        background-image: url(../img/banner2.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
 
-        >h1{
-            font: bold 60px/1 'arial'; color: #000;
-        }
-      }
     .inner{
         width: 1180px;
         >h2{
@@ -22,17 +13,17 @@
           padding: 80px 0 70px;
 
         }
-        span{
-            font: 18px/1 'Noto Sans KR';
-            font-weight: 400;
-            color: #088D4E;
-            &::before{
-                content: '/'; 
-                font-size: 20px;
-                margin-right:20px;
-                margin-left:20px;
-            }
-        }
+        // span{
+        //     font: 18px/1 'Noto Sans KR';
+        //     font-weight: 400;
+        //     color: #000;
+        //     &::before{
+        //         content: '/'; 
+        //         font-size: 20px;
+        //         margin-right:20px;
+        //         margin-left:20px;
+        //     }
+        // }
 
         #tab{
           width: 100%;
@@ -70,7 +61,7 @@
               transition: 0.3s;
             }
             &.on {
-              border-bottom: 3px solid  #088D4E;
+              border-bottom: 3px solid #000;
               box-sizing: border-box;
               a{
                 font: bold 15px/40px 'Noto Sans KR';
@@ -151,13 +142,13 @@
             float: left;
             width: 30px; height: 30px;
             font-size: 20px; color: #fff;
-            background: #088D4E;
+            background: #000;
             text-align: center;
             line-height: 30px;
             transition: background 0.3s;
             &:hover{
-              color: #088D4E;
-              border: 1px solid #088D4E;
+              color: #000;
+              border: 1px solid #000;
               background: #fff;
             }
         }
@@ -165,13 +156,13 @@
             float: right;
             width: 30px; height: 30px;
             font-size: 20px; color: #fff;
-            background: #088D4E;
+            background: #000;
             text-align: center;
             line-height: 30px;
             transition: background 0.3s;
             &:hover{
-              color: #088D4E;
-              border: 1px solid #088D4E;
+              color: #000;
+              border: 1px solid #000;
               background: #fff;
             }
         }
@@ -183,16 +174,16 @@
                 display: inline-block;
                 width: 30px; height: 30px;
                 font: 11px/30px 'arial';
-                color: #088D4E;
-                border: 1px solid #088D4E;
+                color: #000;
+                border: 1px solid #000;
                 margin: 0 5px;
                 transition: 0.5s;
                 &:hover{
-                    background: #088D4E;
+                    background: #000;
                     color: #fff;
                 }
               &:nth-of-type(1){
-                background: #088D4E;
+                background: #000;
                 color: #fff;
               }
             }
@@ -203,6 +194,9 @@
 
     .inner2{
       padding-top: 50px;
+      h2{
+        padding: 80px 0 50px !important;
+      }
       .wrap::after{
         content: ''; display: block; clear: both;
       }
@@ -275,7 +269,7 @@
         }
         h3{
           font: lighter 25px/1.2 'Cormorant Garamond';
-          color: #3b3b3b;
+          color: #000;
           margin-top: 35%; 
           padding-bottom: 30px;
           padding-left: 30px;
@@ -284,8 +278,8 @@
           padding: 13px 23px;
           font: 11px/1 'arial';
           letter-spacing: 1.5px;
-          color: #088D4E;
-          border: 1px solid #088D4E;
+          color: #000;
+          border: 1px solid #000;
           position: absolute;
           left: 30px;
         }
