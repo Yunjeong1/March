@@ -47,7 +47,7 @@ $mobile: 539px;
         li{
           margin-right: 40px;
           &:last-child{margin-right: 0;}
-          a{color: #333;}
+          a{color: #fff;}
         }
       }
       .li_right{
@@ -57,7 +57,7 @@ $mobile: 539px;
         li{
           margin-left: 40px;
           &:first-child{margin-left: 0;}
-          a{color:#333}
+          a{color:#000}
         }
       }
       li {
@@ -493,34 +493,34 @@ $mobile: 539px;
 }
 
 /* banner ------------------------------------------------- */
-#banner{
-  width: 100%;
-  padding: 120px 0;
-  margin-bottom: 100px;
-  background-color: #f0f0f0;
+// #banner{
+//   width: 100%;
+//   padding: 120px 0;
+//   margin-bottom: 100px;
+//   background-color: #f0f0f0;
 
-  background-image: url(../img/aboutUs4.jpg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  background-attachment: fixed;
-  .inner{
-    width: 1180px;
-    margin: 0 auto;
-    transition: 0.3s;
-    h1 {
-      font: bold 32px/1 'Lora';
-      color: #000;
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    p {
-      font: lighter 16px/1.3 'arial';
-      color: #fff;
-      text-align: center;
-    }
-  }
-}
+//   background-image: url(../img/aboutUs4.jpg);
+//   background-repeat: no-repeat;
+//   background-position: center center;
+//   background-size: cover;
+//   background-attachment: fixed;
+//   .inner{
+//     width: 1180px;
+//     margin: 0 auto;
+//     transition: 0.3s;
+//     h1 {
+//       font: bold 32px/1 'Lora';
+//       color: #000;
+//       text-align: center;
+//       margin-bottom: 30px;
+//     }
+//     p {
+//       font: lighter 16px/1.3 'arial';
+//       color: #fff;
+//       text-align: center;
+//     }
+//   }
+// }
 
 /* magazine --------------------------------------------- */
 #magazine {
@@ -910,10 +910,7 @@ aside{
       .wrap_2{
 
           article{
-            width: 50%;
             img{
-              display: block;
-              border: none;
               width: 100%; 
               object-fit: contain;
             }
@@ -1059,6 +1056,9 @@ aside{
         .read {
           font: 1.5vmin/30px 'Lora';
         }
+        .pic{
+          height: auto;
+        }
       }
       .no {
         margin-right: 0;
@@ -1124,7 +1124,6 @@ aside{
           height: 100%;
           object-fit: cover;
         }
-        
       }
     }
   
@@ -1135,7 +1134,24 @@ aside{
       left: 80px;
     }
   }
+
+  /* scroll_e ----------------------------------------- */
+  .scroll_e{
+    right: 1vw; 
+
+    li{
+      width:10px; height:10px; 
+      border: 1px solid #000;
+      border-radius:5px; 
+
+      &.on{
+          height:40px; background: #ddd;
+          border: 2px solid #000;
+      }
+    }
+  }
 }
+
 
 
 
@@ -1237,25 +1253,25 @@ aside{
     }
   }
 
-  /* banner ------------------------ */
-  #banner {
-    padding: 100px 0px;
-    background-position: left;
-    .inner{
-      width: 100%;
-      h1 {
-        font: bold 4vmin/1 'Lora';
-        color: #000;
-        text-align: center;
-        margin-bottom: 30px;
-      }
-      p {
-        font: 2.5vmin/1.3 'arial';
-        color: #fff;
-        text-align: center;
-      }
-    }
-  }
+  // /* banner ------------------------ */
+  // #banner {
+  //   padding: 100px 0px;
+  //   background-position: left;
+  //   .inner{
+  //     width: 100%;
+  //     h1 {
+  //       font: bold 4vmin/1 'Lora';
+  //       color: #000;
+  //       text-align: center;
+  //       margin-bottom: 30px;
+  //     }
+  //     p {
+  //       font: 2.5vmin/1.3 'arial';
+  //       color: #fff;
+  //       text-align: center;
+  //     }
+  //   }
+  // }
 
   /* magazine ------------------- */
   #magazine{

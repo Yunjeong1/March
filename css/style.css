@@ -939,7 +939,7 @@ fieldset {
 .joinLife .inner1 {
   width: 1180px;
   margin: 0 auto;
-  padding: 80px 0 200px;
+  padding: 30px 0 200px;
 }
 .joinLife .inner1 h2 {
   font: 30px/1 "Noto Sans KR";
@@ -997,6 +997,8 @@ fieldset {
   width: 1180px;
   margin: 0 auto;
   font-family: "Noto Sans KR";
+  padding-bottom: 100px;
+  border-bottom: 1px solid #ddd;
 }
 .joinLife .inner2 p {
   font: 12px/1 "arial";
@@ -2443,7 +2445,7 @@ body {
 .joinLife .inner1 {
   width: 1180px;
   margin: 0 auto;
-  padding: 80px 0 200px;
+  padding: 30px 0 200px;
 }
 .joinLife .inner1 h2 {
   font: 30px/1 "Noto Sans KR";
@@ -2501,6 +2503,8 @@ body {
   width: 1180px;
   margin: 0 auto;
   font-family: "Noto Sans KR";
+  padding-bottom: 100px;
+  border-bottom: 1px solid #ddd;
 }
 .joinLife .inner2 p {
   font: 12px/1 "arial";
@@ -2872,7 +2876,7 @@ body {
   margin-right: 0;
 }
 #header .inner #gnbWeb .li_left li a {
-  color: #333;
+  color: #fff;
 }
 #header .inner #gnbWeb .li_right {
   position: absolute;
@@ -2887,7 +2891,7 @@ body {
   margin-left: 0;
 }
 #header .inner #gnbWeb .li_right li a {
-  color: #333;
+  color: #000;
 }
 #header .inner #gnbWeb li {
   float: left;
@@ -3338,34 +3342,6 @@ body {
 }
 
 /* banner ------------------------------------------------- */
-#banner {
-  width: 100%;
-  padding: 120px 0;
-  margin-bottom: 100px;
-  background-color: #f0f0f0;
-  background-image: url(../img/aboutUs4.jpg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  background-attachment: fixed;
-}
-#banner .inner {
-  width: 1180px;
-  margin: 0 auto;
-  transition: 0.3s;
-}
-#banner .inner h1 {
-  font: bold 32px/1 "Lora";
-  color: #000;
-  text-align: center;
-  margin-bottom: 30px;
-}
-#banner .inner p {
-  font: lighter 16px/1.3 "arial";
-  color: #fff;
-  text-align: center;
-}
-
 /* magazine --------------------------------------------- */
 #magazine {
   width: 100%;
@@ -3742,12 +3718,7 @@ aside .popUp .inner .close_img {
     font: lighter 2vmin/1 "work sans";
     margin-top: 10px;
   }
-  #subVisual .inner .wrap_2 article {
-    width: 50%;
-  }
   #subVisual .inner .wrap_2 article img {
-    display: block;
-    border: none;
     width: 100%;
     object-fit: contain;
   }
@@ -3869,6 +3840,9 @@ aside .popUp .inner .close_img {
   #magazine .inner .wrap article .read {
     font: 1.5vmin/30px "Lora";
   }
+  #magazine .inner .wrap article .pic {
+    height: auto;
+  }
   #magazine .inner .wrap .no {
     margin-right: 0;
   }
@@ -3934,6 +3908,22 @@ aside .popUp .inner .close_img {
   }
   #green .swiper-button-next {
     left: 80px;
+  }
+
+  /* scroll_e ----------------------------------------- */
+  .scroll_e {
+    right: 1vw;
+  }
+  .scroll_e li {
+    width: 10px;
+    height: 10px;
+    border: 1px solid #000;
+    border-radius: 5px;
+  }
+  .scroll_e li.on {
+    height: 40px;
+    background: #ddd;
+    border: 2px solid #000;
   }
 }
 /* mobile ---------------------------------------------- */
@@ -4029,26 +4019,6 @@ aside .popUp .inner .close_img {
   }
   #collection .inner .wrap article p {
     font: 3.5vmin/1 "arial";
-  }
-
-  /* banner ------------------------ */
-  #banner {
-    padding: 100px 0px;
-    background-position: left;
-  }
-  #banner .inner {
-    width: 100%;
-  }
-  #banner .inner h1 {
-    font: bold 4vmin/1 "Lora";
-    color: #000;
-    text-align: center;
-    margin-bottom: 30px;
-  }
-  #banner .inner p {
-    font: 2.5vmin/1.3 "arial";
-    color: #fff;
-    text-align: center;
   }
 
   /* magazine ------------------- */
