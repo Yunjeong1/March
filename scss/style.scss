@@ -986,25 +986,12 @@ $mobile: 539px;
           }
         }
         .prev {
-          display: block;
-          position: absolute;
           left: 10%;
-          top: -5%;
-          i{
-            font-size: 25px;
-            color: #000;
-          }
+          top: -8%;
       }
-  
       .next {
-          display: block;
-          position: absolute;
-          right: 10%;
-          bottom: -30px;
-          i{
-            font-size: 25px;
-            color: #000;
-          }
+          left: 20%;
+          top: -8%;
       }
      }
     }
@@ -1265,12 +1252,27 @@ $mobile: 539px;
       display: block;
     }
   }
- 
-  /* visual -------------------------- */
-  #visual{
-    height: calc(100vh - 91px);
-    .inner {
-      width: 100%;
+
+  #subVisual{
+
+    .inner{
+      .wrap_2{
+
+        .prev {
+          left: 10%;
+          top: -10%;
+          i{
+            font-size: 15px;
+          }
+      }
+      .next {
+          left: 20%;
+          top: -10%;
+          i{
+            font-size: 15px;
+          }
+      }
+     }
     }
   }
 

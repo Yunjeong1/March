@@ -4039,24 +4039,12 @@ body {
     object-fit: contain;
   }
   #subVisual .inner .wrap_2 .prev {
-    display: block;
-    position: absolute;
     left: 10%;
-    top: -5%;
-  }
-  #subVisual .inner .wrap_2 .prev i {
-    font-size: 25px;
-    color: #000;
+    top: -8%;
   }
   #subVisual .inner .wrap_2 .next {
-    display: block;
-    position: absolute;
-    right: 10%;
-    bottom: -30px;
-  }
-  #subVisual .inner .wrap_2 .next i {
-    font-size: 25px;
-    color: #000;
+    left: 20%;
+    top: -8%;
   }
 
   /* news -------------------------------- */
@@ -4282,12 +4270,19 @@ body {
     display: block;
   }
 
-  /* visual -------------------------- */
-  #visual {
-    height: calc(100vh - 91px);
+  #subVisual .inner .wrap_2 .prev {
+    left: 10%;
+    top: -10%;
   }
-  #visual .inner {
-    width: 100%;
+  #subVisual .inner .wrap_2 .prev i {
+    font-size: 15px;
+  }
+  #subVisual .inner .wrap_2 .next {
+    left: 20%;
+    top: -10%;
+  }
+  #subVisual .inner .wrap_2 .next i {
+    font-size: 15px;
   }
 
   /* news ------------------------------ */
