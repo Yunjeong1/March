@@ -1,0 +1,63 @@
+#slider {
+    width: 500px;
+    height: 300px;
+    border: 1px solid #000;
+    margin: 100px auto;
+    position: relative;
+    overflow: hidden;
+
+    .panel {
+        width: 300%;
+        height: 100%;
+        margin-left: -100%;
+
+        &::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        li {
+            width: 33.3333%;
+            height: 100%;
+            float: left;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font: bold 30px/1 'arial';
+            color: #fff;
+
+            &[data-index='1'] {
+                background: aqua;
+            }
+            &[data-index='2'] {
+                background: hotpink;
+            }
+            &[data-index='3'] {
+                background: orange;
+            }
+        }
+    }
+
+    .prev {
+        display: block;
+        width: 20px;
+        height: 50px;
+        background: #fff;
+        position: absolute;
+        left: 30px;
+        top: 50%;
+        margin-top: -25px;
+    }
+
+    .next {
+        display: block;
+        width: 20px;
+        height: 50px;
+        background: #fff;
+        position: absolute;
+        right: 30px;
+        top: 50%;
+        margin-top: -25px;
+    }
+}

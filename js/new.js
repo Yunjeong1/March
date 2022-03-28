@@ -7,7 +7,7 @@ window.addEventListener("load", ()=>{
     })
   
     //sort버튼 변수에 저장
-    const btns = document.querySelectorAll(".women .inner ul li");
+    const btns = document.querySelectorAll(".new .inner ul li");
   
     for(let el of btns){
         

@@ -1,65 +1,54 @@
-//#visual - slider
-// const slider = document.querySelector("#visual");
-// const prev = slider.querySelector(".prev");
-// const next = slider.querySelector(".next");
+// //#subVisual - slider
+// const slider = document.querySelector('#slider');
+// const panel = slider.querySelector('.panel');
+// const prev = slider.querySelector('.prev');
+// const next = slider.querySelector('.next');
 // let enableClick = true;
 
-// init(slider);
+// //처음 로딩시 제일 뒤의 슬라이드를 맨 앞으로 강제 이동
+// const lastEl = panel.lastElementChild;
+// panel.prepend(lastEl);
 
-// prev.addEventListener("click",e=>{
+// //다음 버튼 클릭시
+// next.addEventListener('click', (e) => {
 //     e.preventDefault();
-//     if(enableClick){
+
+//     const firstEl = panel.firstElementChild;
+
+//     //enableClick이 true면 모션실행
+//     //enableClick이 false면 아무것도 실행하지 않음
+//     if (enableClick) {
 //         enableClick = false;
-//         prevSlide(slider);
+//         new Anim(panel, {
+//             prop: 'margin-left',
+//             value: '-200%',
+//             duration: 1000,
+//             callback: () => {
+//                 panel.append(firstEl);
+//                 panel.style.marginLeft = '-100%';
+//                 enableClick = true;
+//             },
+//         });
 //     }
-// })
-// next.addEventListener("click",e=>{
+// });
+
+// //이전 버튼 클릭시
+// prev.addEventListener('click', (e) => {
 //     e.preventDefault();
-//     if(enableClick){
+
+//     const lastEl = panel.lastElementChild;
+
+//     if (enableClick) {
 //         enableClick = false;
-//         nextSlide(slider);
+//         new Anim(panel, {
+//             prop: 'margin-left',
+//             value: '0%',
+//             duration: 1000,
+//             callback: () => {
+//                 panel.prepend(lastEl);
+//                 panel.style.marginLeft = '-100%';
+//                 enableClick = true;
+//             },
+//         });
 //     }
-// })
-
-// function init(frame){
-//     const ul = frame.querySelector("ul"); 
-//     const lis = ul.querySelectorAll("li"); 
-//     const len = lis.length; 
-
-//     ul.style.left = "-100%";
-//     ul.prepend(ul.lastElementChild);
-//     ul.style.width = `${100 * len}%`;
-//     lis.forEach((li)=>{
-//         li.style.width = `${100 / len}%`;
-//     })
-// }
-
-// function prevSlide(frame){
-//     const ul = frame.querySelector("ul");
-
-//     new Anim(ul,{
-//         prop:"left",
-//         value:"0",
-//         duration:speed,
-//         callback:()=>{
-//             ul.style.left = "-100%"
-//             ul.prepend(ul.lastElementChild);
-//             enableClick = true;
-//         }
-//     })
-// }
-
-// function nextSlide(frame){
-//     const ul = frame.querySelector("ul");
-
-//     new Anim(ul,{
-//         prop:"left",
-//         value:"-200%",
-//         duration:speed,
-//         callback:()=>{
-//             ul.style.left = "-100%"
-//             ul.append(ul.firstElementChild);
-//             enableClick = true;
-//         }
-//     })
-// }
+// });

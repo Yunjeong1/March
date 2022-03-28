@@ -401,97 +401,190 @@ fieldset {
     width: 100%;
   }
 }
+body {
+  position: relative;
+}
+
+#header_sub #gnbWeb #youtube li a {
+  color: #fff;
+}
+
 /* content ----------------------------------------- */
 .youtube {
   width: 100%;
   padding: 0 0 150px;
+  position: relative;
+}
+.youtube .gif {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  min-width: 100%;
+  height: auto;
+  min-height: 100%;
+  z-index: -100;
+  background: url(../img/bg_loop_gradient1.mp4) no-repeat;
+  background-size: cover;
+}
+.youtube .sub_visual .text {
+  border: none;
+}
+.youtube .sub_visual .text p {
+  color: #fff;
+}
+.youtube .sub_visual .text h1 {
+  color: #fff;
 }
 .youtube .inner {
   width: 1180px;
-  margin: 0 auto;
-  min-height: 500px;
-  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.youtube .inner article {
+  width: 40%;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.youtube .inner article > a {
+  display: block;
+  width: 50vh;
+  height: 35vh;
+}
+.youtube .inner article > a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 7px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+}
+.youtube .inner article:nth-of-type(odd) {
+  margin-top: -30px;
+}
+.youtube .inner article:nth-of-type(even) {
+  margin-top: 100px;
+}
+.youtube .inner article .con {
+  width: 85%;
+}
+.youtube .inner article .con > h2 {
+  width: 100%;
+  text-align: left;
+  font: 25px/1.2 "Noto sans kr";
+  font-weight: 500;
+  color: #fff;
+  padding: 30px 0 0;
+  cursor: pointer;
+}
+.youtube .inner article .con > p {
+  font: 16px/1 "noto sans kr";
+  font-weight: 500;
+  text-align: left;
+  color: #fff;
+  padding: 30px 0 0;
+}
+
+#aside_y {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 5vw;
+  box-sizing: border-box;
+  z-index: 50;
+}
+#aside_y .btnClose {
+  cursor: pointer;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  z-index: 200;
+}
+#aside_y .btnClose img {
+  transform: scale(0.7);
 }
 
 /* tablet ------------------------------------------------ */
 @media screen and (max-width: 1179px) {
-  .men {
+  .youtube {
     padding: 0 0 100px;
   }
-  .men .sub_visual {
-    height: 400px;
+  .youtube .inner {
+    width: 100%;
+    padding: 0 30px;
+    box-sizing: border-box;
+  }
+  .youtube .inner article {
+    width: 40%;
+  }
+  .youtube .inner article > a {
     width: 100%;
   }
-  .men .sub_visual .title h1 {
-    display: block;
-    width: 100%;
-    font: bold 7vmin/1 "arial";
-    letter-spacing: 0px;
+  .youtube .inner article .con > h2 {
+    font: 20px/1.2 "Noto sans kr";
   }
-  .men .sub_visual .title p {
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -10%);
-    font: 13px/1.3 "arial";
-    color: #fff;
+  .youtube .inner article .con > p {
+    font: 15px/1 "noto sans kr";
   }
-  .men .inner {
-    width: 100%;
-    min-height: 400px;
+
+  #aside_y .btnClose {
+    right: 10px;
+    top: 10px;
   }
-  .men .inner p {
-    padding: 70px 100px;
-    text-align: center;
-    font: lighter 2.5vmin/1.5 "arial";
-    color: #333;
-    letter-spacing: 1px;
-  }
-  .men .inner ul {
-    width: 70%;
-    flex-wrap: wrap;
-  }
-  .men .inner ul li {
-    margin-top: 10px;
-  }
-  .men .inner ul a {
-    padding: 14px 9px;
-    font: lighter 19px/1 "arial";
+  #aside_y .btnClose img {
+    transform: scale(0.6);
   }
 }
 /* mobile ---------------------------------------------- */
 @media screen and (max-width: 539px) {
-  .men {
-    padding: 0 0 50px;
+  .youtube {
+    padding: 0 0 100px;
   }
-  .men .sub_visual {
-    height: 300px;
-  }
-  .men .sub_visual .title h1 {
-    font: bold 7vmin/1 "arial";
-  }
-  .men .sub_visual .title p {
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -30%);
-    font: 2.5vmin/1.2 "arial";
-    color: #fff;
-  }
-  .men .inner {
+  .youtube .inner {
     width: 100%;
-    min-height: 500px;
+    padding: 0 30px;
+    box-sizing: border-box;
   }
-  .men .inner ul {
-    width: 60%;
+  .youtube .inner article {
+    width: 100%;
+    margin-bottom: 50px;
   }
-  .men .inner p {
-    padding: 50px;
-    font: lighter 2.5vmin/1.5 "arial";
-    color: #333;
+  .youtube .inner article > a {
+    width: 100%;
   }
-  .men .inner p::after {
-    width: 140px;
+  .youtube .inner article .con > h2 {
+    font: 18px/1.2 "Noto sans kr";
+  }
+  .youtube .inner article .con > p {
+    font: 14px/1 "noto sans kr";
+  }
+  .youtube .inner article:nth-of-type(odd) {
+    margin-top: 0px;
+  }
+  .youtube .inner article:nth-of-type(even) {
+    margin-top: 0px;
+  }
+  .youtube .inner article:last-child {
+    margin-bottom: 0px;
+  }
+
+  #aside_y {
+    padding: 10vw;
+  }
+  #aside_y .btnClose {
+    right: 10px;
+    top: 10px;
+    z-index: 200;
+  }
+  #aside_y .btnClose img {
+    transform: scale(0.6);
   }
 }
 /* content ----------------------------------------- */
@@ -1335,7 +1428,6 @@ body {
 #header_sub {
   width: 100%;
   background: transparent;
-  border-bottom: 1px solid #ddd;
   position: relative;
   z-index: 10;
 }
@@ -1534,6 +1626,18 @@ body {
   width: 100%;
   padding: 0 0 150px;
 }
+.content .gif {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  min-width: 100%;
+  height: auto;
+  min-height: 100%;
+  z-index: -100;
+  background: url(../img/bg_loop_gradient1.mp4) no-repeat;
+  background-size: cover;
+}
 .content .sub_visual {
   width: 1180px;
   margin: 0px auto;
@@ -1639,10 +1743,15 @@ body {
   /* header ----------------------------------- */
   #header_sub .inner {
     width: 100%;
+    position: relative;
     /* 햄버거 버튼 & 모바일메뉴 ----- */
   }
   #header_sub .inner > h1 {
-    left: 30px;
+    position: absolute;
+    left: 50px !important;
+  }
+  #header_sub .inner > h1 img {
+    width: 80px;
   }
   #header_sub .inner #gnbWeb {
     display: none;
@@ -1655,11 +1764,60 @@ body {
   }
 
   /* content ------------------------------------- */
+  .content .gif {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    min-width: 100%;
+    height: auto;
+    min-height: 100%;
+    z-index: -100;
+    background: url(../img/bg_loop_gradient1.mp4) no-repeat;
+    background-size: cover;
+  }
+  .content .sub_visual {
+    width: 100%;
+    margin: 0px auto;
+    position: relative;
+    text-align: center;
+  }
   .content .sub_visual .text {
-    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 70px 0;
+    box-sizing: border-box;
+    width: 60%;
+    border-bottom: 1px solid #666;
+  }
+  .content .sub_visual .text p {
+    font: 45px/1 "Italianno";
+    color: #000;
+    letter-spacing: 0.5px;
+    text-align: left;
+    padding-right: 70px;
+    box-sizing: border-box;
+  }
+  .content .sub_visual .text h1 {
+    font: 55px/1.3 "noto sans kr";
+    font-weight: 500;
+    color: #000;
+    letter-spacing: 0.5px;
+    text-align: left;
   }
   .content .inner {
-    width: 100%;
+    width: 1180px;
+    margin: 0 auto;
+    /* 최소높이 */
+  }
+  .content .inner p {
+    padding: 70px 100px;
+    text-align: center;
+    font: 20px/1.3 "arial";
+    color: #333;
+    letter-spacing: 1px;
   }
 
   /* footer ---------------------------------------- */
@@ -1697,12 +1855,16 @@ body {
   .content .sub_visual {
     height: 300px;
   }
-  .content .sub_visual p {
-    padding-right: 20px !important;
+  .content .sub_visual .title h1 {
+    font: bold 7vmin/1 "arial";
   }
-  .content .sub_visual h1 {
-    font: bold 8vmin/1 "arial";
-    color: #000;
+  .content .sub_visual .title p {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    font: 2.5vmin/1.2 "arial";
+    color: #fff;
   }
   .content .inner {
     min-height: 400px;
@@ -1907,97 +2069,190 @@ body {
     width: 100%;
   }
 }
+body {
+  position: relative;
+}
+
+#header_sub #gnbWeb #youtube li a {
+  color: #fff;
+}
+
 /* content ----------------------------------------- */
 .youtube {
   width: 100%;
   padding: 0 0 150px;
+  position: relative;
+}
+.youtube .gif {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  min-width: 100%;
+  height: auto;
+  min-height: 100%;
+  z-index: -100;
+  background: url(../img/bg_loop_gradient1.mp4) no-repeat;
+  background-size: cover;
+}
+.youtube .sub_visual .text {
+  border: none;
+}
+.youtube .sub_visual .text p {
+  color: #fff;
+}
+.youtube .sub_visual .text h1 {
+  color: #fff;
 }
 .youtube .inner {
   width: 1180px;
-  margin: 0 auto;
-  min-height: 500px;
-  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.youtube .inner article {
+  width: 40%;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.youtube .inner article > a {
+  display: block;
+  width: 50vh;
+  height: 35vh;
+}
+.youtube .inner article > a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 7px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+}
+.youtube .inner article:nth-of-type(odd) {
+  margin-top: -30px;
+}
+.youtube .inner article:nth-of-type(even) {
+  margin-top: 100px;
+}
+.youtube .inner article .con {
+  width: 85%;
+}
+.youtube .inner article .con > h2 {
+  width: 100%;
+  text-align: left;
+  font: 25px/1.2 "Noto sans kr";
+  font-weight: 500;
+  color: #fff;
+  padding: 30px 0 0;
+  cursor: pointer;
+}
+.youtube .inner article .con > p {
+  font: 16px/1 "noto sans kr";
+  font-weight: 500;
+  text-align: left;
+  color: #fff;
+  padding: 30px 0 0;
+}
+
+#aside_y {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 5vw;
+  box-sizing: border-box;
+  z-index: 50;
+}
+#aside_y .btnClose {
+  cursor: pointer;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  z-index: 200;
+}
+#aside_y .btnClose img {
+  transform: scale(0.7);
 }
 
 /* tablet ------------------------------------------------ */
 @media screen and (max-width: 1179px) {
-  .men {
+  .youtube {
     padding: 0 0 100px;
   }
-  .men .sub_visual {
-    height: 400px;
+  .youtube .inner {
+    width: 100%;
+    padding: 0 30px;
+    box-sizing: border-box;
+  }
+  .youtube .inner article {
+    width: 40%;
+  }
+  .youtube .inner article > a {
     width: 100%;
   }
-  .men .sub_visual .title h1 {
-    display: block;
-    width: 100%;
-    font: bold 7vmin/1 "arial";
-    letter-spacing: 0px;
+  .youtube .inner article .con > h2 {
+    font: 20px/1.2 "Noto sans kr";
   }
-  .men .sub_visual .title p {
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -10%);
-    font: 13px/1.3 "arial";
-    color: #fff;
+  .youtube .inner article .con > p {
+    font: 15px/1 "noto sans kr";
   }
-  .men .inner {
-    width: 100%;
-    min-height: 400px;
+
+  #aside_y .btnClose {
+    right: 10px;
+    top: 10px;
   }
-  .men .inner p {
-    padding: 70px 100px;
-    text-align: center;
-    font: lighter 2.5vmin/1.5 "arial";
-    color: #333;
-    letter-spacing: 1px;
-  }
-  .men .inner ul {
-    width: 70%;
-    flex-wrap: wrap;
-  }
-  .men .inner ul li {
-    margin-top: 10px;
-  }
-  .men .inner ul a {
-    padding: 14px 9px;
-    font: lighter 19px/1 "arial";
+  #aside_y .btnClose img {
+    transform: scale(0.6);
   }
 }
 /* mobile ---------------------------------------------- */
 @media screen and (max-width: 539px) {
-  .men {
-    padding: 0 0 50px;
+  .youtube {
+    padding: 0 0 100px;
   }
-  .men .sub_visual {
-    height: 300px;
-  }
-  .men .sub_visual .title h1 {
-    font: bold 7vmin/1 "arial";
-  }
-  .men .sub_visual .title p {
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -30%);
-    font: 2.5vmin/1.2 "arial";
-    color: #fff;
-  }
-  .men .inner {
+  .youtube .inner {
     width: 100%;
-    min-height: 500px;
+    padding: 0 30px;
+    box-sizing: border-box;
   }
-  .men .inner ul {
-    width: 60%;
+  .youtube .inner article {
+    width: 100%;
+    margin-bottom: 50px;
   }
-  .men .inner p {
-    padding: 50px;
-    font: lighter 2.5vmin/1.5 "arial";
-    color: #333;
+  .youtube .inner article > a {
+    width: 100%;
   }
-  .men .inner p::after {
-    width: 140px;
+  .youtube .inner article .con > h2 {
+    font: 18px/1.2 "Noto sans kr";
+  }
+  .youtube .inner article .con > p {
+    font: 14px/1 "noto sans kr";
+  }
+  .youtube .inner article:nth-of-type(odd) {
+    margin-top: 0px;
+  }
+  .youtube .inner article:nth-of-type(even) {
+    margin-top: 0px;
+  }
+  .youtube .inner article:last-child {
+    margin-bottom: 0px;
+  }
+
+  #aside_y {
+    padding: 10vw;
+  }
+  #aside_y .btnClose {
+    right: 10px;
+    top: 10px;
+    z-index: 200;
+  }
+  #aside_y .btnClose img {
+    transform: scale(0.6);
   }
 }
 /* content ----------------------------------------- */
@@ -3083,7 +3338,6 @@ body {
 }
 #subVisual .inner .wrap_2 article img {
   display: block;
-  border: none;
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -3496,7 +3750,7 @@ body {
 }
 
 /* aside ---------------------------------------- */
-aside {
+.aside_index {
   width: 100%;
   height: 100vh;
   position: fixed;
@@ -3506,7 +3760,7 @@ aside {
   z-index: 10;
   display: none;
 }
-aside .popUp {
+.aside_index .popUp {
   width: 600px;
   height: 60vh;
   position: absolute;
@@ -3516,7 +3770,7 @@ aside .popUp {
   overflow: hidden;
   display: none;
 }
-aside .popUp .top {
+.aside_index .popUp .top {
   width: 0%;
   height: 3px;
   background: #000;
@@ -3525,7 +3779,7 @@ aside .popUp .top {
   left: 0;
   z-index: 10;
 }
-aside .popUp .right {
+.aside_index .popUp .right {
   width: 3px;
   height: 0%;
   background: #000;
@@ -3534,7 +3788,7 @@ aside .popUp .right {
   right: 0;
   z-index: 10;
 }
-aside .popUp .bottom {
+.aside_index .popUp .bottom {
   width: 0%;
   height: 3px;
   background: #000;
@@ -3543,7 +3797,7 @@ aside .popUp .bottom {
   right: 0;
   z-index: 10;
 }
-aside .popUp .left {
+.aside_index .popUp .left {
   width: 3px;
   height: 0%;
   background: #000;
@@ -3552,7 +3806,7 @@ aside .popUp .left {
   left: 0;
   z-index: 10;
 }
-aside .popUp .inner {
+.aside_index .popUp .inner {
   width: 100%;
   height: 100%;
   display: flex;
@@ -3567,36 +3821,36 @@ aside .popUp .inner {
   transform: translateY(-50%);
   opacity: 0;
 }
-aside .popUp .inner h2 {
+.aside_index .popUp .inner h2 {
   width: 100%;
   margin-bottom: 10px;
 }
-aside .popUp .inner h2 img {
+.aside_index .popUp .inner h2 img {
   width: 80%;
 }
-aside .popUp .inner p {
+.aside_index .popUp .inner p {
   width: 100%;
 }
-aside .popUp .inner p img {
+.aside_index .popUp .inner p img {
   width: 40%;
 }
-aside .popUp .inner form {
+.aside_index .popUp .inner form {
   margin: 30px auto 0;
   width: 70%;
 }
-aside .popUp .inner form #email {
+.aside_index .popUp .inner form #email {
   width: 65%;
   height: 40px;
   border: none;
   margin-right: 10px;
 }
-aside .popUp .inner form #email::placeholder {
+.aside_index .popUp .inner form #email::placeholder {
   font: 11px/1 "arial";
   color: #bbb;
   letter-spacing: 1px;
   padding-left: 15px;
 }
-aside .popUp .inner form #subsc {
+.aside_index .popUp .inner form #subsc {
   width: 25%;
   height: 40px;
   text-align: center;
@@ -3607,7 +3861,7 @@ aside .popUp .inner form #subsc {
   border: none;
   cursor: pointer;
 }
-aside .popUp .inner .close_img {
+.aside_index .popUp .inner .close_img {
   transform: scale(0.8);
   position: absolute;
   top: 3vw;
