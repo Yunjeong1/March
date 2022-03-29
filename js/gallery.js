@@ -1,9 +1,9 @@
-const body = document.querySelector("body");
-const frame = document.querySelector(".sec");
-const g_head = document.querySelector(".header_g");
-const input = document.querySelector("#search");
-const btnSearch = document.querySelector(".btnSearch");
-const loading = document.querySelector(".loading");
+const body = document.querySelector("#body_g");
+const frame = body.querySelector(".sec");
+const g_head = body.querySelector("#header_sub");
+const input = body.querySelector("#search");
+const btnSearch = body.querySelector(".btnSearch");
+const loading = body.querySelector(".loading");
 const base = "https://www.flickr.com/services/rest/?";
 const method_people = "flickr.people.getPhotos";
 const method_search = "flickr.photos.search";
@@ -96,6 +96,7 @@ frame.addEventListener("click",e=>{
     e.preventDefault();
 
     let target = e.target.closest(".item").querySelector(".pic img");
+
     if(target == e.target){
         let imgSrc = target.parentElement.getAttribute("href");
         let pop = document.createElement("aside");

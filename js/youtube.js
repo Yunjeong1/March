@@ -26,6 +26,7 @@ fetch(url)
             <article>
                 <a href="#" class="btn" data-vid="${item.snippet.resourceId.videoId}">
                     <img src="${item.snippet.thumbnails.maxres.url}">
+                    <i class="fa-solid fa-circle-play"></i>
                 </a>
                 <div class="con">
                     <h2 data-vid="${item.snippet.resourceId.videoId}">${title}</h2>
@@ -47,16 +48,16 @@ function createPop(e){
     //a요소의 data-vid값을 받아야하므로
     //클릭한 요소의 부모태그가 a태그가 아니라면 중지
     if(!e.target.closest("a")) return;
-    
-    const vidId = e.target.closest("a").getAttribute("data-vid"); 
 
-    let pop = document.createElement("aside");
-    pop.setAttribute("id","aside_y");
-    pop.innerHTML = `
-                    <iframe src="https://youtube.com/embed/${vidId}" frameborder="0" width="100%" height="100%" allowfullscreen></iframe>
-                    <span class="btnClose"><img src="img/close.png"></span>
-    `;  //iframe 주소는 유투브 동영상-퍼가기 클릭하면 나옴
-    body.append(pop);
+        const vidId = e.target.closest("a").getAttribute("data-vid"); 
+
+        let pop = document.createElement("aside");
+        pop.setAttribute("id","aside_y");
+        pop.innerHTML = `
+                        <iframe src="https://youtube.com/embed/${vidId}" frameborder="0" width="100%" height="100%" allowfullscreen></iframe>
+                        <span class="btnClose"><img src="img/close.png"></span>
+        `;  //iframe 주소는 유투브 동영상-퍼가기 클릭하면 나옴
+        body.append(pop);
 }
 
 function removePop(e){
