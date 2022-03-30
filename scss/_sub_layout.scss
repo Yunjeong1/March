@@ -30,7 +30,8 @@ body{
     }
     img{
       display: block;
-      width: 60px;
+      width: 120px;
+      margin-left: 7px;
     }
     #gnbWeb {
       display: flex;
@@ -44,7 +45,7 @@ body{
         li{
           margin-right: 40px;
           &:last-child{margin-right: 0;}
-          a{color: #333;}
+          a{color: #000;}
         }
       }
       .li_right{
@@ -54,7 +55,7 @@ body{
         li{
           margin-left: 40px;
           &:first-child{margin-left: 0;}
-          a{color:#333}
+          a{color:#000}
         }
       }
       li {
@@ -187,18 +188,7 @@ body{
   .content{
     width: 100%;
     padding: 0 0 150px;
-    .gif{
-      position:fixed;
-      right:0;
-      bottom:0;
-      width:auto;
-      min-width:100%;
-      height:100%;
-      min-height:auto;
-      z-index:-100;
-      background:url(../img/bg_loop_gradient1.mp4) no-repeat;
-      background-size:cover;
-  }
+    
     .sub_visual{
       width: 1180px;
       margin: 0px auto;
@@ -222,9 +212,9 @@ body{
               box-sizing: border-box;
           }
           h1{
-              font: 55px/1.3 'noto sans kr'; 
+              font: 40px/1 'noto sans kr'; 
               font-weight: 500;
-              color: #000;
+              color: #333;
               letter-spacing: 0.5px;
               text-align: left;
           }
@@ -308,44 +298,31 @@ body{
     /* tablet ------------------------------------------------ */
     @media screen and (max-width:$tablet){
       
-    /* header ----------------------------------- */
-  #header_sub .inner{
-    width: 100%;
-    position: relative;
-    >h1 {
-      position: absolute;
-      left: 50px !important; 
-      img{
-        width: 80px;
+    #header_sub .inner{
+      width: 100%;
+      position: relative;
+      >h1 {
+        position: absolute;
+        left: 50px !important; 
+        img{
+          width: 80px;
+        }
       }
-    }
       #gnbWeb {
         display: none;
-    }
-    /* 햄버거 버튼 & 모바일메뉴 ----- */
-    .btnCall {
+      }
+      /* 햄버거 버튼 & 모바일메뉴 ---- */
+      .btnCall {
         opacity: 1;
-    }
-    .menuMo {
+      }
+      .menuMo {
         display: block;
+      }
     }
-  }
 
   /* content ------------------------------------- */
   .content{
 
-    .gif{
-      position:fixed;
-      right:0;
-      bottom:0;
-      width:auto;
-      min-width:100%;
-      height:auto;
-      min-height:100%;
-      z-index:-100;
-      background:url(../img/bg_loop_gradient1.mp4) no-repeat;
-      background-size:cover;
-    }
     .sub_visual{
       width: 100%;
       margin: 0px auto;
@@ -362,16 +339,13 @@ body{
           border-bottom: 1px solid #666;
           p{
               font: 45px/1 'Italianno'; 
-              color: #000;
               letter-spacing: 0.5px;
               text-align: left;
               padding-right: 70px;
               box-sizing: border-box;
           }
           h1{
-              font: 55px/1.3 'noto sans kr'; 
-              font-weight: 500;
-              color: #000;
+              font: 40px/1.3 'noto sans kr'; 
               letter-spacing: 0.5px;
               text-align: left;
           }
@@ -380,7 +354,6 @@ body{
       .inner{
         width: 1180px; margin: 0 auto;
         
-        /* 최소높이 */
         p{
             padding: 70px 100px;
             text-align: center;
@@ -410,40 +383,53 @@ body{
 /* mobile --------------------------------------------------- */
 @media screen and (max-width:$mobile){
 /* header ---------------------------------- */
-  #header_sub .inner{
-    width: 100%;
-    >h1 {
-        left: 30px; 
-    }
-    #gnbWeb {
-        display: none;
-    }
-    /* 햄버거 버튼 & 모바일메뉴 ----------- */
-    .btnCall {
-    opacity: 1;
-    }
-    .menuMo {
-        display: block;
-      }
+#header_sub .inner{
+  width: 100%;
+
+  #gnbWeb {
+    display: none;
   }
+  /* 햄버거 버튼 & 모바일메뉴 ------ */
+  .btnCall {
+    opacity: 1;
+  }
+  .menuMo {
+    display: block;
+  }
+}
 
 
 /* content ------------------------------------ */
 .content{
     padding: 0 0 50px;
     .sub_visual{
-      height: 300px;
-      .title{
-      h1{
-          font: bold 7vmin/1 'arial';
-      }
-      p{
-          position: absolute; top: 55%; left: 50%;
-          transform: translate(-50%,-30%);
-          font: 2.5vmin/1.2 'arial'; color: #fff;
+      width: 100%;
+      margin: 0px auto;
+      position: relative;
+      text-align: center;
+      .text{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0 auto;
+          padding: 70px 0px;
+          box-sizing: border-box;
+          width: 60%;
+          border-bottom: 1px solid #666;
+          p{
+              font: 45px/1 'Italianno'; 
+              letter-spacing: 0.5px;
+              text-align: left;
+              padding-right: 25px;
+              box-sizing: border-box;
+          }
+          h1{
+              font: 35px/1.3 'noto sans kr'; 
+              letter-spacing: 0px;
+              text-align: left;
+          }
       }
     }
-  }
     .inner{
         min-height: 400px;
         p{

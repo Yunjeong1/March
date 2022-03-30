@@ -44,9 +44,6 @@ body.addEventListener("click",e=> removePop(e));
 function createPop(e){
     e.preventDefault();
     
-    //main태그에 a태그가 없어서 생기는 문제 해결
-    //a요소의 data-vid값을 받아야하므로
-    //클릭한 요소의 부모태그가 a태그가 아니라면 중지
     if(!e.target.closest("a")) return;
 
         const vidId = e.target.closest("a").getAttribute("data-vid"); 

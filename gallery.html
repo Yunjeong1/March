@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Youtube</title>
+    <title>Gallery</title>
     <link rel="shortcut icon" href="favicon/android-icon-36x36.png" image/x-icon">
     <script src="https://kit.fontawesome.com/de418517c9.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
@@ -14,18 +14,18 @@
     <script defer src="js/gallery.js"></script>
 </head>
 
-<body id="body_g">
+<body class="body_g">
     <header id="header_sub">
         <div class="inner">
-            <h1><a href="index.html"><img src="img/logo3.png" alt="logo"></a></h1>
+            <h1><a href="index.html"><img src="img/logo.png" alt="logo"></a></h1>
 
             <nav class="menuWeb">
                 <ul id="gnbWeb">
-                    <div class="li_left" id="gallery">
+                    <div class="li_left">
                         <li><a href="gallery.html">Gallery</a></li>
                         <li><a href="youtube.html">Youtube</a></li>
                     </div>
-                    <div class="li_right" id="gallery">
+                    <div class="li_right">
                         <li><a href="new.html">New</a></li>
                         <li><a href="community.html">Community</a></li>
                         <li><a href="joinLife.html">Join Life</a></li>
@@ -58,31 +58,28 @@
         </div>
     </header>
     <section class="content gallery">
-        <div class="gif">
-            <video src="img/bg_loop_gradient1.mp4" autoplay muted loop></video>
+        <div class="sub_visual">
+            <div class="text">
+                <div class="small">
+                    <p>01</p>
+                </div>
+                <div class="title">
+                    <h1>
+                        Gallery
+                    </h1>
+                </div>
         </div>
-            <div class="sub_visual">
-                <div class="text">
-                    <div class="small">
-                        <p>01</p>
-                    </div>
-                    <div class="title">
-                        <h1>
-                            Gallery
-                        </h1>
-                    </div>
-            </div>
+    </div>
+    <div class="inner">
+        <div id="searchBox">
+            <input type="text" id="search" placeholder="검색어를 입력하세요">
+            <span class="btnSearch"><i class="fa-solid fa-magnifying-glass"></i></span>
         </div>
-        <div class="inner">
-            <div id="searchBox">
-                <input type="text" id="search" placeholder="검색어를 입력하세요">
-                <span class="btnSearch"><i class="fa-solid fa-magnifying-glass"></i></span>
-            </div>
-            <img src="img/loading.gif" class="loading">
+        <img src="img/loading.gif" class="loading">
 
-           <div class="sec"></div>
-        </div>
-    </section>
+       <div class="sec"></div>
+    </div>
+</section>
 
     <section id="footer_sub">
         <div class="inner">

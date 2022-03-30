@@ -1,5 +1,5 @@
-const sections = document.querySelectorAll("section"); 
-const ul = document.querySelector(".scroll_e"); 
+const sections = body_i.querySelectorAll("section"); 
+const ul = body_i.querySelector(".scroll_e"); 
 const lis = ul.querySelectorAll("li");  
 const lis_arr = Array.from(lis); //배열로 바꿔줌
 let posArr = null; 

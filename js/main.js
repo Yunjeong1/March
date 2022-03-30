@@ -21,11 +21,10 @@ var swiper = new Swiper(".mySwiper", {
 
 
 //news의 view more 버튼 클릭시
-const body = document.querySelector("body");
-const news = document. querySelector("#news");
-const btnOpen = document.querySelectorAll(".btnOpen");
-console.log(btnOpen);
-const aside = document.querySelector("aside");
+const body_i = document.querySelector(".body_i");
+const news = body_i.querySelector("#news");
+const btnOpen = body_i.querySelectorAll(".btnOpen");
+const aside = body_i.querySelector(".aside_index");
 const popUp = aside.querySelector(".popUp"); 
 const inner = popUp.querySelector(".inner");
 const _top = popUp.querySelector(".top"); 
@@ -35,12 +34,57 @@ const _left = popUp.querySelector(".left");
 const speed = 500;
 const btnClose = popUp.querySelector(".close");
 
+window.onload = active();
+
+//view more 버튼 클릭시
 for(let i=0; i<2; i++){
   btnOpen[i].addEventListener("click", e=>{
     e.preventDefault();
+    active();
+  })
+}
+
+btnClose.addEventListener("click", e=>{
+  e.preventDefault();
+  body_i.style.overflow = "visible";
+
+  new Anime(inner,{
+    prop:"opacity", 
+    value:0, 
+    duration:speed, 
+    callback:()=>{
+        new Anime(_top,{
+            prop:"width", 
+            value:0, 
+            duration:speed
+        });
+        new Anime(_right,{
+            prop:"height", 
+            value:0, 
+            duration:speed
+        })
+        new Anime(_bottom,{
+            prop:"width", 
+            value:0, 
+            duration:speed
+        })
+        new Anime(_left,{
+            prop:"height", 
+            value:0, 
+            duration:speed,
+            callback :()=>{
+              aside.style.display = "none";
+              popUp.style.display = "none";
+            }
+        })
+      }
+    })
+  })
+
+  function active(){
     aside.style.display = "block";
     popUp.style.display = "block";
-    body.style.overflow = "hidden";
+    body_i.style.overflow = "hidden";
 
     new Anime(_top,{
       prop: "width",
@@ -75,42 +119,4 @@ for(let i=0; i<2; i++){
          })
        }
     })
-  })
-}
-
-btnClose.addEventListener("click", e=>{
-  e.preventDefault();
-  body.style.overflow = "visible";
-
-  new Anime(inner,{
-    prop:"opacity", 
-    value:0, 
-    duration:speed, 
-    callback:()=>{
-        new Anime(_top,{
-            prop:"width", 
-            value:0, 
-            duration:speed
-        });
-        new Anime(_right,{
-            prop:"height", 
-            value:0, 
-            duration:speed
-        })
-        new Anime(_bottom,{
-            prop:"width", 
-            value:0, 
-            duration:speed
-        })
-        new Anime(_left,{
-            prop:"height", 
-            value:0, 
-            duration:speed,
-            callback :()=>{
-              aside.style.display = "none";
-              popUp.style.display = "none";
-            }
-        })
-    }
-})
-})
+  }

@@ -18,9 +18,10 @@
     <script defer src="js/header.js"></script>
     <script defer src="js/slider.js"></script>
     <script defer src="js/scroll.js"></script>
+    <script defer src="js/cookie.js"></script>
 </head>
 
-<body>
+<body class="body_i">
 
     <header id="header">
         <div class="inner">
@@ -90,12 +91,13 @@
                                 <li data-index="3"><img src="img/rev-slider-image-5.jpg" alt="visual"></li>
                             </ul>
                         </div>
-                        <a href="#" class="prev">
+                        
+                        <!-- <a href="#" class="prev">
                             <i class="fa-solid fa-arrow-left"></i>
                         </a>
                         <a href="#" class="next">
                             <i class="fa-solid fa-arrow-right"></i>
-                        </a>
+                        </a> -->
                     </article>
                 </div>
             </div>
@@ -333,6 +335,11 @@
                 <form action="#" method="get">
                     <input type="text" id="email" placeholder="Email Address">
                     <input type="submit" id="subsc" value="SEND">
+                    <div class="text-wrap">
+                        <input type="checkbox" id="ck">
+                        <label for="ck">일주일간 보지않기</label>
+                    </div>
+                    
                 </form>
                 <a href="#" class="close"><img src="img/close.png" alt="close" class="close_img"></a>
             </div>

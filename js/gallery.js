@@ -1,6 +1,6 @@
-const body = document.querySelector("#body_g");
+const body = document.querySelector(".body_g");
 const frame = body.querySelector(".sec");
-const g_head = body.querySelector("#header_sub");
+const g_header = body.querySelector("#header_sub");
 const input = body.querySelector("#search");
 const btnSearch = body.querySelector(".btnSearch");
 const loading = body.querySelector(".loading");
@@ -110,7 +110,7 @@ frame.addEventListener("click",e=>{
         pop.innerHTML = pops;
         body.append(pop);
         body.style.overflow = "hidden";
-        g_head.style.zIndex = "-100";
+        g_header.style.display = "none";
     }
 })
 
@@ -123,7 +123,7 @@ body.addEventListener("click",e=>{
         if(e.target == close){
             pop.remove();
             body.style.overflow = "auto";
-            g_head.style.zIndex = "100";
+            g_header.style.display = "block";
         }
     }
 })

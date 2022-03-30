@@ -39,44 +39,11 @@ fieldset {
   opacity: 0;
 }
 
-body {
-  position: relative;
-}
-
-#header_sub #gnbWeb #gallery li a {
-  color: #fff;
-}
-#header_sub #gnbWeb #gallery li:hover a {
-  color: #ccc;
-  transition: 0.5s;
-}
-
 /* content ----------------------------------------- */
 .gallery {
   width: 100%;
   padding: 0 0 100px;
   position: relative;
-}
-.gallery .gif {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  width: auto;
-  min-width: 100%;
-  height: 100%;
-  min-height: auto;
-  z-index: -100;
-  background: url(../img/bg_loop_gradient1.mp4) no-repeat;
-  background-size: cover;
-}
-.gallery .sub_visual .text {
-  border: none;
-}
-.gallery .sub_visual .text p {
-  color: #fff;
-}
-.gallery .sub_visual .text h1 {
-  color: #fff;
 }
 .gallery .inner {
   width: 1180px;
@@ -84,41 +51,40 @@ body {
 }
 .gallery .inner #searchBox {
   width: 100%;
-  padding: 0px 0px 80px;
+  margin: 100px 0 20px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
 }
 .gallery .inner #searchBox #search {
-  width: 25%;
+  width: 20%;
   height: 50px;
   border-left-width: 0;
   border-right-width: 0;
   border-top-width: 0;
   border-bottom-width: 1;
-  border-bottom: 3px solid #fff;
+  border-bottom: 3px solid #444;
   background: transparent;
 }
 .gallery .inner #searchBox #search:focus {
   outline: none;
 }
 .gallery .inner #searchBox #search::placeholder {
-  font: 17px/1 "noto sans kr";
-  color: #fff;
+  font: 15px/1 "noto sans kr";
+  color: #444;
 }
 .gallery .inner #searchBox .btnSearch {
-  margin-left: 20px;
-  margin-top: -15px;
+  margin-left: 5px;
 }
 .gallery .inner #searchBox .btnSearch i {
-  font-size: 30px;
-  color: #fff;
+  font-size: 25px;
+  color: #444;
   cursor: pointer;
 }
 .gallery .inner .loading {
   width: 80px;
-  position: absolute;
-  top: 75%;
+  position: fixed;
+  top: 50%;
   left: 50%;
   transform: translateX(-50%);
   transition: 0.5s;
@@ -233,13 +199,12 @@ body {
     box-sizing: border-box;
   }
   .gallery .inner #searchBox #search {
-    width: 35%;
+    width: 30%;
   }
   .gallery .inner #searchBox #search::placeholder {
     font: 15px/1 "noto sans kr";
   }
   .gallery .inner #searchBox .btnSearch {
-    margin-left: 20px;
     margin-top: 0px;
   }
   .gallery .inner #searchBox .btnSearch i {
@@ -281,10 +246,14 @@ body {
     width: 40%;
   }
   .gallery .inner #searchBox #search::placeholder {
-    font: 12px/1 "noto sans kr";
+    font: 13px/1 "noto sans kr";
+  }
+  .gallery .inner #searchBox .btnSearch {
+    margin-left: 0px;
   }
   .gallery .inner #searchBox .btnSearch i {
     font-size: 20px;
+    margin-right: 10px;
   }
   .gallery .inner .loading {
     top: 50%;
@@ -310,40 +279,11 @@ body {
   position: relative;
 }
 
-#header_sub #gnbWeb #youtube li a {
-  color: #fff;
-}
-#header_sub #gnbWeb #youtube li:hover a {
-  color: #ccc;
-  transition: 0.5s;
-}
-
 /* content ----------------------------------------- */
 .youtube {
   width: 100%;
   padding: 0 0 100px;
   position: relative;
-}
-.youtube .gif {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  width: auto;
-  min-width: 100%;
-  height: 100%;
-  min-height: auto;
-  z-index: -100;
-  background: url(../img/bg_loop_gradient1.mp4) no-repeat;
-  background-size: cover;
-}
-.youtube .sub_visual .text {
-  border: none;
-}
-.youtube .sub_visual .text p {
-  color: #fff;
-}
-.youtube .sub_visual .text h1 {
-  color: #fff;
 }
 .youtube .inner {
   width: 1180px;
@@ -380,12 +320,16 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  transition: 0.3s;
+}
+.youtube .inner article > a:hover i {
+  font-size: 70px;
 }
 .youtube .inner article:nth-of-type(odd) {
-  margin-top: -30px;
+  margin-top: 50px;
 }
 .youtube .inner article:nth-of-type(even) {
-  margin-top: 100px;
+  margin-top: 180px;
 }
 .youtube .inner article .con {
   width: 85%;
@@ -395,7 +339,7 @@ body {
   text-align: left;
   font: 25px/1.2 "Noto sans kr";
   font-weight: 500;
-  color: #fff;
+  color: #888;
   padding: 30px 0 0;
   cursor: pointer;
 }
@@ -403,7 +347,7 @@ body {
   font: 16px/1 "noto sans kr";
   font-weight: 500;
   text-align: left;
-  color: #fff;
+  color: #aaa;
   padding: 30px 0 0;
 }
 
@@ -537,14 +481,14 @@ body {
 }
 .new .inner ul a {
   display: inline-block;
-  padding: 15px 10px;
+  padding: 13px 30px;
   border: 1px solid #000;
   box-sizing: border-box;
-  font: lighter 23px/1 "arial";
+  font: lighter 16px/1 "arial";
   color: #000;
   text-align: center;
   transition: all 0.3s;
-  letter-spacing: 1.2px;
+  letter-spacing: 1.1px;
 }
 .new .inner .no {
   margin-right: 0%;
@@ -607,7 +551,7 @@ body {
 /* tablet ------------------------------------------------ */
 @media screen and (max-width: 1179px) {
   .new {
-    padding: 0 0 100px;
+    padding: 0 0 50px;
   }
   .new .sub_visual {
     width: 100%;
@@ -631,59 +575,59 @@ body {
     margin-top: 10px;
   }
   .new .inner ul a {
-    padding: 14px 9px;
-    font: lighter 19px/1 "arial";
+    padding: 14px 28px;
+    font: lighter 15px/1 "arial";
   }
   .new .inner .wrap {
     width: 100%;
   }
   .new .inner .wrap article {
     width: 50%;
-    height: 500px;
+    height: 400px;
   }
   .new .inner .wrap article img {
-    object-fit: cover;
+    object-fit: contain;
   }
 }
 /* mobile ---------------------------------------------- */
 @media screen and (max-width: 539px) {
   .new {
-    padding: 0 0 50px;
-  }
-  .new .sub_visual {
-    height: 300px;
-  }
-  .new .sub_visual .title h1 {
-    font: bold 7vmin/1 "arial";
-  }
-  .new .sub_visual .title p {
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -30%);
-    font: 2.5vmin/1.2 "arial";
-    color: #fff;
+    padding: 0px;
   }
   .new .inner {
     width: 100%;
-    padding: 0px;
-  }
-  .new .inner ul {
-    width: 60%;
   }
   .new .inner p {
-    padding: 50px;
+    padding: 70px 100px;
+    text-align: center;
     font: lighter 2.5vmin/1.5 "arial";
     color: #333;
+    letter-spacing: 1px;
   }
-  .new .inner p::after {
-    width: 140px;
+  .new .inner ul {
+    width: 70%;
+    flex-wrap: wrap;
+    margin: 50px auto;
+  }
+  .new .inner ul li {
+    margin-top: 10px;
+  }
+  .new .inner ul a {
+    padding: 14px 28px;
+    font: lighter 15px/1 "arial";
   }
   .new .inner .wrap {
     width: 100%;
   }
   .new .inner .wrap article {
     width: 100%;
+    height: 350px;
+    margin-bottom: 100px;
+  }
+  .new .inner .wrap article img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
 }
 /* content ----------------------------------------- */
@@ -1546,7 +1490,8 @@ body {
 }
 #header_sub .inner img {
   display: block;
-  width: 60px;
+  width: 120px;
+  margin-left: 7px;
 }
 #header_sub .inner #gnbWeb {
   display: flex;
@@ -1566,7 +1511,7 @@ body {
   margin-right: 0;
 }
 #header_sub .inner #gnbWeb .li_left li a {
-  color: #333;
+  color: #000;
 }
 #header_sub .inner #gnbWeb .li_right {
   position: absolute;
@@ -1581,7 +1526,7 @@ body {
   margin-left: 0;
 }
 #header_sub .inner #gnbWeb .li_right li a {
-  color: #333;
+  color: #000;
 }
 #header_sub .inner #gnbWeb li {
   float: left;
@@ -1725,18 +1670,6 @@ body {
   width: 100%;
   padding: 0 0 150px;
 }
-.content .gif {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  width: auto;
-  min-width: 100%;
-  height: 100%;
-  min-height: auto;
-  z-index: -100;
-  background: url(../img/bg_loop_gradient1.mp4) no-repeat;
-  background-size: cover;
-}
 .content .sub_visual {
   width: 1180px;
   margin: 0px auto;
@@ -1762,9 +1695,9 @@ body {
   box-sizing: border-box;
 }
 .content .sub_visual .text h1 {
-  font: 55px/1.3 "noto sans kr";
+  font: 40px/1 "noto sans kr";
   font-weight: 500;
-  color: #000;
+  color: #333;
   letter-spacing: 0.5px;
   text-align: left;
 }
@@ -1838,11 +1771,10 @@ body {
 
 /* tablet ------------------------------------------------ */
 @media screen and (max-width: 1179px) {
-  /* header ----------------------------------- */
   #header_sub .inner {
     width: 100%;
     position: relative;
-    /* 햄버거 버튼 & 모바일메뉴 ----- */
+    /* 햄버거 버튼 & 모바일메뉴 ---- */
   }
   #header_sub .inner > h1 {
     position: absolute;
@@ -1862,18 +1794,6 @@ body {
   }
 
   /* content ------------------------------------- */
-  .content .gif {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    width: auto;
-    min-width: 100%;
-    height: auto;
-    min-height: 100%;
-    z-index: -100;
-    background: url(../img/bg_loop_gradient1.mp4) no-repeat;
-    background-size: cover;
-  }
   .content .sub_visual {
     width: 100%;
     margin: 0px auto;
@@ -1892,23 +1812,19 @@ body {
   }
   .content .sub_visual .text p {
     font: 45px/1 "Italianno";
-    color: #000;
     letter-spacing: 0.5px;
     text-align: left;
     padding-right: 70px;
     box-sizing: border-box;
   }
   .content .sub_visual .text h1 {
-    font: 55px/1.3 "noto sans kr";
-    font-weight: 500;
-    color: #000;
+    font: 40px/1.3 "noto sans kr";
     letter-spacing: 0.5px;
     text-align: left;
   }
   .content .inner {
     width: 1180px;
     margin: 0 auto;
-    /* 최소높이 */
   }
   .content .inner p {
     padding: 70px 100px;
@@ -1931,10 +1847,7 @@ body {
   /* header ---------------------------------- */
   #header_sub .inner {
     width: 100%;
-    /* 햄버거 버튼 & 모바일메뉴 ----------- */
-  }
-  #header_sub .inner > h1 {
-    left: 30px;
+    /* 햄버거 버튼 & 모바일메뉴 ------ */
   }
   #header_sub .inner #gnbWeb {
     display: none;
@@ -1951,18 +1864,32 @@ body {
     padding: 0 0 50px;
   }
   .content .sub_visual {
-    height: 300px;
+    width: 100%;
+    margin: 0px auto;
+    position: relative;
+    text-align: center;
   }
-  .content .sub_visual .title h1 {
-    font: bold 7vmin/1 "arial";
+  .content .sub_visual .text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 70px 0px;
+    box-sizing: border-box;
+    width: 60%;
+    border-bottom: 1px solid #666;
   }
-  .content .sub_visual .title p {
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -30%);
-    font: 2.5vmin/1.2 "arial";
-    color: #fff;
+  .content .sub_visual .text p {
+    font: 45px/1 "Italianno";
+    letter-spacing: 0.5px;
+    text-align: left;
+    padding-right: 25px;
+    box-sizing: border-box;
+  }
+  .content .sub_visual .text h1 {
+    font: 35px/1.3 "noto sans kr";
+    letter-spacing: 0px;
+    text-align: left;
   }
   .content .inner {
     min-height: 400px;
@@ -2018,14 +1945,14 @@ body {
 }
 .new .inner ul a {
   display: inline-block;
-  padding: 15px 10px;
+  padding: 13px 30px;
   border: 1px solid #000;
   box-sizing: border-box;
-  font: lighter 23px/1 "arial";
+  font: lighter 16px/1 "arial";
   color: #000;
   text-align: center;
   transition: all 0.3s;
-  letter-spacing: 1.2px;
+  letter-spacing: 1.1px;
 }
 .new .inner .no {
   margin-right: 0%;
@@ -2088,7 +2015,7 @@ body {
 /* tablet ------------------------------------------------ */
 @media screen and (max-width: 1179px) {
   .new {
-    padding: 0 0 100px;
+    padding: 0 0 50px;
   }
   .new .sub_visual {
     width: 100%;
@@ -2112,71 +2039,63 @@ body {
     margin-top: 10px;
   }
   .new .inner ul a {
-    padding: 14px 9px;
-    font: lighter 19px/1 "arial";
+    padding: 14px 28px;
+    font: lighter 15px/1 "arial";
   }
   .new .inner .wrap {
     width: 100%;
   }
   .new .inner .wrap article {
     width: 50%;
-    height: 500px;
+    height: 400px;
   }
   .new .inner .wrap article img {
-    object-fit: cover;
+    object-fit: contain;
   }
 }
 /* mobile ---------------------------------------------- */
 @media screen and (max-width: 539px) {
   .new {
-    padding: 0 0 50px;
-  }
-  .new .sub_visual {
-    height: 300px;
-  }
-  .new .sub_visual .title h1 {
-    font: bold 7vmin/1 "arial";
-  }
-  .new .sub_visual .title p {
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -30%);
-    font: 2.5vmin/1.2 "arial";
-    color: #fff;
+    padding: 0px;
   }
   .new .inner {
     width: 100%;
-    padding: 0px;
-  }
-  .new .inner ul {
-    width: 60%;
   }
   .new .inner p {
-    padding: 50px;
+    padding: 70px 100px;
+    text-align: center;
     font: lighter 2.5vmin/1.5 "arial";
     color: #333;
+    letter-spacing: 1px;
   }
-  .new .inner p::after {
-    width: 140px;
+  .new .inner ul {
+    width: 70%;
+    flex-wrap: wrap;
+    margin: 50px auto;
+  }
+  .new .inner ul li {
+    margin-top: 10px;
+  }
+  .new .inner ul a {
+    padding: 14px 28px;
+    font: lighter 15px/1 "arial";
   }
   .new .inner .wrap {
     width: 100%;
   }
   .new .inner .wrap article {
     width: 100%;
+    height: 350px;
+    margin-bottom: 100px;
+  }
+  .new .inner .wrap article img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
 }
 body {
   position: relative;
-}
-
-#header_sub #gnbWeb #youtube li a {
-  color: #fff;
-}
-#header_sub #gnbWeb #youtube li:hover a {
-  color: #ccc;
-  transition: 0.5s;
 }
 
 /* content ----------------------------------------- */
@@ -2184,27 +2103,6 @@ body {
   width: 100%;
   padding: 0 0 100px;
   position: relative;
-}
-.youtube .gif {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  width: auto;
-  min-width: 100%;
-  height: 100%;
-  min-height: auto;
-  z-index: -100;
-  background: url(../img/bg_loop_gradient1.mp4) no-repeat;
-  background-size: cover;
-}
-.youtube .sub_visual .text {
-  border: none;
-}
-.youtube .sub_visual .text p {
-  color: #fff;
-}
-.youtube .sub_visual .text h1 {
-  color: #fff;
 }
 .youtube .inner {
   width: 1180px;
@@ -2241,12 +2139,16 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  transition: 0.3s;
+}
+.youtube .inner article > a:hover i {
+  font-size: 70px;
 }
 .youtube .inner article:nth-of-type(odd) {
-  margin-top: -30px;
+  margin-top: 50px;
 }
 .youtube .inner article:nth-of-type(even) {
-  margin-top: 100px;
+  margin-top: 180px;
 }
 .youtube .inner article .con {
   width: 85%;
@@ -2256,7 +2158,7 @@ body {
   text-align: left;
   font: 25px/1.2 "Noto sans kr";
   font-weight: 500;
-  color: #fff;
+  color: #888;
   padding: 30px 0 0;
   cursor: pointer;
 }
@@ -2264,7 +2166,7 @@ body {
   font: 16px/1 "noto sans kr";
   font-weight: 500;
   text-align: left;
-  color: #fff;
+  color: #aaa;
   padding: 30px 0 0;
 }
 
@@ -2366,44 +2268,11 @@ body {
     transform: scale(0.6);
   }
 }
-body {
-  position: relative;
-}
-
-#header_sub #gnbWeb #gallery li a {
-  color: #fff;
-}
-#header_sub #gnbWeb #gallery li:hover a {
-  color: #ccc;
-  transition: 0.5s;
-}
-
 /* content ----------------------------------------- */
 .gallery {
   width: 100%;
   padding: 0 0 100px;
   position: relative;
-}
-.gallery .gif {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  width: auto;
-  min-width: 100%;
-  height: 100%;
-  min-height: auto;
-  z-index: -100;
-  background: url(../img/bg_loop_gradient1.mp4) no-repeat;
-  background-size: cover;
-}
-.gallery .sub_visual .text {
-  border: none;
-}
-.gallery .sub_visual .text p {
-  color: #fff;
-}
-.gallery .sub_visual .text h1 {
-  color: #fff;
 }
 .gallery .inner {
   width: 1180px;
@@ -2411,41 +2280,40 @@ body {
 }
 .gallery .inner #searchBox {
   width: 100%;
-  padding: 0px 0px 80px;
+  margin: 100px 0 20px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
 }
 .gallery .inner #searchBox #search {
-  width: 25%;
+  width: 20%;
   height: 50px;
   border-left-width: 0;
   border-right-width: 0;
   border-top-width: 0;
   border-bottom-width: 1;
-  border-bottom: 3px solid #fff;
+  border-bottom: 3px solid #444;
   background: transparent;
 }
 .gallery .inner #searchBox #search:focus {
   outline: none;
 }
 .gallery .inner #searchBox #search::placeholder {
-  font: 17px/1 "noto sans kr";
-  color: #fff;
+  font: 15px/1 "noto sans kr";
+  color: #444;
 }
 .gallery .inner #searchBox .btnSearch {
-  margin-left: 20px;
-  margin-top: -15px;
+  margin-left: 5px;
 }
 .gallery .inner #searchBox .btnSearch i {
-  font-size: 30px;
-  color: #fff;
+  font-size: 25px;
+  color: #444;
   cursor: pointer;
 }
 .gallery .inner .loading {
   width: 80px;
-  position: absolute;
-  top: 75%;
+  position: fixed;
+  top: 50%;
   left: 50%;
   transform: translateX(-50%);
   transition: 0.5s;
@@ -2560,13 +2428,12 @@ body {
     box-sizing: border-box;
   }
   .gallery .inner #searchBox #search {
-    width: 35%;
+    width: 30%;
   }
   .gallery .inner #searchBox #search::placeholder {
     font: 15px/1 "noto sans kr";
   }
   .gallery .inner #searchBox .btnSearch {
-    margin-left: 20px;
     margin-top: 0px;
   }
   .gallery .inner #searchBox .btnSearch i {
@@ -2608,10 +2475,14 @@ body {
     width: 40%;
   }
   .gallery .inner #searchBox #search::placeholder {
-    font: 12px/1 "noto sans kr";
+    font: 13px/1 "noto sans kr";
+  }
+  .gallery .inner #searchBox .btnSearch {
+    margin-left: 0px;
   }
   .gallery .inner #searchBox .btnSearch i {
     font-size: 20px;
+    margin-right: 10px;
   }
   .gallery .inner .loading {
     top: 50%;
@@ -3489,7 +3360,8 @@ body {
 }
 #header .inner img {
   display: block;
-  width: 60px;
+  width: 120px;
+  margin-left: 7px;
 }
 #header .inner #gnbWeb {
   display: flex;
@@ -4242,7 +4114,7 @@ body {
   margin-bottom: 10px;
 }
 .aside_index .popUp .inner h2 img {
-  width: 80%;
+  width: 60%;
 }
 .aside_index .popUp .inner p {
   width: 100%;
@@ -4252,13 +4124,14 @@ body {
 }
 .aside_index .popUp .inner form {
   margin: 30px auto 0;
-  width: 70%;
+  width: 60%;
+  font-size: 0;
 }
 .aside_index .popUp .inner form #email {
   width: 65%;
   height: 40px;
   border: none;
-  margin-right: 10px;
+  margin-right: 0px;
 }
 .aside_index .popUp .inner form #email::placeholder {
   font: 11px/1 "arial";
@@ -4276,6 +4149,17 @@ body {
   color: #fff;
   border: none;
   cursor: pointer;
+}
+.aside_index .popUp .inner form .text-wrap {
+  display: inline-flex;
+  margin-top: 30px;
+  text-align: left;
+}
+.aside_index .popUp .inner form .text-wrap label {
+  font: lighter 12px/1 "noto sans kr";
+  color: #fff;
+  letter-spacing: 0.1px;
+  margin-left: 10px;
 }
 .aside_index .popUp .inner .close_img {
   transform: scale(0.8);
@@ -4365,6 +4249,7 @@ body {
   }
   #header .inner > h1 img {
     display: block;
+    width: 80px;
     content: url(../img/logo3.png);
   }
   #header .inner #gnbWeb {

@@ -1,3 +1,4 @@
+
 //#subVisual - slider
 const wrap = document.querySelector("#subVisual .wrap_2")
 const slider = wrap.querySelector('.slider');
@@ -9,7 +10,7 @@ let enableClick = true;
 const lastEl = panel.lastElementChild;
 panel.prepend(lastEl);
 
-next.addEventListener('click', (e) => {
+next.addEventListener("click", (e) => {
     e.preventDefault();
 
     const firstEl = panel.firstElementChild;
