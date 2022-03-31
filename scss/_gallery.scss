@@ -122,7 +122,7 @@
     }
   }
 
-  .pop{
+  #pop{
     width: 100%; height: 100vh;
     background: rgba(0,0,0,.85);
     position: fixed;
@@ -144,7 +144,7 @@
         position: absolute;
         top: 40px; right: 40px;
         cursor:pointer;
-        z-index: 100;
+        z-index: 200;
         img{
             transform: scale(0.7);
         }

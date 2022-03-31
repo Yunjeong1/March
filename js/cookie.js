@@ -48,7 +48,7 @@ btnClose.addEventListener("click",e=>{
     })
 
     let isChecked = popUp.querySelector("input[type=checkbox]").checked;
-    if(isChecked) setCookie("today","done",7);
+    if(isChecked) setCookie("today","done",1);
 })
 
 function setCookie(name,val,due){

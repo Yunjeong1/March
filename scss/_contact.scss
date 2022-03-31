@@ -1,3 +1,141 @@
-.content{
-    
+.contact{
+
+    .inner{
+        width: 1180px;
+        margin: 100px auto;
+        position: relative;
+        #map{
+            width:100%; height: 450px;
+            margin: 50px 0 40px; 
+            border: 2px solid #000;
+        }
+        .branch{
+            width: 100%;
+            padding: 0;
+            &::after{
+                content: ''; display: block; clear: both;
+            }
+            article{
+                width: 380px; height: 290px;
+                float: left;
+                margin-right: 20px;
+                text-align: center;
+                border: 1px solid #666;
+                padding: 35px 20px 40px;
+                box-sizing: border-box;
+                position: relative;
+                transition: background-color 0.5s;
+                &.on{
+                    background-color: #eee;
+                }
+                &:last-child{
+                    margin-right: 0;
+                }
+                h2{
+                    font: bold 25px/1 'noto sans kr';
+                    padding: 0;
+                    margin-bottom: 30px;
+                }
+                p{
+                    padding: 0;
+                    font: 15px/1.2 'noto sans kr';
+                    letter-spacing: 0.5px;
+                    margin-bottom: 10px;
+                }
+                a{
+                    position: absolute;
+                    bottom: 45px; left: 50%;
+                    transform: translateX(-50%);
+                    width: 150px; height: 45px;
+                    background: #000;
+                    color: #fff;
+                    border-radius: 50px;
+                    font: 13px/45px 'noto sans kr';
+                }
+            }
+        }
+    }
+}
+
+
+
+
+/* tablet ---------------------------------- */
+@media screen and (max-width: $tablet){
+    .contact{
+        .inner{
+            width: 100%;
+            padding: 0 30px;
+            box-sizing: border-box;
+            #map{
+                width:100%; height: 400px;
+                margin: 40px 0 35px; 
+            }
+            .branch{
+                position: relative;
+                article{
+                    width: 32%; height: 270px;
+                    margin-right: 2%;
+                    padding: 0px;
+                    box-sizing: border-box;
+                    position: relative;
+                    h2{
+                        font: bold 20px/1 'noto sans kr';
+                        margin: 30px 0;
+                    }
+                    p{
+                        padding: 0 15px;
+                        font: 13px/1.2 'noto sans kr';
+                        letter-spacing: 0px;
+                    }
+                    a{
+                        bottom: 35px; 
+                        width: 100px; height: 40px;
+                        font: 12px/40px 'noto sans kr';
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+/* mobile ---------------------------------- */
+@media screen and (max-width: $mobile){
+    .contact{
+        .inner{
+            .branch{
+                position: relative;
+                article{
+                    width: 85%; height: 230px;
+                    margin-right: 0%;
+                    border: none;
+                    border-top: 1px solid #666;
+                    border-bottom: 1px solid #666;
+                    left: 50%; 
+                    transform: translateX(-50%);
+                    &:first-child{
+                        border-top: 2px solid #666;
+                    }
+                    h2{
+                        font: bold 20px/1 'noto sans kr';
+                        margin: 30px 0;
+                    }
+                    p{
+                        padding: 0px 10px;
+                        margin-bottom: 5px;
+                        font: 12px/1.2 'noto sans kr';
+                        letter-spacing: 0px;
+                    }
+                    a{
+                        bottom: 30px; 
+                        width: 100px; height: 40px;
+                        font: 12px/40px 'noto sans kr';
+                    }
+                }
+            }
+        }
+    }
 }

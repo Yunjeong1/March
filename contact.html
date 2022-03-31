@@ -6,10 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=23b20b5b3ceac51dc6600c88ae8262a3"></script>
     <link rel="shortcut icon" href="favicon/android-icon-36x36.png" image/x-icon">
     <script src="https://kit.fontawesome.com/de418517c9.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
     <script defer src="js/header.js"></script>
+    <script defer src="js/contact.js"></script>
 </head>
 
 <body>
@@ -22,6 +24,7 @@
                     <div class="li_left">
                         <li><a href="gallery.html">Gallery</a></li>
                         <li><a href="youtube.html">Youtube</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </div>
                     <div class="li_right">
                         <li><a href="new.html">New</a></li>
@@ -48,6 +51,7 @@
                 <ul id="gnbMo">
                     <li><a href="gallery.html">GALLERY</a></li>
                     <li><a href="youtube.html">YOUTUBE</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
                     <li><a href="new.html">NEW</a></li>
                     <li><a href="community.html">COMMUNITY</a></li>
                     <li><a href="joinLife.html">JOIN LIFE</a></li>
@@ -57,23 +61,51 @@
     </header>
 
     <section class="content contact">
-        <div class="gif">
-            <video src="img/bg_loop_gradient1.mp4" autoplay muted loop></video>
-        </div>
+
         <div class="sub_visual">
             <div class="text">
                 <div class="small">
-                    <p>02</p>
+                    <p>03</p>
                 </div>
                 <div class="title">
                     <h1>
-                        Contact Us
+                        Contact
                     </h1>
                 </div>
             </div>
         </div>
         <div class="inner">
-            <!-- 컨텐츠가 들어갈 부분 -->
+            <div id="map"></div>
+        
+            <div class="branch">
+                <article class="on">
+                    <h2>서울 명동점</h2>
+                    <p>서울 명동 8길 27 엠플라자</p>
+                    <p>02-536-2795</p>
+                    <p>10am-10pm</p>
+                    <span class="on" data-index="0">
+                        <a href="#">위치보기</a>
+                    </span>
+                </article>
+                <article>
+                    <h2>서울 강남점</h2>
+                    <p>서울 강남대로 447 남서울빌딩</p>
+                    <p>02-536-2795</p>
+                    <p>10am-10pm</p>
+                    <span data-index="1">
+                        <a href="#">위치보기</a>
+                    </span>
+                </article>
+                <article>
+                    <h2>서울 잠실점</h2>
+                    <p>서울 롯데 잠실 올림픽로 240 롯데백화점</p>
+                    <p>02-536-2795</p>
+                    <p>10am-10pm</p>
+                    <span data-index="2">
+                        <a href="#">위치보기</a>
+                    </span>
+                </article>
+            </div>
         </div>
 
     </section>

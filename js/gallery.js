@@ -100,7 +100,7 @@ frame.addEventListener("click",e=>{
     if(target == e.target){
         let imgSrc = target.parentElement.getAttribute("href");
         let pop = document.createElement("aside");
-        pop.classList.add("pop");
+        pop.setAttribute("id","pop");
         let pops = `
                 <div class="con">
                     <img src="${imgSrc}">
@@ -117,7 +117,7 @@ frame.addEventListener("click",e=>{
 frame.addEventListener("click",e=>{
     e.preventDefault();
 
-    let pop = body.querySelector(".pop");
+    let pop = body.querySelector("#pop");
     if(pop){
         let close = pop.querySelector(".popClose img");
         if(e.target == close){

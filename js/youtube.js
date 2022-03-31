@@ -18,7 +18,7 @@ fetch(url)
     items.forEach(item=>{
         let title = item.snippet.title;
         let descrip = item.snippet.description;
-        if(title.length > 40) title = title.substr(0,40)+"...";
+        if(title.length > 39) title = title.substr(0,39)+"...";
 
         let date = item.snippet.publishedAt.split("T")[0];
 

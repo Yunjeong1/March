@@ -141,11 +141,11 @@
         .prev{
             float: left;
             width: 30px; height: 30px;
-            font-size: 20px; color: #fff;
+            font-size: 12px; color: #fff;
             background: #000;
             text-align: center;
             line-height: 30px;
-            transition: background 0.3s;
+            transition: background-color 0.3s;
             &:hover{
               color: #000;
               border: 1px solid #000;
@@ -155,7 +155,7 @@
         .next{
             float: right;
             width: 30px; height: 30px;
-            font-size: 20px; color: #fff;
+            font-size: 12px; color: #fff;
             background: #000;
             text-align: center;
             line-height: 30px;
@@ -206,7 +206,7 @@
         margin-bottom: 20px;
         float: left;
         position: relative;
-        transition: all 0.3s;
+        transition: all 0.2s;
         &:hover{
           &::after{
             content: ''; display: block;
