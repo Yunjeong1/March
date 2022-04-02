@@ -6,7 +6,7 @@
     .inner{
         width: 1180px;
         >h2{
-          font: 30px/1 'Noto Sans KR';
+          font: 30px/1 'arial';
           font-weight: 500;
           color: #000;
           letter-spacing: 1px;
@@ -190,7 +190,7 @@
         }
       }
     }
-  }
+  
 
     .inner2{
       padding-top: 50px;
@@ -285,7 +285,7 @@
         }
       }
     }
-
+  }
 
 
   /* tablet --------------------------------------- */
@@ -420,7 +420,7 @@
         margin-right: 0%;
         margin-bottom: 10px;
         .text{
-          bottom: 30%; left: 10%;
+          bottom: 10%; left: 10%;
         }
         &:nth-of-type(9){
           margin-bottom: 10px;

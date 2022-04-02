@@ -1,5 +1,5 @@
 var mapContainer = document.getElementById('map'); 
-const contact = document.querySelector(".content");
+const contact = document.querySelector(".contact");
 const articles = contact.querySelectorAll("article");
 const branch_btns = contact.querySelectorAll("span"); 
 var drag = true; 

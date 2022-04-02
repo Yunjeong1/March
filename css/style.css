@@ -159,7 +159,7 @@ fieldset {
   opacity: 1;
 }
 
-#pop {
+.pop {
   width: 100%;
   height: 100vh;
   background: rgba(0, 0, 0, 0.85);
@@ -171,23 +171,22 @@ fieldset {
   justify-content: center;
   align-items: center;
 }
-#pop .con {
+.pop .con {
   width: 100%;
   height: 100%;
 }
-#pop .con > img {
+.pop .con > img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
-#pop .popClose {
+.pop .popClose {
   position: absolute;
   top: 40px;
   right: 40px;
   cursor: pointer;
-  z-index: 200;
 }
-#pop .popClose img {
+.pop .popClose img {
   transform: scale(0.7);
 }
 
@@ -411,12 +410,12 @@ body {
   }
   .youtube .inner {
     width: 100%;
-    padding: 0 30px;
+    padding: 80px 30px 0;
     box-sizing: border-box;
   }
   .youtube .inner article {
     width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
   }
   .youtube .inner article > a {
     width: 100%;
@@ -449,27 +448,125 @@ body {
     transform: scale(0.6);
   }
 }
+.contact {
+  box-sizing: border-box;
+}
 .contact .inner {
   width: 1180px;
-  margin: 100px auto;
+  margin: 50px auto;
   position: relative;
 }
-.contact .inner #map {
+.contact .inner h2 {
+  font: 30px/1 "arial";
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+}
+.contact .inner1 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding-top: 30px;
+}
+.contact .inner1 > h2 {
+  width: 40%;
+  font: 40px/1.1 "arial";
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+.contact .inner1 table tr {
+  border-top: 1px solid #ddd;
+}
+.contact .inner1 table tr th {
+  font: 14px/1 "noto sans kr";
+  font-weight: 600;
+  color: #000;
+  text-align: left;
+  padding: 21px 0px 21px 0;
+}
+.contact .inner1 table tr th:nth-of-type(2) {
+  border-left: 1px solid #ddd;
+  padding-left: 20px;
+}
+.contact .inner1 table tr th:last-child {
+  border-right: none;
+}
+.contact .inner1 table tr th label {
+  font: 16px/1 "Noto Sans KR";
+  color: #000;
+  font-weight: 500;
+}
+.contact .inner1 table tr th:last-child {
+  text-align: center;
+}
+.contact .inner1 table tr th input[type=submit] {
+  display: inline-block;
+  width: 150px;
+  height: 45px;
+  background: transparent;
+  text-align: center;
+  vertical-align: top;
+  color: #000;
+  border-radius: 50px;
+  border: 1px solid #000;
+  font: 14px/45px "noto sans kr";
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.contact .inner1 table tr th input[type=submit]:hover {
+  color: #fff;
+  background-color: #000;
+}
+.contact .inner1 table tr td input[type=text] {
+  padding-bottom: 0px;
+  box-sizing: border-box;
+  border: none;
+  background: transparent;
+  width: 100%;
+}
+.contact .inner1 table tr td input[type=text]::placeholder {
+  font: 14px/1 "noto sans kr";
+  font-weight: 400;
+  color: #aaa;
+}
+.contact .inner1 table tr td input[type=text]#lastname {
+  padding-left: 50px;
+}
+.contact .inner1 table tr td #comments {
+  width: 100%;
+  height: 200px;
+  font: 14px/1 "noto sans kr";
+  font-weight: 400;
+  resize: none;
+  border: none;
+  padding: 20px 20px 20px 0px;
+  background: none;
+}
+.contact .inner1 table tr td #comments::placeholder {
+  color: #aaa;
+}
+.contact .inner2 {
+  position: relative;
+  width: 1180px;
+}
+.contact .inner2 #map {
   width: 100%;
   height: 450px;
-  margin: 50px 0 40px;
-  border: 2px solid #000;
+  margin: 0px auto 40px;
 }
-.contact .inner .branch {
+.contact .inner2 .branch {
   width: 100%;
   padding: 0;
+  margin: 0 auto;
 }
-.contact .inner .branch::after {
+.contact .inner2 .branch::after {
   content: "";
   display: block;
   clear: both;
 }
-.contact .inner .branch article {
+.contact .inner2 .branch article {
   width: 380px;
   height: 290px;
   float: left;
@@ -481,28 +578,34 @@ body {
   position: relative;
   transition: background-color 0.5s;
 }
-.contact .inner .branch article.on {
+.contact .inner2 .branch article.on {
   background-color: #eee;
 }
-.contact .inner .branch article:last-child {
+.contact .inner2 .branch article:last-child {
   margin-right: 0;
 }
-.contact .inner .branch article h2 {
-  font: bold 25px/1 "noto sans kr";
+.contact .inner2 .branch article h3 {
+  font: bold 20px/1 "noto sans kr";
   padding: 0;
   margin-bottom: 30px;
 }
-.contact .inner .branch article p {
+.contact .inner2 .branch article p {
   padding: 0;
   font: 15px/1.2 "noto sans kr";
   letter-spacing: 0.5px;
   margin-bottom: 10px;
 }
-.contact .inner .branch article a {
+.contact .inner2 .branch article p i {
+  margin-right: 15px;
+  color: #555;
+  font-size: 13px;
+}
+.contact .inner2 .branch article a {
   position: absolute;
-  bottom: 45px;
+  bottom: 15%;
   left: 50%;
   transform: translateX(-50%);
+  display: inline-block;
   width: 150px;
   height: 45px;
   background: #000;
@@ -517,16 +620,46 @@ body {
     width: 100%;
     padding: 0 30px;
     box-sizing: border-box;
+    position: relative;
   }
-  .contact .inner #map {
+  .contact .inner h2 {
+    font: 25px/1 "arial";
+  }
+  .contact .inner1 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding-top: 30px;
+  }
+  .contact .inner1 h2 {
+    width: 50%;
+    font: 5vmin/1.1 "arial";
+    font-weight: 600;
+  }
+  .contact .inner1 table {
+    margin-top: 20px;
+  }
+  .contact .inner1 table th {
+    font: 13px/1 "noto sans kr" !important;
+  }
+  .contact .inner1 table td input[type=text]#username {
+    width: 100px;
+  }
+  .contact .inner1 table td input[type=text]#lastname {
+    width: 100px;
+    padding-left: 20px !important;
+  }
+  .contact .inner2 #map {
     width: 100%;
     height: 400px;
     margin: 40px 0 35px;
   }
-  .contact .inner .branch {
+  .contact .inner2 .branch {
     position: relative;
+    margin: 0 auto;
   }
-  .contact .inner .branch article {
+  .contact .inner2 .branch article {
     width: 32%;
     height: 270px;
     margin-right: 2%;
@@ -534,55 +667,81 @@ body {
     box-sizing: border-box;
     position: relative;
   }
-  .contact .inner .branch article h2 {
+  .contact .inner2 .branch article h3 {
     font: bold 20px/1 "noto sans kr";
     margin: 30px 0;
   }
-  .contact .inner .branch article p {
+  .contact .inner2 .branch article p {
     padding: 0 15px;
     font: 13px/1.2 "noto sans kr";
     letter-spacing: 0px;
   }
-  .contact .inner .branch article a {
+  .contact .inner2 .branch article a {
     bottom: 35px;
-    width: 100px;
+    width: 120px;
     height: 40px;
     font: 12px/40px "noto sans kr";
   }
 }
 /* mobile ---------------------------------- */
 @media screen and (max-width: 539px) {
-  .contact .inner .branch {
+  .contact .inner1 {
+    margin-top: 10px;
+  }
+  .contact .inner1 h2 {
+    width: 60%;
+    margin: 0 auto;
+    font: 5.5vmin/1.1 "arial";
+    font-weight: 600;
+  }
+  .contact .inner1 table {
+    margin-top: 40px;
+  }
+  .contact .inner1 table tr th {
+    display: none;
+  }
+  .contact .inner1 table tr th:last-child {
+    display: block;
+  }
+  .contact .inner1 table tr td {
+    padding-bottom: 30px;
+  }
+  .contact .inner1 table tr td:nth-of-type(2) {
+    border-left: 1px solid #ddd;
+  }
+  .contact .inner1 table tr td input[type=text]#lastname {
+    padding-left: 20px;
+  }
+  .contact .inner2 {
+    margin-top: 70px;
+  }
+  .contact .inner2 #map {
+    margin-bottom: 45px;
+  }
+  .contact .inner2 .branch {
     position: relative;
   }
-  .contact .inner .branch article {
+  .contact .inner2 .branch article {
     width: 85%;
     height: 230px;
     margin-right: 0%;
+    margin-bottom: 30px;
     border: none;
     border-top: 1px solid #666;
     border-bottom: 1px solid #666;
     left: 50%;
     transform: translateX(-50%);
   }
-  .contact .inner .branch article:first-child {
-    border-top: 2px solid #666;
+  .contact .inner2 .branch article h3 {
+    font: bold 18px/1 "noto sans kr";
   }
-  .contact .inner .branch article h2 {
-    font: bold 20px/1 "noto sans kr";
-    margin: 30px 0;
-  }
-  .contact .inner .branch article p {
+  .contact .inner2 .branch article p {
     padding: 0px 10px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     font: 12px/1.2 "noto sans kr";
-    letter-spacing: 0px;
   }
-  .contact .inner .branch article a {
-    bottom: 30px;
-    width: 100px;
-    height: 40px;
-    font: 12px/40px "noto sans kr";
+  .contact .inner2 .branch article a {
+    bottom: 28px;
   }
 }
 /* content ----------------------------------------- */
@@ -771,7 +930,7 @@ body {
   width: 1180px;
 }
 .community .inner > h2 {
-  font: 30px/1 "Noto Sans KR";
+  font: 30px/1 "arial";
   font-weight: 500;
   color: #000;
   letter-spacing: 1px;
@@ -950,19 +1109,18 @@ body {
   background: #000;
   color: #fff;
 }
-
-.inner2 {
+.community .inner2 {
   padding-top: 50px;
 }
-.inner2 h2 {
+.community .inner2 h2 {
   padding: 80px 0 50px !important;
 }
-.inner2 .wrap::after {
+.community .inner2 .wrap::after {
   content: "";
   display: block;
   clear: both;
 }
-.inner2 article {
+.community .inner2 article {
   width: 280px;
   height: 300px;
   margin-right: 20px;
@@ -971,7 +1129,7 @@ body {
   position: relative;
   transition: all 0.2s;
 }
-.inner2 article:hover::after {
+.community .inner2 article:hover::after {
   content: "";
   display: block;
   width: 100%;
@@ -985,65 +1143,65 @@ body {
   z-index: 1;
   transition: all 0.3s;
 }
-.inner2 article:hover .text {
+.community .inner2 article:hover .text {
   bottom: 100px;
   left: 50px;
   opacity: 1;
   z-index: 10;
   transition: all 0.5s;
 }
-.inner2 article .text {
+.community .inner2 article .text {
   position: absolute;
   bottom: -200px;
   left: 50px;
   opacity: 0;
 }
-.inner2 article .text h4 {
+.community .inner2 article .text h4 {
   font: 30px/1 "Cormorant Garamond";
   color: #fff;
   margin-bottom: 10px;
 }
-.inner2 article .text h5 {
+.community .inner2 article .text h5 {
   display: block;
   font: lighter 11px/1 "arial";
   color: #fff;
   letter-spacing: 0.2em;
 }
-.inner2 article:nth-of-type(7):hover::after {
+.community .inner2 article:nth-of-type(7):hover::after {
   display: none;
 }
-.inner2 article:nth-of-type(12):hover .text {
+.community .inner2 article:nth-of-type(12):hover .text {
   display: none;
 }
-.inner2 article:nth-of-type(4n) {
+.community .inner2 article:nth-of-type(4n) {
   margin-right: 0;
 }
-.inner2 article:nth-of-type(9) {
+.community .inner2 article:nth-of-type(9) {
   margin-bottom: 0;
 }
-.inner2 article:nth-of-type(10) {
+.community .inner2 article:nth-of-type(10) {
   margin-bottom: 0;
 }
-.inner2 article:nth-of-type(11) {
+.community .inner2 article:nth-of-type(11) {
   margin-bottom: 0;
 }
-.inner2 article:nth-of-type(12) {
+.community .inner2 article:nth-of-type(12) {
   margin-bottom: 0;
 }
-.inner2 article img {
+.community .inner2 article img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border: 0;
 }
-.inner2 article h3 {
+.community .inner2 article h3 {
   font: lighter 25px/1.2 "Cormorant Garamond";
   color: #000;
   margin-top: 35%;
   padding-bottom: 30px;
   padding-left: 30px;
 }
-.inner2 article a {
+.community .inner2 article a {
   padding: 13px 23px;
   font: 11px/1 "arial";
   letter-spacing: 1.5px;
@@ -1183,7 +1341,7 @@ body {
     margin-bottom: 10px;
   }
   .inner2 article .text {
-    bottom: 30%;
+    bottom: 10%;
     left: 10%;
   }
   .inner2 article:nth-of-type(9) {
@@ -1214,7 +1372,7 @@ body {
   padding: 30px 0 200px;
 }
 .joinLife .inner1 h2 {
-  font: 30px/1 "Noto Sans KR";
+  font: 30px/1 "arial";
   font-weight: 500;
   color: #000;
   letter-spacing: 1px;
@@ -1291,11 +1449,11 @@ body {
   margin-right: 0;
 }
 .joinLife .inner2 h2 {
-  font: 30px/1 "Noto Sans KR";
+  font: 30px/1 "arial";
   font-weight: 500;
   color: #000;
   letter-spacing: 1px;
-  padding: 30px 0 50px;
+  padding: 80px 0 50px !important;
 }
 .joinLife .inner2 h3 {
   font: 16px/1 "Noto Sans KR";
@@ -1401,24 +1559,11 @@ body {
 }
 
 @media screen and (max-width: 1179px) {
+  .joinLife {
+    padding: 0 0 50px;
+  }
   .joinLife .sub_visual {
-    height: 350px;
     width: 100%;
-  }
-  .joinLife .sub_visual .title h1 {
-    display: block;
-    width: 100%;
-    font: bold 7vmin/1 "arial";
-    letter-spacing: 0px;
-  }
-  .joinLife .sub_visual .title p {
-    width: 100%;
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -10%);
-    font: 13px/1.3 "arial";
-    color: #fff;
   }
   .joinLife .inner1 {
     padding: 0 30px;
@@ -1454,7 +1599,7 @@ body {
   }
   .joinLife .inner2 {
     width: 100%;
-    padding: 0 30px;
+    padding: 0 30px 50px;
     margin: 0 auto;
   }
   .joinLife .inner2 .wrap .group {
@@ -1521,37 +1666,14 @@ body {
   }
 }
 @media screen and (max-width: 539px) {
-  .joinLife .sub_visual {
-    height: 300px;
-  }
-  .joinLife .sub_visual .title h1 {
-    font: bold 7vmin/1 "arial";
-    letter-spacing: 0px;
-  }
-  .joinLife .sub_visual .title p {
-    width: 70%;
-    font: 3vmin/1.2 "arial";
-    text-align: center;
-  }
-  .joinLife .inner1 h1 {
-    font: 22px/1 "Noto Sans KR";
-    font-weight: 500;
-    letter-spacing: 0;
-  }
-  .joinLife .inner1 span {
-    font: 13px/1 "Noto Sans KR";
-    letter-spacing: 0;
-  }
-  .joinLife .inner1 span::before {
-    content: "/";
-    margin-right: 10px;
-    margin-left: 5px;
+  .joinLife .inner1 {
+    margin-top: 30px;
   }
   .joinLife .inner1::after {
     content: "";
     display: block;
     padding: 60px 30px 0px;
-    border-bottom: 1px solid #eee;
+    border-bottom: none;
   }
   .joinLife .inner1 .wrap article {
     width: 100%;
@@ -1564,6 +1686,7 @@ body {
   }
   .joinLife .inner2 {
     width: 100%;
+    padding-bottom: 50px;
   }
   .joinLife .inner2 .wrap .group {
     width: 100%;
@@ -1819,7 +1942,7 @@ body {
   margin: 0 auto;
   padding: 70px 0;
   box-sizing: border-box;
-  width: 60%;
+  width: 39% !important;
   border-bottom: 1px solid #666;
 }
 .content .sub_visual .text p {
@@ -1831,7 +1954,7 @@ body {
   box-sizing: border-box;
 }
 .content .sub_visual .text h1 {
-  font: 40px/1 "noto sans kr";
+  font: 40px/1.3 "noto sans kr";
   font-weight: 500;
   color: #333;
   letter-spacing: 0.5px;
@@ -1932,44 +2055,44 @@ body {
   /* content ------------------------------------- */
   .content .sub_visual {
     width: 100%;
-    margin: 0px auto;
-    position: relative;
-    text-align: center;
-  }
-  .content .sub_visual .text {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    padding: 70px 0;
-    box-sizing: border-box;
-    width: 60%;
-    border-bottom: 1px solid #666;
-  }
-  .content .sub_visual .text p {
-    font: 45px/1 "Italianno";
-    letter-spacing: 0.5px;
-    text-align: left;
-    padding-right: 70px;
-    box-sizing: border-box;
-  }
-  .content .sub_visual .text h1 {
-    font: 40px/1.3 "noto sans kr";
-    letter-spacing: 0.5px;
-    text-align: left;
-  }
-  .content .inner {
-    width: 1180px;
-    margin: 0 auto;
-  }
-  .content .inner p {
-    padding: 70px 100px;
-    text-align: center;
-    font: 20px/1.3 "arial";
-    color: #333;
-    letter-spacing: 1px;
   }
 
+  /*
+  .content{
+
+    .sub_visual{
+      width: 100%;
+      margin: 0px auto;
+      position: relative;
+      text-align: center;
+      .text{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0 auto;
+          padding: 70px 0;
+          box-sizing: border-box;
+          width: 30%;
+          border-bottom: 1px solid #666;
+          p{
+              font: 45px/1 'Italianno'; 
+              letter-spacing: 0.5px;
+              text-align: left;
+              padding-right: 70px;
+              box-sizing: border-box;
+          }
+          h1{
+              font: 40px/1.3 'noto sans kr'; 
+              letter-spacing: 0.5px;
+              text-align: left;
+          }
+      }
+    }
+      .inner{
+        width: 100%; margin: 0 auto;
+      }
+  }
+  */
   /* footer ---------------------------------------- */
   #footer_sub {
     padding: 75px 30px;
@@ -1996,41 +2119,42 @@ body {
   }
 
   /* content ------------------------------------ */
-  .content {
-    padding: 0 0 50px;
+  /*
+  .content{
+      padding: 0 0 50px;
+      .sub_visual{
+        width: 100%;
+        margin: 0px auto;
+        position: relative;
+        text-align: center;
+        .text{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            padding: 70px 0px;
+            box-sizing: border-box;
+            width: 60%;
+            border-bottom: 1px solid #666;
+            p{
+                font: 45px/1 'Italianno'; 
+                letter-spacing: 0.5px;
+                text-align: left;
+                padding-right: 25px;
+                box-sizing: border-box;
+            }
+            h1{
+                font: 35px/1.3 'noto sans kr'; 
+                letter-spacing: 0px;
+                text-align: left;
+            }
+        }
+      }
+      .inner{
+          min-height: 400px;
+      }	
   }
-  .content .sub_visual {
-    width: 100%;
-    margin: 0px auto;
-    position: relative;
-    text-align: center;
-  }
-  .content .sub_visual .text {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    padding: 70px 0px;
-    box-sizing: border-box;
-    width: 60%;
-    border-bottom: 1px solid #666;
-  }
-  .content .sub_visual .text p {
-    font: 45px/1 "Italianno";
-    letter-spacing: 0.5px;
-    text-align: left;
-    padding-right: 25px;
-    box-sizing: border-box;
-  }
-  .content .sub_visual .text h1 {
-    font: 35px/1.3 "noto sans kr";
-    letter-spacing: 0px;
-    text-align: left;
-  }
-  .content .inner {
-    min-height: 400px;
-  }
-
+  */
   /* footer ------------------------------- */
   #footer_sub .inner ul li {
     margin-left: 30px;
@@ -2175,12 +2299,12 @@ body {
   }
   .youtube .inner {
     width: 100%;
-    padding: 0 30px;
+    padding: 80px 30px 0;
     box-sizing: border-box;
   }
   .youtube .inner article {
     width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
   }
   .youtube .inner article > a {
     width: 100%;
@@ -2333,7 +2457,7 @@ body {
   opacity: 1;
 }
 
-#pop {
+.pop {
   width: 100%;
   height: 100vh;
   background: rgba(0, 0, 0, 0.85);
@@ -2345,23 +2469,22 @@ body {
   justify-content: center;
   align-items: center;
 }
-#pop .con {
+.pop .con {
   width: 100%;
   height: 100%;
 }
-#pop .con > img {
+.pop .con > img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
-#pop .popClose {
+.pop .popClose {
   position: absolute;
   top: 40px;
   right: 40px;
   cursor: pointer;
-  z-index: 200;
 }
-#pop .popClose img {
+.pop .popClose img {
   transform: scale(0.7);
 }
 
@@ -2449,27 +2572,125 @@ body {
     bottom: 10px;
   }
 }
+.contact {
+  box-sizing: border-box;
+}
 .contact .inner {
   width: 1180px;
-  margin: 100px auto;
+  margin: 50px auto;
   position: relative;
 }
-.contact .inner #map {
+.contact .inner h2 {
+  font: 30px/1 "arial";
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+}
+.contact .inner1 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding-top: 30px;
+}
+.contact .inner1 > h2 {
+  width: 40%;
+  font: 40px/1.1 "arial";
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+.contact .inner1 table tr {
+  border-top: 1px solid #ddd;
+}
+.contact .inner1 table tr th {
+  font: 14px/1 "noto sans kr";
+  font-weight: 600;
+  color: #000;
+  text-align: left;
+  padding: 21px 0px 21px 0;
+}
+.contact .inner1 table tr th:nth-of-type(2) {
+  border-left: 1px solid #ddd;
+  padding-left: 20px;
+}
+.contact .inner1 table tr th:last-child {
+  border-right: none;
+}
+.contact .inner1 table tr th label {
+  font: 16px/1 "Noto Sans KR";
+  color: #000;
+  font-weight: 500;
+}
+.contact .inner1 table tr th:last-child {
+  text-align: center;
+}
+.contact .inner1 table tr th input[type=submit] {
+  display: inline-block;
+  width: 150px;
+  height: 45px;
+  background: transparent;
+  text-align: center;
+  vertical-align: top;
+  color: #000;
+  border-radius: 50px;
+  border: 1px solid #000;
+  font: 14px/45px "noto sans kr";
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.contact .inner1 table tr th input[type=submit]:hover {
+  color: #fff;
+  background-color: #000;
+}
+.contact .inner1 table tr td input[type=text] {
+  padding-bottom: 0px;
+  box-sizing: border-box;
+  border: none;
+  background: transparent;
+  width: 100%;
+}
+.contact .inner1 table tr td input[type=text]::placeholder {
+  font: 14px/1 "noto sans kr";
+  font-weight: 400;
+  color: #aaa;
+}
+.contact .inner1 table tr td input[type=text]#lastname {
+  padding-left: 50px;
+}
+.contact .inner1 table tr td #comments {
+  width: 100%;
+  height: 200px;
+  font: 14px/1 "noto sans kr";
+  font-weight: 400;
+  resize: none;
+  border: none;
+  padding: 20px 20px 20px 0px;
+  background: none;
+}
+.contact .inner1 table tr td #comments::placeholder {
+  color: #aaa;
+}
+.contact .inner2 {
+  position: relative;
+  width: 1180px;
+}
+.contact .inner2 #map {
   width: 100%;
   height: 450px;
-  margin: 50px 0 40px;
-  border: 2px solid #000;
+  margin: 0px auto 40px;
 }
-.contact .inner .branch {
+.contact .inner2 .branch {
   width: 100%;
   padding: 0;
+  margin: 0 auto;
 }
-.contact .inner .branch::after {
+.contact .inner2 .branch::after {
   content: "";
   display: block;
   clear: both;
 }
-.contact .inner .branch article {
+.contact .inner2 .branch article {
   width: 380px;
   height: 290px;
   float: left;
@@ -2481,28 +2702,34 @@ body {
   position: relative;
   transition: background-color 0.5s;
 }
-.contact .inner .branch article.on {
+.contact .inner2 .branch article.on {
   background-color: #eee;
 }
-.contact .inner .branch article:last-child {
+.contact .inner2 .branch article:last-child {
   margin-right: 0;
 }
-.contact .inner .branch article h2 {
-  font: bold 25px/1 "noto sans kr";
+.contact .inner2 .branch article h3 {
+  font: bold 20px/1 "noto sans kr";
   padding: 0;
   margin-bottom: 30px;
 }
-.contact .inner .branch article p {
+.contact .inner2 .branch article p {
   padding: 0;
   font: 15px/1.2 "noto sans kr";
   letter-spacing: 0.5px;
   margin-bottom: 10px;
 }
-.contact .inner .branch article a {
+.contact .inner2 .branch article p i {
+  margin-right: 15px;
+  color: #555;
+  font-size: 13px;
+}
+.contact .inner2 .branch article a {
   position: absolute;
-  bottom: 45px;
+  bottom: 15%;
   left: 50%;
   transform: translateX(-50%);
+  display: inline-block;
   width: 150px;
   height: 45px;
   background: #000;
@@ -2517,16 +2744,46 @@ body {
     width: 100%;
     padding: 0 30px;
     box-sizing: border-box;
+    position: relative;
   }
-  .contact .inner #map {
+  .contact .inner h2 {
+    font: 25px/1 "arial";
+  }
+  .contact .inner1 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding-top: 30px;
+  }
+  .contact .inner1 h2 {
+    width: 50%;
+    font: 5vmin/1.1 "arial";
+    font-weight: 600;
+  }
+  .contact .inner1 table {
+    margin-top: 20px;
+  }
+  .contact .inner1 table th {
+    font: 13px/1 "noto sans kr" !important;
+  }
+  .contact .inner1 table td input[type=text]#username {
+    width: 100px;
+  }
+  .contact .inner1 table td input[type=text]#lastname {
+    width: 100px;
+    padding-left: 20px !important;
+  }
+  .contact .inner2 #map {
     width: 100%;
     height: 400px;
     margin: 40px 0 35px;
   }
-  .contact .inner .branch {
+  .contact .inner2 .branch {
     position: relative;
+    margin: 0 auto;
   }
-  .contact .inner .branch article {
+  .contact .inner2 .branch article {
     width: 32%;
     height: 270px;
     margin-right: 2%;
@@ -2534,55 +2791,81 @@ body {
     box-sizing: border-box;
     position: relative;
   }
-  .contact .inner .branch article h2 {
+  .contact .inner2 .branch article h3 {
     font: bold 20px/1 "noto sans kr";
     margin: 30px 0;
   }
-  .contact .inner .branch article p {
+  .contact .inner2 .branch article p {
     padding: 0 15px;
     font: 13px/1.2 "noto sans kr";
     letter-spacing: 0px;
   }
-  .contact .inner .branch article a {
+  .contact .inner2 .branch article a {
     bottom: 35px;
-    width: 100px;
+    width: 120px;
     height: 40px;
     font: 12px/40px "noto sans kr";
   }
 }
 /* mobile ---------------------------------- */
 @media screen and (max-width: 539px) {
-  .contact .inner .branch {
+  .contact .inner1 {
+    margin-top: 10px;
+  }
+  .contact .inner1 h2 {
+    width: 60%;
+    margin: 0 auto;
+    font: 5.5vmin/1.1 "arial";
+    font-weight: 600;
+  }
+  .contact .inner1 table {
+    margin-top: 40px;
+  }
+  .contact .inner1 table tr th {
+    display: none;
+  }
+  .contact .inner1 table tr th:last-child {
+    display: block;
+  }
+  .contact .inner1 table tr td {
+    padding-bottom: 30px;
+  }
+  .contact .inner1 table tr td:nth-of-type(2) {
+    border-left: 1px solid #ddd;
+  }
+  .contact .inner1 table tr td input[type=text]#lastname {
+    padding-left: 20px;
+  }
+  .contact .inner2 {
+    margin-top: 70px;
+  }
+  .contact .inner2 #map {
+    margin-bottom: 45px;
+  }
+  .contact .inner2 .branch {
     position: relative;
   }
-  .contact .inner .branch article {
+  .contact .inner2 .branch article {
     width: 85%;
     height: 230px;
     margin-right: 0%;
+    margin-bottom: 30px;
     border: none;
     border-top: 1px solid #666;
     border-bottom: 1px solid #666;
     left: 50%;
     transform: translateX(-50%);
   }
-  .contact .inner .branch article:first-child {
-    border-top: 2px solid #666;
+  .contact .inner2 .branch article h3 {
+    font: bold 18px/1 "noto sans kr";
   }
-  .contact .inner .branch article h2 {
-    font: bold 20px/1 "noto sans kr";
-    margin: 30px 0;
-  }
-  .contact .inner .branch article p {
+  .contact .inner2 .branch article p {
     padding: 0px 10px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     font: 12px/1.2 "noto sans kr";
-    letter-spacing: 0px;
   }
-  .contact .inner .branch article a {
-    bottom: 30px;
-    width: 100px;
-    height: 40px;
-    font: 12px/40px "noto sans kr";
+  .contact .inner2 .branch article a {
+    bottom: 28px;
   }
 }
 /* content ----------------------------------------- */
@@ -2771,7 +3054,7 @@ body {
   width: 1180px;
 }
 .community .inner > h2 {
-  font: 30px/1 "Noto Sans KR";
+  font: 30px/1 "arial";
   font-weight: 500;
   color: #000;
   letter-spacing: 1px;
@@ -2950,19 +3233,18 @@ body {
   background: #000;
   color: #fff;
 }
-
-.inner2 {
+.community .inner2 {
   padding-top: 50px;
 }
-.inner2 h2 {
+.community .inner2 h2 {
   padding: 80px 0 50px !important;
 }
-.inner2 .wrap::after {
+.community .inner2 .wrap::after {
   content: "";
   display: block;
   clear: both;
 }
-.inner2 article {
+.community .inner2 article {
   width: 280px;
   height: 300px;
   margin-right: 20px;
@@ -2971,7 +3253,7 @@ body {
   position: relative;
   transition: all 0.2s;
 }
-.inner2 article:hover::after {
+.community .inner2 article:hover::after {
   content: "";
   display: block;
   width: 100%;
@@ -2985,65 +3267,65 @@ body {
   z-index: 1;
   transition: all 0.3s;
 }
-.inner2 article:hover .text {
+.community .inner2 article:hover .text {
   bottom: 100px;
   left: 50px;
   opacity: 1;
   z-index: 10;
   transition: all 0.5s;
 }
-.inner2 article .text {
+.community .inner2 article .text {
   position: absolute;
   bottom: -200px;
   left: 50px;
   opacity: 0;
 }
-.inner2 article .text h4 {
+.community .inner2 article .text h4 {
   font: 30px/1 "Cormorant Garamond";
   color: #fff;
   margin-bottom: 10px;
 }
-.inner2 article .text h5 {
+.community .inner2 article .text h5 {
   display: block;
   font: lighter 11px/1 "arial";
   color: #fff;
   letter-spacing: 0.2em;
 }
-.inner2 article:nth-of-type(7):hover::after {
+.community .inner2 article:nth-of-type(7):hover::after {
   display: none;
 }
-.inner2 article:nth-of-type(12):hover .text {
+.community .inner2 article:nth-of-type(12):hover .text {
   display: none;
 }
-.inner2 article:nth-of-type(4n) {
+.community .inner2 article:nth-of-type(4n) {
   margin-right: 0;
 }
-.inner2 article:nth-of-type(9) {
+.community .inner2 article:nth-of-type(9) {
   margin-bottom: 0;
 }
-.inner2 article:nth-of-type(10) {
+.community .inner2 article:nth-of-type(10) {
   margin-bottom: 0;
 }
-.inner2 article:nth-of-type(11) {
+.community .inner2 article:nth-of-type(11) {
   margin-bottom: 0;
 }
-.inner2 article:nth-of-type(12) {
+.community .inner2 article:nth-of-type(12) {
   margin-bottom: 0;
 }
-.inner2 article img {
+.community .inner2 article img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border: 0;
 }
-.inner2 article h3 {
+.community .inner2 article h3 {
   font: lighter 25px/1.2 "Cormorant Garamond";
   color: #000;
   margin-top: 35%;
   padding-bottom: 30px;
   padding-left: 30px;
 }
-.inner2 article a {
+.community .inner2 article a {
   padding: 13px 23px;
   font: 11px/1 "arial";
   letter-spacing: 1.5px;
@@ -3183,7 +3465,7 @@ body {
     margin-bottom: 10px;
   }
   .inner2 article .text {
-    bottom: 30%;
+    bottom: 10%;
     left: 10%;
   }
   .inner2 article:nth-of-type(9) {
@@ -3214,7 +3496,7 @@ body {
   padding: 30px 0 200px;
 }
 .joinLife .inner1 h2 {
-  font: 30px/1 "Noto Sans KR";
+  font: 30px/1 "arial";
   font-weight: 500;
   color: #000;
   letter-spacing: 1px;
@@ -3291,11 +3573,11 @@ body {
   margin-right: 0;
 }
 .joinLife .inner2 h2 {
-  font: 30px/1 "Noto Sans KR";
+  font: 30px/1 "arial";
   font-weight: 500;
   color: #000;
   letter-spacing: 1px;
-  padding: 30px 0 50px;
+  padding: 80px 0 50px !important;
 }
 .joinLife .inner2 h3 {
   font: 16px/1 "Noto Sans KR";
@@ -3401,24 +3683,11 @@ body {
 }
 
 @media screen and (max-width: 1179px) {
+  .joinLife {
+    padding: 0 0 50px;
+  }
   .joinLife .sub_visual {
-    height: 350px;
     width: 100%;
-  }
-  .joinLife .sub_visual .title h1 {
-    display: block;
-    width: 100%;
-    font: bold 7vmin/1 "arial";
-    letter-spacing: 0px;
-  }
-  .joinLife .sub_visual .title p {
-    width: 100%;
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -10%);
-    font: 13px/1.3 "arial";
-    color: #fff;
   }
   .joinLife .inner1 {
     padding: 0 30px;
@@ -3454,7 +3723,7 @@ body {
   }
   .joinLife .inner2 {
     width: 100%;
-    padding: 0 30px;
+    padding: 0 30px 50px;
     margin: 0 auto;
   }
   .joinLife .inner2 .wrap .group {
@@ -3521,37 +3790,14 @@ body {
   }
 }
 @media screen and (max-width: 539px) {
-  .joinLife .sub_visual {
-    height: 300px;
-  }
-  .joinLife .sub_visual .title h1 {
-    font: bold 7vmin/1 "arial";
-    letter-spacing: 0px;
-  }
-  .joinLife .sub_visual .title p {
-    width: 70%;
-    font: 3vmin/1.2 "arial";
-    text-align: center;
-  }
-  .joinLife .inner1 h1 {
-    font: 22px/1 "Noto Sans KR";
-    font-weight: 500;
-    letter-spacing: 0;
-  }
-  .joinLife .inner1 span {
-    font: 13px/1 "Noto Sans KR";
-    letter-spacing: 0;
-  }
-  .joinLife .inner1 span::before {
-    content: "/";
-    margin-right: 10px;
-    margin-left: 5px;
+  .joinLife .inner1 {
+    margin-top: 30px;
   }
   .joinLife .inner1::after {
     content: "";
     display: block;
     padding: 60px 30px 0px;
-    border-bottom: 1px solid #eee;
+    border-bottom: none;
   }
   .joinLife .inner1 .wrap article {
     width: 100%;
@@ -3564,6 +3810,7 @@ body {
   }
   .joinLife .inner2 {
     width: 100%;
+    padding-bottom: 50px;
   }
   .joinLife .inner2 .wrap .group {
     width: 100%;

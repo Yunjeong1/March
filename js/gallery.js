@@ -100,7 +100,7 @@ frame.addEventListener("click",e=>{
     if(target == e.target){
         let imgSrc = target.parentElement.getAttribute("href");
         let pop = document.createElement("aside");
-        pop.setAttribute("id","pop");
+        pop.classList.add("pop");
         let pops = `
                 <div class="con">
                     <img src="${imgSrc}">
@@ -117,13 +117,14 @@ frame.addEventListener("click",e=>{
 frame.addEventListener("click",e=>{
     e.preventDefault();
 
-    let pop = body.querySelector("#pop");
+    let pop = body.querySelector(".pop");
     if(pop){
-        let close = pop.querySelector(".popClose img");
+        let close = pop.querySelector("span img");
         if(e.target == close){
-            pop.remove();
+            e.target.closest("aside").remove();
             body.style.overflow = "auto";
             g_header.style.display = "block";
         }
     }
 })
+
