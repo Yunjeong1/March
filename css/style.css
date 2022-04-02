@@ -509,8 +509,8 @@ body {
   vertical-align: top;
   color: #000;
   border-radius: 50px;
-  border: 1px solid #000;
-  font: 14px/45px "noto sans kr";
+  border: 2px solid #000;
+  font: 14px/40px "noto sans kr";
   margin-top: 20px;
   cursor: pointer;
   transition: background-color 0.3s;
@@ -1430,74 +1430,105 @@ body {
   padding-bottom: 100px;
   border-bottom: 1px solid #ddd;
 }
-.joinLife .inner2 p {
-  font: 12px/1 "arial";
-  color: red;
-  margin-top: 10px;
+.joinLife .inner2 > h2 {
+  padding-bottom: 10px !important;
 }
-.joinLife .inner2 .wrap::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-.joinLife .inner2 .wrap .group {
-  float: left;
-  width: 580px;
-  margin-right: 20px;
-}
-.joinLife .inner2 .wrap .group2 {
-  margin-right: 0;
+.joinLife .inner2 > span {
+  font: 13px/1 "arial";
+  color: #444;
 }
 .joinLife .inner2 h2 {
   font: 30px/1 "arial";
   font-weight: 500;
   color: #000;
   letter-spacing: 1px;
-  padding: 80px 0 50px !important;
+  padding: 80px 0 50px;
 }
-.joinLife .inner2 h3 {
+.joinLife .inner2 .bar {
+  font: 18px/1 "Noto Sans KR";
+  font-weight: 400;
+  color: #999;
+}
+.joinLife .inner2 .bar::before {
+  content: "/";
+  margin-right: 20px;
+  margin-left: 20px;
+}
+.joinLife .inner2 form {
+  width: 50%;
+  margin: 70px auto 0;
+}
+.joinLife .inner2 form h3 {
   font: 16px/1 "Noto Sans KR";
   font-weight: 500;
   color: #555;
   margin-bottom: 30px;
   text-align: left;
 }
-.joinLife .inner2 #terms {
-  width: 80%;
-  height: 300px;
+.joinLife .inner2 form #terms {
+  width: 100%;
+  height: 130px;
   resize: none;
   font: 12px/1.1 "arial";
   color: #aaa;
   background: rgba(244, 241, 241, 0.485);
   margin-bottom: 10px;
   padding: 20px;
+  box-sizing: border-box;
   border: 1px solid #ddd;
 }
-.joinLife .inner2 .agreement {
+.joinLife .inner2 form .agreement {
   text-align: left;
   margin-bottom: 50px;
 }
-.joinLife .inner2 .agreement label[for=agree] {
+.joinLife .inner2 form .agreement label[for=agree] {
   font-size: 13px;
 }
-.joinLife .inner2 table th {
+.joinLife .inner2 form .agreement p {
+  font: 11px/1.2 "arial";
+  color: red;
+  margin-top: 5px;
+}
+.joinLife .inner2 form table {
+  width: 100%;
+}
+.joinLife .inner2 form table tr {
+  position: relative;
+}
+.joinLife .inner2 form table tr th {
+  border-top: 1px solid #ddd;
+  width: 30%;
   font: 14px/1 "Noto Sans KR";
   font-weight: 500;
   color: #333;
   text-align: left;
-  padding-right: 60px;
-  padding-bottom: 30px;
+  padding: 20px 0 25px;
   box-sizing: border-box;
+  position: relative;
 }
-.joinLife .inner2 table th:last-child {
+.joinLife .inner2 form table tr th::after {
+  content: "|";
+  display: inline;
+  color: #dbdbdb;
+  font-size: 20px;
+  position: absolute;
+  left: 140px;
+  margin-top: -3px;
+}
+.joinLife .inner2 form table tr th:last-child {
   border-right: none;
   border-bottom: none;
   background: none;
   text-align: center;
   padding: 40px 0 0;
+  box-sizing: border-box;
 }
-.joinLife .inner2 table th input[type=submit] {
-  width: 150px;
+.joinLife .inner2 form table tr th:last-child::after {
+  content: "";
+  clear: both;
+}
+.joinLife .inner2 form table tr th input[type=submit] {
+  width: 130px;
   height: 42px;
   border: none;
   background: #000;
@@ -1508,12 +1539,12 @@ body {
   cursor: pointer;
   transition: background 0.5s;
 }
-.joinLife .inner2 table th input[type=submit]:hover {
+.joinLife .inner2 form table tr th input[type=submit]:hover {
   background: #fff;
   border: 2px solid #000;
   color: #000;
 }
-.joinLife .inner2 table th input[type=reset] {
+.joinLife .inner2 form table tr th input[type=reset] {
   width: 150px;
   height: 42px;
   border: 1px solid #aaa;
@@ -1525,37 +1556,62 @@ body {
   border-radius: 21px;
   cursor: pointer;
 }
-.joinLife .inner2 table td {
-  color: #333;
-  padding-bottom: 30px;
-  box-sizing: border-box;
-}
-.joinLife .inner2 table td input::placeholder {
-  color: #ccc;
-}
-.joinLife .inner2 table td textarea::placeholder {
-  color: #ccc;
-}
-.joinLife .inner2 table td input[type=text], .joinLife .inner2 table td input[type=password], .joinLife .inner2 table td select {
+.joinLife .inner2 form table tr td {
   border: 1px solid #ddd;
+  border-left: none;
+  border-right: none;
+  color: #333;
+  box-sizing: border-box;
+  text-align: left;
+  position: relative;
+}
+.joinLife .inner2 form table tr td input::placeholder {
+  color: #ccc;
+}
+.joinLife .inner2 form table tr td textarea::placeholder {
+  color: #ccc;
+}
+.joinLife .inner2 form table tr td input[type=text], .joinLife .inner2 form table tr td input[type=password], .joinLife .inner2 form table tr td select {
+  border: none;
   width: 100%;
   height: 45px;
-  padding: 10px;
+  padding-left: 30px;
+  background: transparent;
 }
-.joinLife .inner2 table td input[type=checkbox], .joinLife .inner2 table td input[type=radio] {
+.joinLife .inner2 form table tr td input[type=checkbox], .joinLife .inner2 form table tr td input[type=radio] {
   margin-right: 5px;
 }
-.joinLife .inner2 table td label {
-  margin-right: 30px;
+.joinLife .inner2 form table tr td label {
+  margin-right: 20px;
   font: 14px/1 "Noto Sans KR";
   color: #555;
 }
-.joinLife .inner2 table td textarea#comments {
+.joinLife .inner2 form table tr td textarea#comments {
   width: 100%;
   height: 150px;
+  background: transparent;
   resize: none;
-  border: 1px solid #ddd;
-  padding: 20px;
+  border: none;
+  padding: 70px 0 60px 30px;
+  box-sizing: border-box;
+}
+.joinLife .inner2 form table tr td p {
+  font: 11px/1.2 "arial";
+  color: red;
+  margin-top: 0px;
+  position: absolute;
+  top: 42px;
+  padding-left: 30px;
+}
+.joinLife .inner2 form table tr:nth-of-type(4) td, .joinLife .inner2 form table tr:nth-of-type(5) td {
+  padding-left: 30px;
+}
+.joinLife .inner2 form table tr:nth-of-type(4) td p, .joinLife .inner2 form table tr:nth-of-type(5) td p {
+  padding-left: 0;
+  display: none;
+}
+.joinLife .inner2 form table tr:nth-of-type(8) p {
+  top: 90px;
 }
 
 @media screen and (max-width: 1179px) {
@@ -1566,9 +1622,8 @@ body {
     width: 100%;
   }
   .joinLife .inner1 {
-    padding: 0 30px;
+    padding: 20px 30px 0;
     width: 100%;
-    border-bottom: none;
   }
   .joinLife .inner1 h2 {
     font: 25px/1 "Noto Sans KR";
@@ -1576,12 +1631,6 @@ body {
   }
   .joinLife .inner1 span {
     font: 18px/1 "Noto Sans KR";
-  }
-  .joinLife .inner1::after {
-    content: "";
-    display: block;
-    padding: 60px 30px 0px;
-    border-bottom: 1px solid #eee;
   }
   .joinLife .inner1 .wrap article {
     width: 48%;
@@ -1599,70 +1648,70 @@ body {
   }
   .joinLife .inner2 {
     width: 100%;
-    padding: 0 30px 50px;
+    padding: 0 30px;
+    border-bottom: none;
+  }
+  .joinLife .inner2::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #ddd;
     margin: 0 auto;
   }
-  .joinLife .inner2 .wrap .group {
-    width: 49%;
-    margin-right: 2%;
+  .joinLife .inner2 form {
+    width: 70%;
   }
-  .joinLife .inner2 .wrap .group2 {
-    margin-right: 0;
-  }
-  .joinLife .inner2 h2 {
-    font: 25px/1 "Noto Sans KR";
-    font-weight: 500;
-    padding: 80px 0 45px;
-  }
-  .joinLife .inner2 span {
-    font: 18px/1 "Noto Sans KR";
-    font-weight: 400;
-  }
-  .joinLife .inner2 h3 {
-    font: 15px/1 "arial";
-    font-weight: 600;
-  }
-  .joinLife .inner2 table tr:last-child {
+  .joinLife .inner2 form table {
     width: 100%;
   }
-  .joinLife .inner2 table th {
+  .joinLife .inner2 form table tr th {
     display: none;
   }
-  .joinLife .inner2 table th:last-child {
-    display: block;
-    padding: 20px 0 0;
-  }
-  .joinLife .inner2 table th input[type=submit] {
-    width: 100px;
-    height: 35px;
-    font: bold 13px/1 "arial";
-    margin: 0 5px;
-    border-radius: 21px;
-  }
-  .joinLife .inner2 table th input[type=reset] {
-    width: 100px;
-    height: 35px;
-    font: bold 13px/1 "arial";
-    margin: 0 5px;
-    border-radius: 21px;
-  }
-  .joinLife .inner2 table td input::placeholder {
-    color: #aaa;
-  }
-  .joinLife .inner2 table td textarea::placeholder {
-    color: #aaa;
-  }
-  .joinLife .inner2 table td input[type=text], .joinLife .inner2 table td input[type=password], .joinLife .inner2 table td select {
+  .joinLife .inner2 form table tr th:last-child {
     width: 100%;
-  }
-  .joinLife .inner2 table td textarea#comments {
-    width: 100%;
-  }
-  .joinLife .inner2 table td label {
-    margin-right: 15px;
-  }
-  .joinLife .inner2 table td .interestTxt, .joinLife .inner2 table td .genderTxt {
     display: block;
+    border: none;
+  }
+  .joinLife .inner2 form table tr th:last-child input[type=reset] {
+    display: none;
+  }
+  .joinLife .inner2 form table tr th:last-child input[type=submit] {
+    margin-left: 10px;
+    margin-bottom: 80px;
+  }
+  .joinLife .inner2 form table tr td input::placeholder {
+    color: #bbb;
+  }
+  .joinLife .inner2 form table tr td textarea::placeholder {
+    color: #bbb;
+  }
+  .joinLife .inner2 form table tr td input[type=text], .joinLife .inner2 form table tr td input[type=password], .joinLife .inner2 form table tr td select {
+    border: none;
+    width: 100%;
+    height: 70px !important;
+    padding-left: 0px;
+  }
+  .joinLife .inner2 form table tr td textarea#comments {
+    height: 170px;
+    padding: 30px 0 60px 0px;
+  }
+  .joinLife .inner2 form table tr td p {
+    font: 10px/1.2 "arial";
+    margin-top: 0px;
+    margin-left: -30px;
+    position: absolute;
+    top: 48px;
+    display: block;
+  }
+  .joinLife .inner2 form table tr:nth-of-type(4) td, .joinLife .inner2 form table tr:nth-of-type(5) td {
+    padding: 25px 0 25px 0px;
+  }
+  .joinLife .inner2 form table tr:nth-of-type(4) td p, .joinLife .inner2 form table tr:nth-of-type(5) td p {
+    display: block;
+    margin-top: 5px;
+    margin-left: 0;
+    color: blue;
   }
 }
 @media screen and (max-width: 539px) {
@@ -1675,6 +1724,10 @@ body {
     padding: 60px 30px 0px;
     border-bottom: none;
   }
+  .joinLife .inner1 h2 {
+    font: 25px/1 "Noto Sans KR";
+    font-weight: 500;
+  }
   .joinLife .inner1 .wrap article {
     width: 100%;
     height: 400px;
@@ -1686,11 +1739,13 @@ body {
   }
   .joinLife .inner2 {
     width: 100%;
-    padding-bottom: 50px;
+    padding-bottom: 0px;
+  }
+  .joinLife .inner2 form {
+    width: 85%;
   }
   .joinLife .inner2 .wrap .group {
     width: 100%;
-    margin-right: 0;
   }
   .joinLife .inner2 #terms {
     width: 100%;
@@ -1711,12 +1766,10 @@ body {
   .joinLife .inner2 table th input[type=submit] {
     width: 150px;
     height: 42px;
-  }
-  .joinLife .inner2 table th input[type=reset] {
-    display: none;
+    margin-left: 0px !important;
   }
   .joinLife .inner2 table td label {
-    margin-right: 20px;
+    margin-right: 0px;
   }
   .joinLife .inner2 table td input[type=text], .joinLife .inner2 table td input[type=password], .joinLife .inner2 table td select {
     width: 100%;
@@ -2633,8 +2686,8 @@ body {
   vertical-align: top;
   color: #000;
   border-radius: 50px;
-  border: 1px solid #000;
-  font: 14px/45px "noto sans kr";
+  border: 2px solid #000;
+  font: 14px/40px "noto sans kr";
   margin-top: 20px;
   cursor: pointer;
   transition: background-color 0.3s;
@@ -3554,74 +3607,105 @@ body {
   padding-bottom: 100px;
   border-bottom: 1px solid #ddd;
 }
-.joinLife .inner2 p {
-  font: 12px/1 "arial";
-  color: red;
-  margin-top: 10px;
+.joinLife .inner2 > h2 {
+  padding-bottom: 10px !important;
 }
-.joinLife .inner2 .wrap::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-.joinLife .inner2 .wrap .group {
-  float: left;
-  width: 580px;
-  margin-right: 20px;
-}
-.joinLife .inner2 .wrap .group2 {
-  margin-right: 0;
+.joinLife .inner2 > span {
+  font: 13px/1 "arial";
+  color: #444;
 }
 .joinLife .inner2 h2 {
   font: 30px/1 "arial";
   font-weight: 500;
   color: #000;
   letter-spacing: 1px;
-  padding: 80px 0 50px !important;
+  padding: 80px 0 50px;
 }
-.joinLife .inner2 h3 {
+.joinLife .inner2 .bar {
+  font: 18px/1 "Noto Sans KR";
+  font-weight: 400;
+  color: #999;
+}
+.joinLife .inner2 .bar::before {
+  content: "/";
+  margin-right: 20px;
+  margin-left: 20px;
+}
+.joinLife .inner2 form {
+  width: 50%;
+  margin: 70px auto 0;
+}
+.joinLife .inner2 form h3 {
   font: 16px/1 "Noto Sans KR";
   font-weight: 500;
   color: #555;
   margin-bottom: 30px;
   text-align: left;
 }
-.joinLife .inner2 #terms {
-  width: 80%;
-  height: 300px;
+.joinLife .inner2 form #terms {
+  width: 100%;
+  height: 130px;
   resize: none;
   font: 12px/1.1 "arial";
   color: #aaa;
   background: rgba(244, 241, 241, 0.485);
   margin-bottom: 10px;
   padding: 20px;
+  box-sizing: border-box;
   border: 1px solid #ddd;
 }
-.joinLife .inner2 .agreement {
+.joinLife .inner2 form .agreement {
   text-align: left;
   margin-bottom: 50px;
 }
-.joinLife .inner2 .agreement label[for=agree] {
+.joinLife .inner2 form .agreement label[for=agree] {
   font-size: 13px;
 }
-.joinLife .inner2 table th {
+.joinLife .inner2 form .agreement p {
+  font: 11px/1.2 "arial";
+  color: red;
+  margin-top: 5px;
+}
+.joinLife .inner2 form table {
+  width: 100%;
+}
+.joinLife .inner2 form table tr {
+  position: relative;
+}
+.joinLife .inner2 form table tr th {
+  border-top: 1px solid #ddd;
+  width: 30%;
   font: 14px/1 "Noto Sans KR";
   font-weight: 500;
   color: #333;
   text-align: left;
-  padding-right: 60px;
-  padding-bottom: 30px;
+  padding: 20px 0 25px;
   box-sizing: border-box;
+  position: relative;
 }
-.joinLife .inner2 table th:last-child {
+.joinLife .inner2 form table tr th::after {
+  content: "|";
+  display: inline;
+  color: #dbdbdb;
+  font-size: 20px;
+  position: absolute;
+  left: 140px;
+  margin-top: -3px;
+}
+.joinLife .inner2 form table tr th:last-child {
   border-right: none;
   border-bottom: none;
   background: none;
   text-align: center;
   padding: 40px 0 0;
+  box-sizing: border-box;
 }
-.joinLife .inner2 table th input[type=submit] {
-  width: 150px;
+.joinLife .inner2 form table tr th:last-child::after {
+  content: "";
+  clear: both;
+}
+.joinLife .inner2 form table tr th input[type=submit] {
+  width: 130px;
   height: 42px;
   border: none;
   background: #000;
@@ -3632,12 +3716,12 @@ body {
   cursor: pointer;
   transition: background 0.5s;
 }
-.joinLife .inner2 table th input[type=submit]:hover {
+.joinLife .inner2 form table tr th input[type=submit]:hover {
   background: #fff;
   border: 2px solid #000;
   color: #000;
 }
-.joinLife .inner2 table th input[type=reset] {
+.joinLife .inner2 form table tr th input[type=reset] {
   width: 150px;
   height: 42px;
   border: 1px solid #aaa;
@@ -3649,37 +3733,62 @@ body {
   border-radius: 21px;
   cursor: pointer;
 }
-.joinLife .inner2 table td {
-  color: #333;
-  padding-bottom: 30px;
-  box-sizing: border-box;
-}
-.joinLife .inner2 table td input::placeholder {
-  color: #ccc;
-}
-.joinLife .inner2 table td textarea::placeholder {
-  color: #ccc;
-}
-.joinLife .inner2 table td input[type=text], .joinLife .inner2 table td input[type=password], .joinLife .inner2 table td select {
+.joinLife .inner2 form table tr td {
   border: 1px solid #ddd;
+  border-left: none;
+  border-right: none;
+  color: #333;
+  box-sizing: border-box;
+  text-align: left;
+  position: relative;
+}
+.joinLife .inner2 form table tr td input::placeholder {
+  color: #ccc;
+}
+.joinLife .inner2 form table tr td textarea::placeholder {
+  color: #ccc;
+}
+.joinLife .inner2 form table tr td input[type=text], .joinLife .inner2 form table tr td input[type=password], .joinLife .inner2 form table tr td select {
+  border: none;
   width: 100%;
   height: 45px;
-  padding: 10px;
+  padding-left: 30px;
+  background: transparent;
 }
-.joinLife .inner2 table td input[type=checkbox], .joinLife .inner2 table td input[type=radio] {
+.joinLife .inner2 form table tr td input[type=checkbox], .joinLife .inner2 form table tr td input[type=radio] {
   margin-right: 5px;
 }
-.joinLife .inner2 table td label {
-  margin-right: 30px;
+.joinLife .inner2 form table tr td label {
+  margin-right: 20px;
   font: 14px/1 "Noto Sans KR";
   color: #555;
 }
-.joinLife .inner2 table td textarea#comments {
+.joinLife .inner2 form table tr td textarea#comments {
   width: 100%;
   height: 150px;
+  background: transparent;
   resize: none;
-  border: 1px solid #ddd;
-  padding: 20px;
+  border: none;
+  padding: 70px 0 60px 30px;
+  box-sizing: border-box;
+}
+.joinLife .inner2 form table tr td p {
+  font: 11px/1.2 "arial";
+  color: red;
+  margin-top: 0px;
+  position: absolute;
+  top: 42px;
+  padding-left: 30px;
+}
+.joinLife .inner2 form table tr:nth-of-type(4) td, .joinLife .inner2 form table tr:nth-of-type(5) td {
+  padding-left: 30px;
+}
+.joinLife .inner2 form table tr:nth-of-type(4) td p, .joinLife .inner2 form table tr:nth-of-type(5) td p {
+  padding-left: 0;
+  display: none;
+}
+.joinLife .inner2 form table tr:nth-of-type(8) p {
+  top: 90px;
 }
 
 @media screen and (max-width: 1179px) {
@@ -3690,9 +3799,8 @@ body {
     width: 100%;
   }
   .joinLife .inner1 {
-    padding: 0 30px;
+    padding: 20px 30px 0;
     width: 100%;
-    border-bottom: none;
   }
   .joinLife .inner1 h2 {
     font: 25px/1 "Noto Sans KR";
@@ -3700,12 +3808,6 @@ body {
   }
   .joinLife .inner1 span {
     font: 18px/1 "Noto Sans KR";
-  }
-  .joinLife .inner1::after {
-    content: "";
-    display: block;
-    padding: 60px 30px 0px;
-    border-bottom: 1px solid #eee;
   }
   .joinLife .inner1 .wrap article {
     width: 48%;
@@ -3723,70 +3825,70 @@ body {
   }
   .joinLife .inner2 {
     width: 100%;
-    padding: 0 30px 50px;
+    padding: 0 30px;
+    border-bottom: none;
+  }
+  .joinLife .inner2::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #ddd;
     margin: 0 auto;
   }
-  .joinLife .inner2 .wrap .group {
-    width: 49%;
-    margin-right: 2%;
+  .joinLife .inner2 form {
+    width: 70%;
   }
-  .joinLife .inner2 .wrap .group2 {
-    margin-right: 0;
-  }
-  .joinLife .inner2 h2 {
-    font: 25px/1 "Noto Sans KR";
-    font-weight: 500;
-    padding: 80px 0 45px;
-  }
-  .joinLife .inner2 span {
-    font: 18px/1 "Noto Sans KR";
-    font-weight: 400;
-  }
-  .joinLife .inner2 h3 {
-    font: 15px/1 "arial";
-    font-weight: 600;
-  }
-  .joinLife .inner2 table tr:last-child {
+  .joinLife .inner2 form table {
     width: 100%;
   }
-  .joinLife .inner2 table th {
+  .joinLife .inner2 form table tr th {
     display: none;
   }
-  .joinLife .inner2 table th:last-child {
-    display: block;
-    padding: 20px 0 0;
-  }
-  .joinLife .inner2 table th input[type=submit] {
-    width: 100px;
-    height: 35px;
-    font: bold 13px/1 "arial";
-    margin: 0 5px;
-    border-radius: 21px;
-  }
-  .joinLife .inner2 table th input[type=reset] {
-    width: 100px;
-    height: 35px;
-    font: bold 13px/1 "arial";
-    margin: 0 5px;
-    border-radius: 21px;
-  }
-  .joinLife .inner2 table td input::placeholder {
-    color: #aaa;
-  }
-  .joinLife .inner2 table td textarea::placeholder {
-    color: #aaa;
-  }
-  .joinLife .inner2 table td input[type=text], .joinLife .inner2 table td input[type=password], .joinLife .inner2 table td select {
+  .joinLife .inner2 form table tr th:last-child {
     width: 100%;
-  }
-  .joinLife .inner2 table td textarea#comments {
-    width: 100%;
-  }
-  .joinLife .inner2 table td label {
-    margin-right: 15px;
-  }
-  .joinLife .inner2 table td .interestTxt, .joinLife .inner2 table td .genderTxt {
     display: block;
+    border: none;
+  }
+  .joinLife .inner2 form table tr th:last-child input[type=reset] {
+    display: none;
+  }
+  .joinLife .inner2 form table tr th:last-child input[type=submit] {
+    margin-left: 10px;
+    margin-bottom: 80px;
+  }
+  .joinLife .inner2 form table tr td input::placeholder {
+    color: #bbb;
+  }
+  .joinLife .inner2 form table tr td textarea::placeholder {
+    color: #bbb;
+  }
+  .joinLife .inner2 form table tr td input[type=text], .joinLife .inner2 form table tr td input[type=password], .joinLife .inner2 form table tr td select {
+    border: none;
+    width: 100%;
+    height: 70px !important;
+    padding-left: 0px;
+  }
+  .joinLife .inner2 form table tr td textarea#comments {
+    height: 170px;
+    padding: 30px 0 60px 0px;
+  }
+  .joinLife .inner2 form table tr td p {
+    font: 10px/1.2 "arial";
+    margin-top: 0px;
+    margin-left: -30px;
+    position: absolute;
+    top: 48px;
+    display: block;
+  }
+  .joinLife .inner2 form table tr:nth-of-type(4) td, .joinLife .inner2 form table tr:nth-of-type(5) td {
+    padding: 25px 0 25px 0px;
+  }
+  .joinLife .inner2 form table tr:nth-of-type(4) td p, .joinLife .inner2 form table tr:nth-of-type(5) td p {
+    display: block;
+    margin-top: 5px;
+    margin-left: 0;
+    color: blue;
   }
 }
 @media screen and (max-width: 539px) {
@@ -3799,6 +3901,10 @@ body {
     padding: 60px 30px 0px;
     border-bottom: none;
   }
+  .joinLife .inner1 h2 {
+    font: 25px/1 "Noto Sans KR";
+    font-weight: 500;
+  }
   .joinLife .inner1 .wrap article {
     width: 100%;
     height: 400px;
@@ -3810,11 +3916,13 @@ body {
   }
   .joinLife .inner2 {
     width: 100%;
-    padding-bottom: 50px;
+    padding-bottom: 0px;
+  }
+  .joinLife .inner2 form {
+    width: 85%;
   }
   .joinLife .inner2 .wrap .group {
     width: 100%;
-    margin-right: 0;
   }
   .joinLife .inner2 #terms {
     width: 100%;
@@ -3835,12 +3943,10 @@ body {
   .joinLife .inner2 table th input[type=submit] {
     width: 150px;
     height: 42px;
-  }
-  .joinLife .inner2 table th input[type=reset] {
-    display: none;
+    margin-left: 0px !important;
   }
   .joinLife .inner2 table td label {
-    margin-right: 20px;
+    margin-right: 0px;
   }
   .joinLife .inner2 table td input[type=text], .joinLife .inner2 table td input[type=password], .joinLife .inner2 table td select {
     width: 100%;

@@ -69,8 +69,13 @@ function isCheck(name){
         if(errMsgs.length >0) inputs[0].closest("td").querySelector("p").remove();
 
         const errMsg = document.createElement("p");
+        errMsg.classList.add("on");
         errMsg.append(`필수입력 항목을 선택하세요`);
         inputs[0].closest("td").append(errMsg);
+        if(errMsg.classList.contains("on")) {
+            errMsg.style.display = "block";
+            errMsg.style.color = "red";
+        }
         return false;
     }
 }
