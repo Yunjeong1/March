@@ -244,48 +244,63 @@ $mobile: 539px;
             overflow: hidden;
         
             .panel {
-                width: 300%;
-                height: 100%;
-                margin-left: -100%;
-        
-                &::after {
-                    content: '';
-                    display: block;
-                    clear: both;
-                }
-        
-                img {
-                    width: 33.3333%;
-                    height: 100%;
-                    float: left;
-                    display: block;
-                    object-fit: contain;
-                }
+              width: 300%;
+              height: 100%;
+              margin-left: -100%;
+      
+              &::after {
+                  content: '';
+                  display: block;
+                  clear: both;
+              }
+              li{
+                width: 33.3333%;
+                float: left;
+              }
+              img {
+                  width: 100%;
+                  height: 100%;
+                  display: block;
+                  object-fit: contain;
+              }
             }
+            .btn{
+              opacity: 0;
+              transition: 0.3s;
 
+              .prev {
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                img{
+                  transform: scale(0.4);
+                  transition: 0.3s;
+                }
+                &:hover img{transform: scale(0.5);}
+              }
+        
+              .next {
+                display: block;
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                img{
+                  transform: scale(0.4);
+                  transition: 0.3s;
+                }
+                &:hover img{transform: scale(0.5);}
+              }
+            }
+            &:hover{
+              .btn{
+                opacity: 1;
+              }
+            }
           }
         }
-        .prev {
-          display: block;
-          position: absolute;
-          left: 25%;
-          top: -5%;
-          i{
-            font-size: 20px;
-            color: #333;
-          }
-      }
-  
-      .next {
-          display: block;
-          position: absolute;
-          left: 30%;
-          top: -5%;
-          i{
-            font-size: 20px;
-            color: #333;
-          }
-      }
     }
   }
 }
@@ -360,7 +375,7 @@ $mobile: 539px;
       margin-bottom: 100px;
       opacity:0; 
       transform:translateY(50px);
-      transition-duration: 0.3s;
+      transition-duration: 0.5s;
       transition-delay: 0s;
       
       .group1{
@@ -929,10 +944,10 @@ $mobile: 539px;
     position: relative;
     >h1 {
       position: absolute;
-      left: 50px !important; 
+      left: 80px !important; 
       img{
         display: block;
-        width: 80px;
+        width: 120px;
         content:url(../img/logo3.png);
       }
     }
@@ -971,46 +986,32 @@ $mobile: 539px;
       .wrap_2{
 
         article{
-          width: 50%; height: auto;
+
 
           .slider {
-            width: 80%;
-            height: 100%;
-            margin: 0px auto;
-            position: relative;
-            overflow: hidden;
-        
-            .panel {
-                width: 300%;
-                height: 100%;
-                margin-left: -100%;
-        
-                &::after {
-                    content: '';
-                    display: block;
-                    clear: both;
-                }
-        
-                img {
-                    width: 33.3333%;
-                    height: 100%;
-                    float: left;
-                    display: block;
-                    object-fit: contain;
-                }
-            }
 
+            .btn{
+
+              .prev {
+                left: -10px;
+                img{
+                  transform: scale(0.2);
+
+                }
+                &:hover img{transform: scale(0.25);}
+              }
+        
+              .next {
+                right: -10px;
+                img{
+                  transform: scale(0.2);
+                }
+                &:hover img{transform: scale(0.25);}
+              }
+            }
           }
         }
-        .prev {
-          left: 10%;
-          top: -8%;
       }
-      .next {
-          left: 20%;
-          top: -8%;
-      }
-     }
     }
   }
 
@@ -1056,7 +1057,7 @@ $mobile: 539px;
 
 /* collection -------------------------- */
 #collection {
-  padding: 0 30px 75px;
+  padding: 120px 30px 75px;
   .inner {
     width: 100%;
     margin: 0 auto;
@@ -1273,29 +1274,36 @@ $mobile: 539px;
   #subVisual{
 
     .inner{
+     
       .wrap_2{
+        article{
+          .slider {
+            .btn{
+              .prev {
+                left: -15px;
+                img{
+                  transform: scale(0.2);
 
-        .prev {
-          left: 10%;
-          top: -10%;
-          i{
-            font-size: 15px;
+                }
+                &:hover img{transform: scale(0.25);}
+              }
+              .next {
+                right: -15px;
+                img{
+                  transform: scale(0.2);
+                }
+                &:hover img{transform: scale(0.25);}
+              }
+            }
           }
+        }
       }
-      .next {
-          left: 20%;
-          top: -10%;
-          i{
-            font-size: 15px;
-          }
-      }
-     }
     }
   }
 
   /* news ------------------------------ */
   #news {
-    padding: 0px 30px;
+    padding: 0px 30px 200px;
     .inner .wrap{
       .group1 {
         margin-top: 80px;
@@ -1330,7 +1338,7 @@ $mobile: 539px;
 
   /* collection ---------------------------------------- */
   #collection {
-    padding: 170px 30px 50px;
+    padding: 120px 30px 50px;
     .inner{
       span {
         font: 4vmin/1 'Baskervville';
@@ -1477,6 +1485,14 @@ $mobile: 539px;
       #slider{
         left: -10%;
       }
+    }
+    .swiper-button-prev{
+      top: 32%;
+      left: 30px;
+    }
+    .swiper-button-next{
+      top: 32%;
+      left: 80px;
     }
   } 
 }

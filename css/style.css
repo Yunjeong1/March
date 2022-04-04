@@ -1149,7 +1149,7 @@ body {
   left: 50px;
   opacity: 1;
   z-index: 10;
-  transition: all 0.5s;
+  transition: all 0.3s;
 }
 .community .inner2 article .text {
   position: absolute;
@@ -3327,7 +3327,7 @@ body {
   left: 50px;
   opacity: 1;
   z-index: 10;
-  transition: all 0.5s;
+  transition: all 0.3s;
 }
 .community .inner2 article .text {
   position: absolute;
@@ -4221,32 +4221,50 @@ body {
   display: block;
   clear: both;
 }
-#subVisual .inner .wrap_2 article .slider .panel img {
+#subVisual .inner .wrap_2 article .slider .panel li {
   width: 33.3333%;
-  height: 100%;
   float: left;
+}
+#subVisual .inner .wrap_2 article .slider .panel img {
+  width: 100%;
+  height: 100%;
   display: block;
   object-fit: contain;
 }
-#subVisual .inner .wrap_2 .prev {
+#subVisual .inner .wrap_2 article .slider .btn {
+  opacity: 0;
+  transition: 0.3s;
+}
+#subVisual .inner .wrap_2 article .slider .btn .prev {
   display: block;
   position: absolute;
-  left: 25%;
-  top: -5%;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
-#subVisual .inner .wrap_2 .prev i {
-  font-size: 20px;
-  color: #333;
+#subVisual .inner .wrap_2 article .slider .btn .prev img {
+  transform: scale(0.4);
+  transition: 0.3s;
 }
-#subVisual .inner .wrap_2 .next {
+#subVisual .inner .wrap_2 article .slider .btn .prev:hover img {
+  transform: scale(0.5);
+}
+#subVisual .inner .wrap_2 article .slider .btn .next {
   display: block;
   position: absolute;
-  left: 30%;
-  top: -5%;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
-#subVisual .inner .wrap_2 .next i {
-  font-size: 20px;
-  color: #333;
+#subVisual .inner .wrap_2 article .slider .btn .next img {
+  transform: scale(0.4);
+  transition: 0.3s;
+}
+#subVisual .inner .wrap_2 article .slider .btn .next:hover img {
+  transform: scale(0.5);
+}
+#subVisual .inner .wrap_2 article .slider:hover .btn {
+  opacity: 1;
 }
 
 /* news ------------------------------------------------- */
@@ -4320,7 +4338,7 @@ body {
   margin-bottom: 100px;
   opacity: 0;
   transform: translateY(50px);
-  transition-duration: 0.3s;
+  transition-duration: 0.5s;
   transition-delay: 0s;
 }
 #news .inner .wrap1 .group1 a {
@@ -4861,11 +4879,11 @@ body {
   }
   #header .inner > h1 {
     position: absolute;
-    left: 50px !important;
+    left: 80px !important;
   }
   #header .inner > h1 img {
     display: block;
-    width: 80px;
+    width: 120px;
     content: url(../img/logo3.png);
   }
   #header .inner #gnbWeb {
@@ -4889,41 +4907,23 @@ body {
     font: lighter 2vmin/1 "work sans";
     margin-top: 10px;
   }
-  #subVisual .inner .wrap_2 article {
-    width: 50%;
-    height: auto;
+  #subVisual .inner .wrap_2 article .slider .btn .prev {
+    left: -10px;
   }
-  #subVisual .inner .wrap_2 article .slider {
-    width: 80%;
-    height: 100%;
-    margin: 0px auto;
-    position: relative;
-    overflow: hidden;
+  #subVisual .inner .wrap_2 article .slider .btn .prev img {
+    transform: scale(0.2);
   }
-  #subVisual .inner .wrap_2 article .slider .panel {
-    width: 300%;
-    height: 100%;
-    margin-left: -100%;
+  #subVisual .inner .wrap_2 article .slider .btn .prev:hover img {
+    transform: scale(0.25);
   }
-  #subVisual .inner .wrap_2 article .slider .panel::after {
-    content: "";
-    display: block;
-    clear: both;
+  #subVisual .inner .wrap_2 article .slider .btn .next {
+    right: -10px;
   }
-  #subVisual .inner .wrap_2 article .slider .panel img {
-    width: 33.3333%;
-    height: 100%;
-    float: left;
-    display: block;
-    object-fit: contain;
+  #subVisual .inner .wrap_2 article .slider .btn .next img {
+    transform: scale(0.2);
   }
-  #subVisual .inner .wrap_2 .prev {
-    left: 10%;
-    top: -8%;
-  }
-  #subVisual .inner .wrap_2 .next {
-    left: 20%;
-    top: -8%;
+  #subVisual .inner .wrap_2 article .slider .btn .next:hover img {
+    transform: scale(0.25);
   }
 
   /* news -------------------------------- */
@@ -4966,7 +4966,7 @@ body {
 
   /* collection -------------------------- */
   #collection {
-    padding: 0 30px 75px;
+    padding: 120px 30px 75px;
   }
   #collection .inner {
     width: 100%;
@@ -5149,24 +5149,28 @@ body {
     display: block;
   }
 
-  #subVisual .inner .wrap_2 .prev {
-    left: 10%;
-    top: -10%;
+  #subVisual .inner .wrap_2 article .slider .btn .prev {
+    left: -15px;
   }
-  #subVisual .inner .wrap_2 .prev i {
-    font-size: 15px;
+  #subVisual .inner .wrap_2 article .slider .btn .prev img {
+    transform: scale(0.2);
   }
-  #subVisual .inner .wrap_2 .next {
-    left: 20%;
-    top: -10%;
+  #subVisual .inner .wrap_2 article .slider .btn .prev:hover img {
+    transform: scale(0.25);
   }
-  #subVisual .inner .wrap_2 .next i {
-    font-size: 15px;
+  #subVisual .inner .wrap_2 article .slider .btn .next {
+    right: -15px;
+  }
+  #subVisual .inner .wrap_2 article .slider .btn .next img {
+    transform: scale(0.2);
+  }
+  #subVisual .inner .wrap_2 article .slider .btn .next:hover img {
+    transform: scale(0.25);
   }
 
   /* news ------------------------------ */
   #news {
-    padding: 0px 30px;
+    padding: 0px 30px 200px;
   }
   #news .inner .wrap .group1 {
     margin-top: 80px;
@@ -5199,7 +5203,7 @@ body {
 
   /* collection ---------------------------------------- */
   #collection {
-    padding: 170px 30px 50px;
+    padding: 120px 30px 50px;
   }
   #collection .inner span {
     font: 4vmin/1 "Baskervville";
@@ -5318,6 +5322,14 @@ body {
   }
   #green .inner #slider {
     left: -10%;
+  }
+  #green .swiper-button-prev {
+    top: 32%;
+    left: 30px;
+  }
+  #green .swiper-button-next {
+    top: 32%;
+    left: 80px;
   }
 }
 

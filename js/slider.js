@@ -3,8 +3,8 @@
 const wrap = document.querySelector("#subVisual .wrap_2");
 const slider = wrap.querySelector(".slider");
 const panel = wrap.querySelector(".panel");
-const prev = wrap.querySelector('.prev');
-const next = wrap.querySelector('.next');
+const prev = wrap.querySelector(".prev");
+const next = wrap.querySelector(".next");
 let enableClick = true;
 const lastEl = panel.lastElementChild;
 
@@ -16,6 +16,7 @@ next.addEventListener("click", e=>{
     const firstEl = panel.firstElementChild;
 
     if (enableClick) {
+        panel.style.marginLeft = "-100%";
         enableClick = false;
         new Anim(panel, {
             prop: "margin-left",
@@ -37,6 +38,7 @@ prev.addEventListener("click", e=>{
     const lastEl = panel.lastElementChild;
 
     if (enableClick) {
+        panel.style.marginLeft = "-100%";
         enableClick = false;
         new Anim(panel, {
             prop: "margin-left",
