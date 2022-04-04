@@ -11,6 +11,7 @@ const username = "195294341@N02";
 const key = "24d03e5e0bfb87d434ce0c70071a6ff9";
 const per_page = 25; 
 const url = `${base}method=${method_people}&api_key=${key}&per_page=${per_page}&format=json&nojsoncallback=1&user_id=${username}`;
+let speed = 300;
 
 
 callData(url);
@@ -111,19 +112,30 @@ frame.addEventListener("click",e=>{
         body.append(pop);
         body.style.overflow = "hidden";
         g_header.style.display = "none";
+        new Anim(pop,{
+            prop: "opacity",
+            value: 1,
+            duration: speed,
+        })
     }
 })
 
-frame.addEventListener("click",e=>{
-    e.preventDefault();
-
-    let pop = body.querySelector(".pop");
+body.addEventListener("click",e=>{
+    let pop = body.querySelector("aside");
     if(pop){
-        let close = pop.querySelector("span img");
+    let close = body.querySelector(".popClose img");
         if(e.target == close){
-            e.target.closest("aside").remove();
+            
             body.style.overflow = "auto";
             g_header.style.display = "block";
+            new Anim(pop,{
+                prop: "opacity",
+                value: 0,
+                duration: speed,
+                callback: ()=>{
+                    e.target.closest("aside").remove();
+                }
+            })
         }
     }
 })

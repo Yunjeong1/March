@@ -170,6 +170,7 @@ fieldset {
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0;
 }
 .pop .con {
   width: 100%;
@@ -509,7 +510,7 @@ body {
   vertical-align: top;
   color: #000;
   border-radius: 50px;
-  border: 2px solid #000;
+  border: 1px solid #000;
   font: 14px/40px "noto sans kr";
   margin-top: 20px;
   cursor: pointer;
@@ -2521,6 +2522,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0;
 }
 .pop .con {
   width: 100%;
@@ -2686,7 +2688,7 @@ body {
   vertical-align: top;
   color: #000;
   border-radius: 50px;
-  border: 2px solid #000;
+  border: 1px solid #000;
   font: 14px/40px "noto sans kr";
   margin-top: 20px;
   cursor: pointer;
@@ -4258,7 +4260,6 @@ body {
   width: 1180px;
   margin: 0 auto;
   position: relative;
-  transition: 0.3s;
 }
 #news .inner .wrap {
   width: 100%;
@@ -4319,8 +4320,8 @@ body {
   margin-bottom: 100px;
   opacity: 0;
   transform: translateY(50px);
-  transition-duration: 0.5s;
-  transition-delay: 0.2s;
+  transition-duration: 0.3s;
+  transition-delay: 0s;
 }
 #news .inner .wrap1 .group1 a {
   display: block;
@@ -4339,8 +4340,8 @@ body {
 #news .inner .wrap2 {
   opacity: 0;
   transform: translateY(50px);
-  transition-duration: 1s;
-  transition-delay: 0.4s;
+  transition-duration: 0.5s;
+  transition-delay: 0.2s;
 }
 #news .inner .wrap2 article span {
   text-align: right;
@@ -4373,8 +4374,7 @@ body {
 /* collection ---------------------------------------- */
 #collection {
   width: 100%;
-  padding-bottom: 85px;
-  margin-top: 100px;
+  padding: 100px 0 85px;
 }
 #collection .inner {
   width: 1180px;
@@ -4416,7 +4416,7 @@ body {
   margin-right: 20px;
   transition-duration: 0.5s;
   opacity: 0;
-  transform: translateY(50px);
+  transform: translateY(100px);
 }
 #collection .inner .wrap article:nth-of-type(1) {
   transition-delay: 0s;
@@ -4660,7 +4660,7 @@ body {
   position: fixed;
   top: 0;
   left: 0%;
-  background-color: rgba(241, 241, 241, 0.8);
+  background-color: rgba(241, 241, 241, 0.9);
   z-index: 10;
   display: none;
 }
@@ -4736,7 +4736,7 @@ body {
   width: 100%;
 }
 .aside_index .popUp .inner p img {
-  width: 40%;
+  width: 35%;
 }
 .aside_index .popUp .inner form {
   margin: 30px auto 0;
@@ -4774,7 +4774,7 @@ body {
 .aside_index .popUp .inner form .text-wrap label {
   font: lighter 12px/1 "noto sans kr";
   color: #fff;
-  letter-spacing: 0.1px;
+  letter-spacing: 0.4px;
   margin-left: 10px;
 }
 .aside_index .popUp .inner .close_img {

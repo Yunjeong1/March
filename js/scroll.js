@@ -3,7 +3,7 @@ const ul = body_i.querySelector(".scroll_e");
 const lis = ul.querySelectorAll("li");  
 const lis_arr = Array.from(lis); //배열로 바꿔줌
 let posArr = null; 
-let base = -300;
+let base = -350;
 
 
 //로딩시 세로위치값 구하기 
