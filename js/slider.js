@@ -1,4 +1,3 @@
-
 //#subVisual - 슬라이더 적용
 const wrap = document.querySelector("#subVisual .wrap_2");
 const slider = wrap.querySelector(".slider");
@@ -12,43 +11,47 @@ panel.prepend(lastEl);
 
 next.addEventListener("click", e=>{
     e.preventDefault();
-    
-    const firstEl = panel.firstElementChild;
-
     if (enableClick) {
-        panel.style.marginLeft = "-100%";
         enableClick = false;
-        new Anim(panel, {
-            prop: "margin-left",
-            value: "-200%",
-            duration: 1000,
-            callback: () => {
-                panel.append(firstEl);
-                panel.style.marginLeft = "-100%";
-                enableClick = true;
-            },
-        });
+        nextBtn();
     }
 });
-
 
 prev.addEventListener("click", e=>{
     e.preventDefault();
-
-    const lastEl = panel.lastElementChild;
-
     if (enableClick) {
-        panel.style.marginLeft = "-100%";
+        prevBtn();
         enableClick = false;
-        new Anim(panel, {
-            prop: "margin-left",
-            value: "0%",
-            duration: 1000,
-            callback: () => {
-                panel.prepend(lastEl);
-                panel.style.marginLeft = "-100%";
-                enableClick = true;
-            },
-        });
     }
 });
+
+
+function nextBtn(){
+    const firstEl = panel.firstElementChild;
+    panel.style.marginLeft = "-100%";
+    new Anim(panel, {
+        prop: "margin-left",
+        value: "-200%",
+        duration: 1000,
+        callback: () => {
+            panel.append(firstEl);
+            panel.style.marginLeft = "-100%";
+            enableClick = true;
+        },
+    });
+}
+
+function prevBtn(){
+    const lastEl = panel.lastElementChild;
+    panel.style.marginLeft = "-100%";
+    new Anim(panel, {
+        prop: "margin-left",
+        value: "0%",
+        duration: 1000,
+        callback: () => {
+            panel.prepend(lastEl);
+            panel.style.marginLeft = "-100%";
+            enableClick = true;
+        },
+    });
+}
