@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Lora:wght@400;500;600;700&family=Oswald:wght@200;300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;500;600;700&family=Italianno&family=Noto+Sans+KR:wght@300;400;500&family=Roboto:wght@400;500&family=Work+Sans:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;500;600;700&family=Italianno&family=Noto+Sans+KR:wght@300;400;500&family=Roboto:wght@400;500&family=Poppins:wght@300;400;500;600&family=Work+Sans:wght@300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Noto+Sans+KR:wght@100;300;400;500;700&family=Orbitron&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&family=Orbitron&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Noto+Sans+KR:wght@100;300;400;500;700&family=Orbitron&display=swap");
@@ -303,18 +303,16 @@ body {
 .youtube .inner article > a {
   display: block;
   width: 50vh;
-  height: 35vh;
   position: relative;
 }
-.youtube .inner article > a img {
+.youtube .inner article > a .cover img {
   width: 100%;
-  height: 100%;
   object-fit: cover;
-  border-radius: 7px;
-  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 0px;
+  filter: grayscale(100%);
 }
 .youtube .inner article > a i {
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(255, 255, 255, 0.8);
   font-size: 55px;
   position: absolute;
   top: 50%;
@@ -326,10 +324,10 @@ body {
   font-size: 70px;
 }
 .youtube .inner article:nth-of-type(odd) {
-  margin-top: 50px;
+  margin-top: 30px;
 }
 .youtube .inner article:nth-of-type(even) {
-  margin-top: 180px;
+  margin-top: 150px;
 }
 .youtube .inner article .con {
   width: 85%;
@@ -337,18 +335,19 @@ body {
 .youtube .inner article .con > h2 {
   width: 100%;
   text-align: left;
-  font: 25px/1.2 "Noto sans kr";
-  font-weight: 500;
+  font: 24px/1.2 "Oswald";
+  font-weight: 300;
+  letter-spacing: 0.5px;
   color: #888;
-  padding: 30px 0 0;
+  padding: 20px 0 0;
   cursor: pointer;
 }
 .youtube .inner article .con > p {
-  font: 16px/1 "noto sans kr";
-  font-weight: 500;
+  font: 15px/1 "arial";
+  font-weight: 400;
   text-align: left;
   color: #aaa;
-  padding: 30px 0 0;
+  padding: 20px 0 0;
 }
 
 #aside_y {
@@ -384,16 +383,18 @@ body {
     box-sizing: border-box;
   }
   .youtube .inner article {
-    width: 40%;
+    width: 45%;
   }
   .youtube .inner article > a {
     width: 100%;
   }
   .youtube .inner article .con > h2 {
-    font: 20px/1.2 "Noto sans kr";
+    font: 21px/1.1 "oswald";
+    font-weight: 300;
   }
   .youtube .inner article .con > p {
-    font: 15px/1 "noto sans kr";
+    font: 13px/1 "arial";
+    font-weight: 400;
   }
 
   #aside_y .btnClose {
@@ -422,10 +423,12 @@ body {
     width: 100%;
   }
   .youtube .inner article .con > h2 {
-    font: 18px/1.2 "Noto sans kr";
+    font: 20px/1.2 "oswald";
+    font-weight: 300;
   }
   .youtube .inner article .con > p {
-    font: 14px/1 "noto sans kr";
+    font: 13px/1 "arial";
+    font-weight: 400;
   }
   .youtube .inner article:nth-of-type(odd) {
     margin-top: 0px;
@@ -1846,8 +1849,8 @@ body {
 }
 #header_sub .inner #gnbWeb li a {
   display: block;
-  font: 15px/1 "arial";
-  font-weight: 400;
+  font: 16px/1 "oswald";
+  font-weight: 300;
   letter-spacing: 0.5px;
   transition: all 0.3s;
 }
@@ -2008,10 +2011,10 @@ body {
   box-sizing: border-box;
 }
 .content .sub_visual .text h1 {
-  font: 40px/1.3 "noto sans kr";
+  font: 45px/1.3 "poppins";
   font-weight: 500;
   color: #333;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
   text-align: left;
 }
 .content .inner {
@@ -2112,41 +2115,41 @@ body {
   }
 
   /*
-  .content{
+   .content{
 
-    .sub_visual{
-      width: 100%;
-      margin: 0px auto;
-      position: relative;
-      text-align: center;
-      .text{
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          margin: 0 auto;
-          padding: 70px 0;
-          box-sizing: border-box;
-          width: 30%;
-          border-bottom: 1px solid #666;
-          p{
-              font: 45px/1 'Italianno'; 
-              letter-spacing: 0.5px;
-              text-align: left;
-              padding-right: 70px;
-              box-sizing: border-box;
-          }
-          h1{
-              font: 40px/1.3 'noto sans kr'; 
-              letter-spacing: 0.5px;
-              text-align: left;
-          }
-      }
-    }
-      .inner{
-        width: 100%; margin: 0 auto;
-      }
-  }
-  */
+     .sub_visual{
+       width: 100%;
+       margin: 0px auto;
+       position: relative;
+       text-align: center;
+       .text{
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           margin: 0 auto;
+           padding: 70px 0;
+           box-sizing: border-box;
+           width: 30%;
+           border-bottom: 1px solid #666;
+           p{
+               font: 45px/1 'Italianno'; 
+               letter-spacing: 0.5px;
+               text-align: left;
+               padding-right: 70px;
+               box-sizing: border-box;
+           }
+           h1{
+               font: 40px/1.3 'noto sans kr'; 
+               letter-spacing: 0.5px;
+               text-align: left;
+           }
+       }
+     }
+       .inner{
+         width: 100%; margin: 0 auto;
+       }
+   }
+   */
   /* footer ---------------------------------------- */
   #footer_sub {
     padding: 75px 30px;
@@ -2245,18 +2248,16 @@ body {
 .youtube .inner article > a {
   display: block;
   width: 50vh;
-  height: 35vh;
   position: relative;
 }
-.youtube .inner article > a img {
+.youtube .inner article > a .cover img {
   width: 100%;
-  height: 100%;
   object-fit: cover;
-  border-radius: 7px;
-  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 0px;
+  filter: grayscale(100%);
 }
 .youtube .inner article > a i {
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(255, 255, 255, 0.8);
   font-size: 55px;
   position: absolute;
   top: 50%;
@@ -2268,10 +2269,10 @@ body {
   font-size: 70px;
 }
 .youtube .inner article:nth-of-type(odd) {
-  margin-top: 50px;
+  margin-top: 30px;
 }
 .youtube .inner article:nth-of-type(even) {
-  margin-top: 180px;
+  margin-top: 150px;
 }
 .youtube .inner article .con {
   width: 85%;
@@ -2279,18 +2280,19 @@ body {
 .youtube .inner article .con > h2 {
   width: 100%;
   text-align: left;
-  font: 25px/1.2 "Noto sans kr";
-  font-weight: 500;
+  font: 24px/1.2 "Oswald";
+  font-weight: 300;
+  letter-spacing: 0.5px;
   color: #888;
-  padding: 30px 0 0;
+  padding: 20px 0 0;
   cursor: pointer;
 }
 .youtube .inner article .con > p {
-  font: 16px/1 "noto sans kr";
-  font-weight: 500;
+  font: 15px/1 "arial";
+  font-weight: 400;
   text-align: left;
   color: #aaa;
-  padding: 30px 0 0;
+  padding: 20px 0 0;
 }
 
 #aside_y {
@@ -2326,16 +2328,18 @@ body {
     box-sizing: border-box;
   }
   .youtube .inner article {
-    width: 40%;
+    width: 45%;
   }
   .youtube .inner article > a {
     width: 100%;
   }
   .youtube .inner article .con > h2 {
-    font: 20px/1.2 "Noto sans kr";
+    font: 21px/1.1 "oswald";
+    font-weight: 300;
   }
   .youtube .inner article .con > p {
-    font: 15px/1 "noto sans kr";
+    font: 13px/1 "arial";
+    font-weight: 400;
   }
 
   #aside_y .btnClose {
@@ -2364,10 +2368,12 @@ body {
     width: 100%;
   }
   .youtube .inner article .con > h2 {
-    font: 18px/1.2 "Noto sans kr";
+    font: 20px/1.2 "oswald";
+    font-weight: 300;
   }
   .youtube .inner article .con > p {
-    font: 14px/1 "noto sans kr";
+    font: 13px/1 "arial";
+    font-weight: 400;
   }
   .youtube .inner article:nth-of-type(odd) {
     margin-top: 0px;
@@ -4020,8 +4026,8 @@ body {
 }
 #header .inner #gnbWeb li a {
   display: block;
-  font: 15px/1 "arial";
-  font-weight: 400;
+  font: 16px/1 "oswald";
+  font-weight: 300;
   letter-spacing: 0.5px;
   transition: all 0.3s;
 }
@@ -4185,11 +4191,11 @@ body {
 }
 #subVisual .inner .wrap_1 article h2 {
   font: 55px/1 "Cormorant";
-  color: #A79990;
+  color: #a79990;
 }
 #subVisual .inner .wrap_1 article h2 span {
   font: 75px/1 "Cormorant";
-  color: #A79990;
+  color: #a79990;
 }
 #subVisual .inner .wrap_1 article p {
   font: 16px/1 "work sans";
