@@ -1,447 +1,464 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&family=Orbitron&display=swap');
 /* content ----------------------------------------- */
-.joinLife{
-    padding-bottom: 70px;
+.joinLife {
+	padding-bottom: 70px;
 
-    .inner1{
-        width: 1180px; 
-        margin: 0 auto;
-        padding: 30px 0 200px;
-        h2{
-            font: 30px/1 'arial';
-            font-weight: 500;
-            color: #000;
-            letter-spacing: 1px;
-            padding: 50px 0;
-        }
-        // span{
-        //     font: 20px/1 'Noto Sans KR';
-        //     font-weight: 400;
-        //     color: #088D4E;
-        //     &::before{
-        //         content: '/'; 
-        //         margin-right:20px; 
-        //         margin-left:10px; 
-        //     }
-        // }
-        .wrap{
-            width: 100%;
-            &::after{
-                content: ''; display: block; clear: both;
-            }
-            article{
-                width: 280px; height: 400px;
-                float: left;
-                margin-right: 20px;
-                img{
-                    width: 100%; height: 100%;
-                    object-fit: cover;
-                }
-                &:nth-of-type(even){
-                    height: 300px;
-                }
-                &:last-child{
-                    margin-right: 0;
-                }
-                &:hover{
-                    .btn{
-                        border-bottom: none;
-                    }
-                }
-                h3{
-                    font: 20px/1 'Noto Sans KR';
-                    font-weight: 400;
-                    color: #000;
-                    letter-spacing: 1px;
-                    padding: 10px 0;
-                }
-                p{
-                    font: 13px/1.3 'Noto Sans KR';
-                    color: #333;
-                    margin-bottom: 10px;
-                }
-                .btn{
-                    font: 12px/1 'Noto Sans KR';
-                    color: #333;
-                    border-bottom: 1px solid #333;
-                }
-            }
-        }
-    }
-    .inner2{
-        width: 1180px; 
-        margin: 0 auto;
-        font-family: 'Noto Sans KR';
-        padding-bottom: 100px;
-        border-bottom: 1px solid #ddd;
+	.inner1 {
+		width: 1180px;
+		margin: 0 auto;
+		padding: 30px 0 200px;
+		h2 {
+			font: 30px/1 'arial';
+			font-weight: 500;
+			color: #000;
+			letter-spacing: 1px;
+			padding: 50px 0;
+		}
 
-        >h2{
-            padding-bottom: 10px !important;
-        }
+		.wrap {
+			width: 100%;
+			&::after {
+				content: '';
+				display: block;
+				clear: both;
+			}
+			article {
+				width: 280px;
+				height: 400px;
+				float: left;
+				margin-right: 20px;
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+				&:nth-of-type(even) {
+					height: 300px;
+				}
+				&:last-child {
+					margin-right: 0;
+				}
+				&:hover {
+					.btn {
+						border-bottom: none;
+					}
+				}
+				h3 {
+					font: 20px/1 'Noto Sans KR';
+					font-weight: 400;
+					color: #000;
+					letter-spacing: 1px;
+					padding: 10px 0;
+				}
+				p {
+					font: 13px/1.3 'Noto Sans KR';
+					color: #333;
+					margin-bottom: 10px;
+				}
+				.btn {
+					font: 12px/1 'Noto Sans KR';
+					color: #333;
+					border-bottom: 1px solid #333;
+				}
+			}
+		}
+	}
+	.inner2 {
+		width: 1180px;
+		margin: 0 auto;
+		font-family: 'Noto Sans KR';
+		padding-bottom: 100px;
+		border-bottom: 1px solid #ddd;
 
-        >span{
-            font: 13px/1 'arial';
-            color: #444;
-        }
-        h2{
-            font: 30px/1 'arial';
-            font-weight: 500;
-            color: #000;
-            letter-spacing: 1px;
-            padding: 80px 0 50px;
-        }
-        .bar{
-            font: 18px/1 'Noto Sans KR';
-            font-weight: 400;
-            color: #999;
-            &::before{
-                content: '/'; 
-                margin-right:20px;
-                margin-left: 20px; 
-            }
-        }
-        form{
-            width: 50%;
-            margin: 70px auto 0;
+		> h2 {
+			padding-bottom: 10px !important;
+		}
 
-            h3{
-                font: 16px/1 'Noto Sans KR';
-                font-weight: 500;
-                color: #555;
-                margin-bottom: 30px;
-                text-align: left;
-            }
-            #terms{
-                width: 100%; height: 130px;
-                resize: none;
-                font: 12px/1.1 'arial';
-                color: #aaa;
-                background: rgba(244, 241, 241, 0.485);
-                margin-bottom: 10px;
-                padding: 20px;
-                box-sizing: border-box;
-                border: 1px solid #ddd;
-            }
-            .agreement{
-                text-align: left;
-                margin-bottom: 50px;
-                label[for=agree]{font-size: 13px;}
-                p{
-                    font: 11px/1.2 'arial';
-                    color:  red;
-                    margin-top: 5px;
-                }
-            }
-            table{
-                width: 100%;
-                tr{
-                    position: relative;
-                    th{
-                        border-top: 1px solid #ddd;
-                        width: 30%;
-                        font: 14px/1 'Noto Sans KR';
-                        font-weight: 500;
-                        color: #333;
-                        text-align: left;
-                        padding: 20px 0 25px;
-                        box-sizing: border-box;
-                        position: relative;
-        
-                        &::after{
-                            content: '|'; display:inline; 
-                            color: rgb(219, 219, 219);
-                            font-size: 20px;
-                            position: absolute;
-                            left: 140px;
-                            margin-top: -3px;
-                        }
-                        &:last-child{
-                            border-right: none;
-                            border-bottom: none;
-                            background: none;
-                            text-align: center;
-                            padding: 40px 0 0;
-                            box-sizing: border-box;
-                            &::after{
-                                content:''; clear: both;
-                            }
-                        }
-                        input[type=submit]{
-                            width: 130px; height: 42px;
-                            border: none;
-                            background: #000;
-                            color: #fff;
-                            font: bold 14px/1 'arial';
-                            margin: 0 10px;
-                            border-radius: 21px;
-                            cursor: pointer;
-                            transition: background 0.5s;
-        
-                            &:hover{
-                                background: #fff;
-                                border: 2px solid #000;
-                                color: #000;
-                            }
-                        }
-                        input[type=reset]{
-                            width: 150px; height: 42px;
-                            border: 1px solid #aaa;
-                            box-sizing: border-box;
-                            background: none;
-                            color: #aaa;
-                            font: bold 14px/1 'arial';
-                            margin: 0 10px;
-                            border-radius: 21px;
-                            cursor: pointer;
-                        }
-                    }
-                    td{
-                        border: 1px solid #ddd;
-                        border-left: none;
-                        border-right: none;
-                        color: #333;
-                        box-sizing: border-box;
-                        text-align: left;
-                        position: relative;
-        
-                        input::placeholder{
-                            color: #ccc;
-                        }
-                        textarea::placeholder{
-                            color: #ccc;
-                        }
-                        input[type=text],input[type=password],select{
-                            border: none;
-                            width:100%; height:45px; 
-                            padding-left: 30px; 
-                            background: transparent;
-                        }
-                        input[type=checkbox], input[type=radio] {
-                            margin-right: 5px;
-                        }
-                        label{
-                            margin-right: 20px;
-                            font: 14px/1 'Noto Sans KR';
-                            color: #555;
-                        }
-                        textarea#comments{
-                            width: 100%; height: 150px;
-                            background: transparent;
-                            resize: none;
-                            border: none;
-                            padding: 70px 0 60px 30px;
-                            box-sizing: border-box;
-                        }
-                        p{
-                            font: 11px/1.2 'arial';
-                            color:  red;
-                            margin-top: 0px;
-                            position: absolute;
-                            top: 42px;
-                            padding-left: 30px;
-                        }
-                    }
-                    &:nth-of-type(4), &:nth-of-type(5){
-                        td{
-                            padding-left: 30px;
-                            p{
-                                padding-left: 0;
-                                display: none;
-                            }
-                        }
-                    }
-                    &:nth-of-type(8){
-                        p{
-                            top: 90px;
-                        }
-                    }
-                }
-            }
-        }
-    }
+		> span {
+			font: 13px/1 'arial';
+			color: #444;
+		}
+		h2 {
+			font: 30px/1 'arial';
+			font-weight: 500;
+			color: #000;
+			letter-spacing: 1px;
+			padding: 80px 0 50px;
+		}
+		.bar {
+			font: 18px/1 'Noto Sans KR';
+			font-weight: 400;
+			color: #999;
+			&::before {
+				content: '/';
+				margin-right: 20px;
+				margin-left: 20px;
+			}
+		}
+		form {
+			width: 50%;
+			margin: 70px auto 0;
+
+			h3 {
+				font: 16px/1 'Noto Sans KR';
+				font-weight: 500;
+				color: #555;
+				margin-bottom: 30px;
+				text-align: left;
+			}
+			#terms {
+				width: 100%;
+				height: 130px;
+				resize: none;
+				font: 12px/1.1 'arial';
+				color: #aaa;
+				background: rgba(241, 239, 239, 0.651);
+				margin-bottom: 10px;
+				padding: 20px;
+				box-sizing: border-box;
+				border: 1px solid #ddd;
+			}
+			.agreement {
+				text-align: left;
+				margin-bottom: 50px;
+				label[for='agree'] {
+					font-size: 13px;
+				}
+				p {
+					font: 11px/1.2 'arial';
+					color: red;
+					margin-top: 5px;
+				}
+			}
+			table {
+				width: 100%;
+				tr {
+					position: relative;
+					th {
+						border-top: 1px solid #ddd;
+						width: 30%;
+						font: 14px/1 'Noto Sans KR';
+						font-weight: 500;
+						color: #333;
+						text-align: left;
+						padding: 20px 0 25px;
+						box-sizing: border-box;
+						position: relative;
+
+						&::after {
+							content: '|';
+							display: inline;
+							color: rgb(219, 219, 219);
+							font-size: 20px;
+							position: absolute;
+							left: 140px;
+							margin-top: -3px;
+						}
+						&:last-child {
+							border-right: none;
+							border-bottom: none;
+							background: none;
+							text-align: center;
+							padding: 40px 0 0;
+							box-sizing: border-box;
+							&::after {
+								content: '';
+								clear: both;
+							}
+						}
+						input[type='submit'] {
+							width: 130px;
+							height: 42px;
+							border: none;
+							background: #000;
+							color: #fff;
+							font: bold 14px/1 'arial';
+							margin: 0 10px;
+							border-radius: 21px;
+							cursor: pointer;
+							transition: background 0.5s;
+
+							&:hover {
+								background: #fff;
+								border: 2px solid #000;
+								color: #000;
+							}
+						}
+						input[type='reset'] {
+							width: 150px;
+							height: 42px;
+							border: 1px solid #aaa;
+							box-sizing: border-box;
+							background: none;
+							color: #aaa;
+							font: bold 14px/1 'arial';
+							margin: 0 10px;
+							border-radius: 21px;
+							cursor: pointer;
+						}
+					}
+					td {
+						border: 1px solid #ddd;
+						border-left: none;
+						border-right: none;
+						color: #333;
+						box-sizing: border-box;
+						text-align: left;
+						position: relative;
+
+						input::placeholder {
+							color: #ccc;
+						}
+						textarea::placeholder {
+							color: #ccc;
+						}
+						input[type='text'],
+						input[type='password'],
+						select {
+							border: none;
+							width: 100%;
+							height: 45px;
+							padding-left: 30px;
+							background: transparent;
+						}
+						input[type='checkbox'],
+						input[type='radio'] {
+							margin-right: 5px;
+						}
+						label {
+							margin-right: 20px;
+							font: 14px/1 'Noto Sans KR';
+							color: #555;
+						}
+						textarea#comments {
+							width: 100%;
+							height: 150px;
+							background: transparent;
+							resize: none;
+							border: none;
+							padding: 70px 0 60px 30px;
+							box-sizing: border-box;
+						}
+						p {
+							font: 11px/1.2 'arial';
+							color: red;
+							margin-top: 0px;
+							position: absolute;
+							top: 42px;
+							padding-left: 30px;
+						}
+					}
+					&:nth-of-type(4),
+					&:nth-of-type(5) {
+						td {
+							padding-left: 30px;
+							p {
+								padding-left: 0;
+								display: none;
+							}
+						}
+					}
+					&:nth-of-type(8) {
+						p {
+							top: 90px;
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 // tablet -------------------------------------------------
-@media screen and (max-width:$tablet){
-    .joinLife{
-        padding: 0 0 50px;
-        .sub_visual{
-            width: 100%;
-        }
-        .inner1{
-            padding: 20px 30px 0;
-            width: 100%;
-            h2{
-                font:25px/1 'Noto Sans KR';
-                font-weight: 500;
-            }
-            span{
-                font:18px/1 'Noto Sans KR';
-            }
-            .wrap{
-                article{
-                    width: 48%; height: 450px;
-                    margin-right: 4%;
-                    margin-bottom: 150px;
+@media screen and (max-width: $tablet) {
+	.joinLife {
+		padding: 0 0 50px;
+		.sub_visual {
+			width: 100%;
+		}
+		.inner1 {
+			padding: 20px 30px 0;
+			width: 100%;
+			h2 {
+				font: 25px/1 'Noto Sans KR';
+				font-weight: 500;
+			}
+			span {
+				font: 18px/1 'Noto Sans KR';
+			}
+			.wrap {
+				article {
+					width: 48%;
+					height: 450px;
+					margin-right: 4%;
+					margin-bottom: 150px;
 
-                    &:nth-of-type(even){
-                        height: 350px;
-                        margin-right: 0;
-                    }
-                    h3{
-                        font: 19px/1 'Noto Sans KR';
-                        letter-spacing: 0.5px;
-                    }
-                }
-            }
-        }
-        .inner2{
-            width: 100%; 
-            padding: 0 30px;
-            border-bottom: none;
-            &::after{
-                content: ''; display: block; 
-                width: 100%; height: 1px;
-                background: #ddd;
-                margin: 0 auto;
-            }
-            form{
-                width: 70%;
+					&:nth-of-type(even) {
+						height: 350px;
+						margin-right: 0;
+					}
+					h3 {
+						font: 19px/1 'Noto Sans KR';
+						letter-spacing: 0.5px;
+					}
+				}
+			}
+		}
+		.inner2 {
+			width: 100%;
+			padding: 0 30px;
+			border-bottom: none;
+			&::after {
+				content: '';
+				display: block;
+				width: 100%;
+				height: 1px;
+				background: #ddd;
+				margin: 0 auto;
+			}
+			form {
+				width: 70%;
 
-                table{
-                    width: 100%;
-        
-                    tr{
-                        th{
-                            display: none;
-                            &:last-child{
-                                width: 100%;
-                                display: block;
-                                border: none;
-                                input[type=reset]{
-                                    display: none;
-                                }
-                                input[type=submit]{
-                                    margin-left: 10px;
-                                    margin-bottom: 80px;
-                                }
-                            }
-                        }
-                        td{
- 
-                            input::placeholder{
-                                color: #bbb;
-                            }
-                            textarea::placeholder{
-                                color: #bbb;
-                            }
-                            input[type=text],input[type=password],select{
-                                border: none;
-                                width:100%; height:70px !important; 
-                                padding-left: 0px; 
-                            }
-                            textarea#comments{
-                                height: 170px;
-                                padding: 30px 0 60px 0px;
-                            }
-                            p{
-                                font: 10px/1.2 'arial';
-                                margin-top: 0px;
-                                margin-left: -30px;
-                                position: absolute;
-                                top: 48px;
-                                display: block;
-                            }
-                        }
-                        &:nth-of-type(4), &:nth-of-type(5){
-                            td{
-                                padding: 25px 0 25px 0px;
-                                p{
-                                    display: block;
-                                    margin-top: 5px;
-                                    margin-left: 0;
-                                    color: blue;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
+				table {
+					width: 100%;
+
+					tr {
+						th {
+							display: none;
+							&:last-child {
+								width: 100%;
+								display: block;
+								border: none;
+								input[type='reset'] {
+									display: none;
+								}
+								input[type='submit'] {
+									margin-left: 10px;
+									margin-bottom: 80px;
+								}
+							}
+						}
+						td {
+							input::placeholder {
+								color: #bbb;
+							}
+							textarea::placeholder {
+								color: #bbb;
+							}
+							input[type='text'],
+							input[type='password'],
+							select {
+								border: none;
+								width: 100%;
+								height: 70px !important;
+								padding-left: 0px;
+							}
+							textarea#comments {
+								height: 170px;
+								padding: 30px 0 60px 0px;
+							}
+							p {
+								font: 10px/1.2 'arial';
+								margin-top: 0px;
+								margin-left: -30px;
+								position: absolute;
+								top: 48px;
+								display: block;
+							}
+						}
+						&:nth-of-type(4),
+						&:nth-of-type(5) {
+							td {
+								padding: 25px 0 25px 0px;
+								p {
+									display: block;
+									margin-top: 5px;
+									margin-left: 0;
+									color: blue;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 // mobile -------------------------------------------------
-@media screen and (max-width:$mobile){
-    .joinLife{
+@media screen and (max-width: $mobile) {
+	.joinLife {
+		.inner1 {
+			margin-top: 30px;
+			&::after {
+				content: '';
+				display: block;
+				padding: 60px 30px 0px;
+				border-bottom: none;
+			}
+			h2 {
+				font: 25px/1 'Noto Sans KR';
+				font-weight: 500;
+			}
+			.wrap {
+				article {
+					width: 100%;
+					height: 400px;
+					margin-right: 0%;
+					margin-bottom: 150px;
 
-        .inner1{
-            margin-top: 30px;
-            &::after{
-                content: ''; display: block;
-                padding: 60px 30px 0px;
-                border-bottom: none;
-            }
-            h2{
-                font: 25px/1 'Noto Sans KR';
-                font-weight: 500;
-            }
-            .wrap{
-                article{
-                    width: 100%; height: 400px;
-                    margin-right: 0%;
-                    margin-bottom: 150px;
-
-                    &:nth-of-type(even){
-                        height: 400px;
-                    }
-                }
-            }
-        }
-        .inner2{
-            width: 100%;
-            padding-bottom: 0px;
-            form{
-                width: 85%;
-            }
-            .wrap{
-
-                .group{
-                    width: 100%;
-                }
-            }
-            #terms{
-                width: 100%;
-            }
-            h2{
-                font: 25px/1 'Noto Sans KR';
-                font-weight: 500;
-                padding: 80px 0 45px;
-            }
-            span{
-                font: 18px/1 'Noto Sans KR';
-                font-weight: 400;
-            }
-            h3{
-                font: 15px/1 'arial';
-                font-weight: 600;
-            }
-            table{
-                th{
-                    input[type=submit]{
-                        width: 150px; height: 42px;
-                        margin-left: 0px !important;
-                    }
-                }
-                td{
-                    label{
-                        margin-right: 0px;
-                    }
-                    input[type=text],input[type=password],select{
-                        width: 100%;
-                    }
-                }
-            }
-        }
-    }
+					&:nth-of-type(even) {
+						height: 400px;
+					}
+				}
+			}
+		}
+		.inner2 {
+			width: 100%;
+			padding-bottom: 0px;
+			form {
+				width: 85%;
+			}
+			.wrap {
+				.group {
+					width: 100%;
+				}
+			}
+			#terms {
+				width: 100%;
+			}
+			h2 {
+				font: 25px/1 'Noto Sans KR';
+				font-weight: 500;
+				padding: 80px 0 45px;
+			}
+			span {
+				font: 18px/1 'Noto Sans KR';
+				font-weight: 400;
+			}
+			h3 {
+				font: 15px/1 'arial';
+				font-weight: 600;
+			}
+			table {
+				th {
+					input[type='submit'] {
+						width: 150px;
+						height: 42px;
+						margin-left: 0px !important;
+					}
+				}
+				td {
+					label {
+						margin-right: 0px;
+					}
+					input[type='text'],
+					input[type='password'],
+					select {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
 }

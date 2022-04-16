@@ -48,6 +48,7 @@ fieldset {
 .gallery .inner {
   width: 1180px;
   position: relative;
+  min-height: 400px;
 }
 .gallery .inner #searchBox {
   width: 100%;
@@ -82,7 +83,7 @@ fieldset {
   cursor: pointer;
 }
 .gallery .inner .loading {
-  width: 80px;
+  width: 250px;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -529,6 +530,7 @@ body {
   border: none;
   background: transparent;
   width: 100%;
+  position: relative;
 }
 .contact .inner1 table tr td input[type=text]::placeholder {
   font: 14px/1 "noto sans kr";
@@ -551,6 +553,19 @@ body {
 .contact .inner1 table tr td #comments::placeholder {
   color: #aaa;
 }
+.contact .inner1 table tr td p {
+  font: 10px/1 "arial";
+  color: red;
+  padding: 0;
+  text-align: left;
+}
+.contact .inner1 table tr td .two {
+  margin-left: 50px;
+}
+.contact .inner1 table tr td .four {
+  position: absolute;
+  top: 187px;
+}
 .contact .inner2 {
   position: relative;
   width: 1180px;
@@ -559,6 +574,8 @@ body {
   width: 100%;
   height: 450px;
   margin: 0px auto 40px;
+  background: rgba(0, 0, 0, 0.7);
+  filter: grayscale(100%);
 }
 .contact .inner2 .branch {
   width: 100%;
@@ -583,7 +600,22 @@ body {
   transition: background-color 0.5s;
 }
 .contact .inner2 .branch article.on {
-  background-color: #eee;
+  background-color: #000;
+  color: #fff;
+}
+.contact .inner2 .branch article.on a {
+  background: #fff;
+  color: #000;
+}
+.contact .inner2 .branch article.on a:hover {
+  border: none;
+  font: 13px/45px "noto sans kr";
+}
+.contact .inner2 .branch article.on i {
+  color: #bbb;
+}
+.contact .inner2 .branch article.on p {
+  color: #fff;
 }
 .contact .inner2 .branch article:last-child {
   margin-right: 0;
@@ -616,6 +648,13 @@ body {
   color: #fff;
   border-radius: 50px;
   font: 13px/45px "noto sans kr";
+  transition: background-color 0.3s;
+}
+.contact .inner2 .branch article a:hover {
+  border: 2px solid #000;
+  background-color: #fff;
+  color: #000;
+  font: 13px/41px "noto sans kr";
 }
 
 /* tablet ---------------------------------- */
@@ -1475,7 +1514,7 @@ body {
   resize: none;
   font: 12px/1.1 "arial";
   color: #aaa;
-  background: rgba(244, 241, 241, 0.485);
+  background: rgba(241, 239, 239, 0.651);
   margin-bottom: 10px;
   padding: 20px;
   box-sizing: border-box;
@@ -1575,14 +1614,17 @@ body {
 .joinLife .inner2 form table tr td textarea::placeholder {
   color: #ccc;
 }
-.joinLife .inner2 form table tr td input[type=text], .joinLife .inner2 form table tr td input[type=password], .joinLife .inner2 form table tr td select {
+.joinLife .inner2 form table tr td input[type=text],
+.joinLife .inner2 form table tr td input[type=password],
+.joinLife .inner2 form table tr td select {
   border: none;
   width: 100%;
   height: 45px;
   padding-left: 30px;
   background: transparent;
 }
-.joinLife .inner2 form table tr td input[type=checkbox], .joinLife .inner2 form table tr td input[type=radio] {
+.joinLife .inner2 form table tr td input[type=checkbox],
+.joinLife .inner2 form table tr td input[type=radio] {
   margin-right: 5px;
 }
 .joinLife .inner2 form table tr td label {
@@ -1690,7 +1732,9 @@ body {
   .joinLife .inner2 form table tr td textarea::placeholder {
     color: #bbb;
   }
-  .joinLife .inner2 form table tr td input[type=text], .joinLife .inner2 form table tr td input[type=password], .joinLife .inner2 form table tr td select {
+  .joinLife .inner2 form table tr td input[type=text],
+.joinLife .inner2 form table tr td input[type=password],
+.joinLife .inner2 form table tr td select {
     border: none;
     width: 100%;
     height: 70px !important;
@@ -1775,7 +1819,9 @@ body {
   .joinLife .inner2 table td label {
     margin-right: 0px;
   }
-  .joinLife .inner2 table td input[type=text], .joinLife .inner2 table td input[type=password], .joinLife .inner2 table td select {
+  .joinLife .inner2 table td input[type=text],
+.joinLife .inner2 table td input[type=password],
+.joinLife .inner2 table td select {
     width: 100%;
   }
 }
@@ -2406,6 +2452,7 @@ body {
 .gallery .inner {
   width: 1180px;
   position: relative;
+  min-height: 400px;
 }
 .gallery .inner #searchBox {
   width: 100%;
@@ -2440,7 +2487,7 @@ body {
   cursor: pointer;
 }
 .gallery .inner .loading {
-  width: 80px;
+  width: 250px;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -2710,6 +2757,7 @@ body {
   border: none;
   background: transparent;
   width: 100%;
+  position: relative;
 }
 .contact .inner1 table tr td input[type=text]::placeholder {
   font: 14px/1 "noto sans kr";
@@ -2732,6 +2780,19 @@ body {
 .contact .inner1 table tr td #comments::placeholder {
   color: #aaa;
 }
+.contact .inner1 table tr td p {
+  font: 10px/1 "arial";
+  color: red;
+  padding: 0;
+  text-align: left;
+}
+.contact .inner1 table tr td .two {
+  margin-left: 50px;
+}
+.contact .inner1 table tr td .four {
+  position: absolute;
+  top: 187px;
+}
 .contact .inner2 {
   position: relative;
   width: 1180px;
@@ -2740,6 +2801,8 @@ body {
   width: 100%;
   height: 450px;
   margin: 0px auto 40px;
+  background: rgba(0, 0, 0, 0.7);
+  filter: grayscale(100%);
 }
 .contact .inner2 .branch {
   width: 100%;
@@ -2764,7 +2827,22 @@ body {
   transition: background-color 0.5s;
 }
 .contact .inner2 .branch article.on {
-  background-color: #eee;
+  background-color: #000;
+  color: #fff;
+}
+.contact .inner2 .branch article.on a {
+  background: #fff;
+  color: #000;
+}
+.contact .inner2 .branch article.on a:hover {
+  border: none;
+  font: 13px/45px "noto sans kr";
+}
+.contact .inner2 .branch article.on i {
+  color: #bbb;
+}
+.contact .inner2 .branch article.on p {
+  color: #fff;
 }
 .contact .inner2 .branch article:last-child {
   margin-right: 0;
@@ -2797,6 +2875,13 @@ body {
   color: #fff;
   border-radius: 50px;
   font: 13px/45px "noto sans kr";
+  transition: background-color 0.3s;
+}
+.contact .inner2 .branch article a:hover {
+  border: 2px solid #000;
+  background-color: #fff;
+  color: #000;
+  font: 13px/41px "noto sans kr";
 }
 
 /* tablet ---------------------------------- */
@@ -3656,7 +3741,7 @@ body {
   resize: none;
   font: 12px/1.1 "arial";
   color: #aaa;
-  background: rgba(244, 241, 241, 0.485);
+  background: rgba(241, 239, 239, 0.651);
   margin-bottom: 10px;
   padding: 20px;
   box-sizing: border-box;
@@ -3756,14 +3841,17 @@ body {
 .joinLife .inner2 form table tr td textarea::placeholder {
   color: #ccc;
 }
-.joinLife .inner2 form table tr td input[type=text], .joinLife .inner2 form table tr td input[type=password], .joinLife .inner2 form table tr td select {
+.joinLife .inner2 form table tr td input[type=text],
+.joinLife .inner2 form table tr td input[type=password],
+.joinLife .inner2 form table tr td select {
   border: none;
   width: 100%;
   height: 45px;
   padding-left: 30px;
   background: transparent;
 }
-.joinLife .inner2 form table tr td input[type=checkbox], .joinLife .inner2 form table tr td input[type=radio] {
+.joinLife .inner2 form table tr td input[type=checkbox],
+.joinLife .inner2 form table tr td input[type=radio] {
   margin-right: 5px;
 }
 .joinLife .inner2 form table tr td label {
@@ -3871,7 +3959,9 @@ body {
   .joinLife .inner2 form table tr td textarea::placeholder {
     color: #bbb;
   }
-  .joinLife .inner2 form table tr td input[type=text], .joinLife .inner2 form table tr td input[type=password], .joinLife .inner2 form table tr td select {
+  .joinLife .inner2 form table tr td input[type=text],
+.joinLife .inner2 form table tr td input[type=password],
+.joinLife .inner2 form table tr td select {
     border: none;
     width: 100%;
     height: 70px !important;
@@ -3956,7 +4046,9 @@ body {
   .joinLife .inner2 table td label {
     margin-right: 0px;
   }
-  .joinLife .inner2 table td input[type=text], .joinLife .inner2 table td input[type=password], .joinLife .inner2 table td select {
+  .joinLife .inner2 table td input[type=text],
+.joinLife .inner2 table td input[type=password],
+.joinLife .inner2 table td select {
     width: 100%;
   }
 }
