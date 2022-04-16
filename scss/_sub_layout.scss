@@ -306,7 +306,6 @@ body {
 		address {
 			float: left;
 			width: 100%;
-			/* float은 자기 요소만큼 넓이를 가지기 때문에 text길이만큼만 자기공간 --> width:100%를 적용해야 자기공간이 늘어나서 줄바꿈이 됨 */
 			font: 14px/1.3 'arial';
 			color: #777;
 			margin-bottom: 20px;
@@ -319,7 +318,6 @@ body {
 			color: #777;
 			width: 100%;
 			float: left;
-			/* float은 자기 요소만큼 넓이를 가지기 때문에 text길이만큼만 자기공간 --> width:100%를 적용해야 자기공간이 늘어나서 줄바꿈이 됨 */
 		}
 	}
 }

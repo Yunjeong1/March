@@ -1497,18 +1497,22 @@ body {
   margin-right: 20px;
   margin-left: 20px;
 }
-.joinLife .inner2 form {
-  width: 50%;
-  margin: 70px auto 0;
+.joinLife .inner2 .cover {
+  background: #fff;
 }
-.joinLife .inner2 form h3 {
+.joinLife .inner2 .cover form {
+  width: 50%;
+  margin: 50px auto 0;
+  padding: 50px 0;
+}
+.joinLife .inner2 .cover form h3 {
   font: 16px/1 "Noto Sans KR";
   font-weight: 500;
   color: #555;
   margin-bottom: 30px;
   text-align: left;
 }
-.joinLife .inner2 form #terms {
+.joinLife .inner2 .cover form #terms {
   width: 100%;
   height: 130px;
   resize: none;
@@ -1520,25 +1524,25 @@ body {
   box-sizing: border-box;
   border: 1px solid #ddd;
 }
-.joinLife .inner2 form .agreement {
+.joinLife .inner2 .cover form .agreement {
   text-align: left;
   margin-bottom: 50px;
 }
-.joinLife .inner2 form .agreement label[for=agree] {
+.joinLife .inner2 .cover form .agreement label[for=agree] {
   font-size: 13px;
 }
-.joinLife .inner2 form .agreement p {
+.joinLife .inner2 .cover form .agreement p {
   font: 11px/1.2 "arial";
   color: red;
   margin-top: 5px;
 }
-.joinLife .inner2 form table {
+.joinLife .inner2 .cover form table {
   width: 100%;
 }
-.joinLife .inner2 form table tr {
+.joinLife .inner2 .cover form table tr {
   position: relative;
 }
-.joinLife .inner2 form table tr th {
+.joinLife .inner2 .cover form table tr th {
   border-top: 1px solid #ddd;
   width: 30%;
   font: 14px/1 "Noto Sans KR";
@@ -1549,7 +1553,7 @@ body {
   box-sizing: border-box;
   position: relative;
 }
-.joinLife .inner2 form table tr th::after {
+.joinLife .inner2 .cover form table tr th::after {
   content: "|";
   display: inline;
   color: #dbdbdb;
@@ -1558,7 +1562,7 @@ body {
   left: 140px;
   margin-top: -3px;
 }
-.joinLife .inner2 form table tr th:last-child {
+.joinLife .inner2 .cover form table tr th:last-child {
   border-right: none;
   border-bottom: none;
   background: none;
@@ -1566,11 +1570,11 @@ body {
   padding: 40px 0 0;
   box-sizing: border-box;
 }
-.joinLife .inner2 form table tr th:last-child::after {
+.joinLife .inner2 .cover form table tr th:last-child::after {
   content: "";
   clear: both;
 }
-.joinLife .inner2 form table tr th input[type=submit] {
+.joinLife .inner2 .cover form table tr th input[type=submit] {
   width: 130px;
   height: 42px;
   border: none;
@@ -1582,12 +1586,12 @@ body {
   cursor: pointer;
   transition: background 0.5s;
 }
-.joinLife .inner2 form table tr th input[type=submit]:hover {
+.joinLife .inner2 .cover form table tr th input[type=submit]:hover {
   background: #fff;
   border: 2px solid #000;
   color: #000;
 }
-.joinLife .inner2 form table tr th input[type=reset] {
+.joinLife .inner2 .cover form table tr th input[type=reset] {
   width: 150px;
   height: 42px;
   border: 1px solid #aaa;
@@ -1599,7 +1603,7 @@ body {
   border-radius: 21px;
   cursor: pointer;
 }
-.joinLife .inner2 form table tr td {
+.joinLife .inner2 .cover form table tr td {
   border: 1px solid #ddd;
   border-left: none;
   border-right: none;
@@ -1608,31 +1612,31 @@ body {
   text-align: left;
   position: relative;
 }
-.joinLife .inner2 form table tr td input::placeholder {
+.joinLife .inner2 .cover form table tr td input::placeholder {
   color: #ccc;
 }
-.joinLife .inner2 form table tr td textarea::placeholder {
+.joinLife .inner2 .cover form table tr td textarea::placeholder {
   color: #ccc;
 }
-.joinLife .inner2 form table tr td input[type=text],
-.joinLife .inner2 form table tr td input[type=password],
-.joinLife .inner2 form table tr td select {
+.joinLife .inner2 .cover form table tr td input[type=text],
+.joinLife .inner2 .cover form table tr td input[type=password],
+.joinLife .inner2 .cover form table tr td select {
   border: none;
   width: 100%;
   height: 45px;
   padding-left: 30px;
   background: transparent;
 }
-.joinLife .inner2 form table tr td input[type=checkbox],
-.joinLife .inner2 form table tr td input[type=radio] {
+.joinLife .inner2 .cover form table tr td input[type=checkbox],
+.joinLife .inner2 .cover form table tr td input[type=radio] {
   margin-right: 5px;
 }
-.joinLife .inner2 form table tr td label {
+.joinLife .inner2 .cover form table tr td label {
   margin-right: 20px;
   font: 14px/1 "Noto Sans KR";
   color: #555;
 }
-.joinLife .inner2 form table tr td textarea#comments {
+.joinLife .inner2 .cover form table tr td textarea#comments {
   width: 100%;
   height: 150px;
   background: transparent;
@@ -1641,7 +1645,7 @@ body {
   padding: 70px 0 60px 30px;
   box-sizing: border-box;
 }
-.joinLife .inner2 form table tr td p {
+.joinLife .inner2 .cover form table tr td p {
   font: 11px/1.2 "arial";
   color: red;
   margin-top: 0px;
@@ -1649,14 +1653,14 @@ body {
   top: 42px;
   padding-left: 30px;
 }
-.joinLife .inner2 form table tr:nth-of-type(4) td, .joinLife .inner2 form table tr:nth-of-type(5) td {
+.joinLife .inner2 .cover form table tr:nth-of-type(4) td, .joinLife .inner2 .cover form table tr:nth-of-type(5) td {
   padding-left: 30px;
 }
-.joinLife .inner2 form table tr:nth-of-type(4) td p, .joinLife .inner2 form table tr:nth-of-type(5) td p {
+.joinLife .inner2 .cover form table tr:nth-of-type(4) td p, .joinLife .inner2 .cover form table tr:nth-of-type(5) td p {
   padding-left: 0;
   display: none;
 }
-.joinLife .inner2 form table tr:nth-of-type(8) p {
+.joinLife .inner2 .cover form table tr:nth-of-type(8) p {
   top: 90px;
 }
 
@@ -2115,7 +2119,6 @@ body {
 #footer_sub .inner address {
   float: left;
   width: 100%;
-  /* float은 자기 요소만큼 넓이를 가지기 때문에 text길이만큼만 자기공간 --> width:100%를 적용해야 자기공간이 늘어나서 줄바꿈이 됨 */
   font: 14px/1.3 "arial";
   color: #777;
   margin-bottom: 20px;
@@ -2128,7 +2131,6 @@ body {
   color: #777;
   width: 100%;
   float: left;
-  /* float은 자기 요소만큼 넓이를 가지기 때문에 text길이만큼만 자기공간 --> width:100%를 적용해야 자기공간이 늘어나서 줄바꿈이 됨 */
 }
 
 /* tablet ------------------------------------------------ */
@@ -3724,18 +3726,22 @@ body {
   margin-right: 20px;
   margin-left: 20px;
 }
-.joinLife .inner2 form {
-  width: 50%;
-  margin: 70px auto 0;
+.joinLife .inner2 .cover {
+  background: #fff;
 }
-.joinLife .inner2 form h3 {
+.joinLife .inner2 .cover form {
+  width: 50%;
+  margin: 50px auto 0;
+  padding: 50px 0;
+}
+.joinLife .inner2 .cover form h3 {
   font: 16px/1 "Noto Sans KR";
   font-weight: 500;
   color: #555;
   margin-bottom: 30px;
   text-align: left;
 }
-.joinLife .inner2 form #terms {
+.joinLife .inner2 .cover form #terms {
   width: 100%;
   height: 130px;
   resize: none;
@@ -3747,25 +3753,25 @@ body {
   box-sizing: border-box;
   border: 1px solid #ddd;
 }
-.joinLife .inner2 form .agreement {
+.joinLife .inner2 .cover form .agreement {
   text-align: left;
   margin-bottom: 50px;
 }
-.joinLife .inner2 form .agreement label[for=agree] {
+.joinLife .inner2 .cover form .agreement label[for=agree] {
   font-size: 13px;
 }
-.joinLife .inner2 form .agreement p {
+.joinLife .inner2 .cover form .agreement p {
   font: 11px/1.2 "arial";
   color: red;
   margin-top: 5px;
 }
-.joinLife .inner2 form table {
+.joinLife .inner2 .cover form table {
   width: 100%;
 }
-.joinLife .inner2 form table tr {
+.joinLife .inner2 .cover form table tr {
   position: relative;
 }
-.joinLife .inner2 form table tr th {
+.joinLife .inner2 .cover form table tr th {
   border-top: 1px solid #ddd;
   width: 30%;
   font: 14px/1 "Noto Sans KR";
@@ -3776,7 +3782,7 @@ body {
   box-sizing: border-box;
   position: relative;
 }
-.joinLife .inner2 form table tr th::after {
+.joinLife .inner2 .cover form table tr th::after {
   content: "|";
   display: inline;
   color: #dbdbdb;
@@ -3785,7 +3791,7 @@ body {
   left: 140px;
   margin-top: -3px;
 }
-.joinLife .inner2 form table tr th:last-child {
+.joinLife .inner2 .cover form table tr th:last-child {
   border-right: none;
   border-bottom: none;
   background: none;
@@ -3793,11 +3799,11 @@ body {
   padding: 40px 0 0;
   box-sizing: border-box;
 }
-.joinLife .inner2 form table tr th:last-child::after {
+.joinLife .inner2 .cover form table tr th:last-child::after {
   content: "";
   clear: both;
 }
-.joinLife .inner2 form table tr th input[type=submit] {
+.joinLife .inner2 .cover form table tr th input[type=submit] {
   width: 130px;
   height: 42px;
   border: none;
@@ -3809,12 +3815,12 @@ body {
   cursor: pointer;
   transition: background 0.5s;
 }
-.joinLife .inner2 form table tr th input[type=submit]:hover {
+.joinLife .inner2 .cover form table tr th input[type=submit]:hover {
   background: #fff;
   border: 2px solid #000;
   color: #000;
 }
-.joinLife .inner2 form table tr th input[type=reset] {
+.joinLife .inner2 .cover form table tr th input[type=reset] {
   width: 150px;
   height: 42px;
   border: 1px solid #aaa;
@@ -3826,7 +3832,7 @@ body {
   border-radius: 21px;
   cursor: pointer;
 }
-.joinLife .inner2 form table tr td {
+.joinLife .inner2 .cover form table tr td {
   border: 1px solid #ddd;
   border-left: none;
   border-right: none;
@@ -3835,31 +3841,31 @@ body {
   text-align: left;
   position: relative;
 }
-.joinLife .inner2 form table tr td input::placeholder {
+.joinLife .inner2 .cover form table tr td input::placeholder {
   color: #ccc;
 }
-.joinLife .inner2 form table tr td textarea::placeholder {
+.joinLife .inner2 .cover form table tr td textarea::placeholder {
   color: #ccc;
 }
-.joinLife .inner2 form table tr td input[type=text],
-.joinLife .inner2 form table tr td input[type=password],
-.joinLife .inner2 form table tr td select {
+.joinLife .inner2 .cover form table tr td input[type=text],
+.joinLife .inner2 .cover form table tr td input[type=password],
+.joinLife .inner2 .cover form table tr td select {
   border: none;
   width: 100%;
   height: 45px;
   padding-left: 30px;
   background: transparent;
 }
-.joinLife .inner2 form table tr td input[type=checkbox],
-.joinLife .inner2 form table tr td input[type=radio] {
+.joinLife .inner2 .cover form table tr td input[type=checkbox],
+.joinLife .inner2 .cover form table tr td input[type=radio] {
   margin-right: 5px;
 }
-.joinLife .inner2 form table tr td label {
+.joinLife .inner2 .cover form table tr td label {
   margin-right: 20px;
   font: 14px/1 "Noto Sans KR";
   color: #555;
 }
-.joinLife .inner2 form table tr td textarea#comments {
+.joinLife .inner2 .cover form table tr td textarea#comments {
   width: 100%;
   height: 150px;
   background: transparent;
@@ -3868,7 +3874,7 @@ body {
   padding: 70px 0 60px 30px;
   box-sizing: border-box;
 }
-.joinLife .inner2 form table tr td p {
+.joinLife .inner2 .cover form table tr td p {
   font: 11px/1.2 "arial";
   color: red;
   margin-top: 0px;
@@ -3876,14 +3882,14 @@ body {
   top: 42px;
   padding-left: 30px;
 }
-.joinLife .inner2 form table tr:nth-of-type(4) td, .joinLife .inner2 form table tr:nth-of-type(5) td {
+.joinLife .inner2 .cover form table tr:nth-of-type(4) td, .joinLife .inner2 .cover form table tr:nth-of-type(5) td {
   padding-left: 30px;
 }
-.joinLife .inner2 form table tr:nth-of-type(4) td p, .joinLife .inner2 form table tr:nth-of-type(5) td p {
+.joinLife .inner2 .cover form table tr:nth-of-type(4) td p, .joinLife .inner2 .cover form table tr:nth-of-type(5) td p {
   padding-left: 0;
   display: none;
 }
-.joinLife .inner2 form table tr:nth-of-type(8) p {
+.joinLife .inner2 .cover form table tr:nth-of-type(8) p {
   top: 90px;
 }
 

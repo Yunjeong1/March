@@ -95,172 +95,177 @@
 				margin-left: 20px;
 			}
 		}
-		form {
-			width: 50%;
-			margin: 70px auto 0;
+		.cover {
+			background: #fff;
 
-			h3 {
-				font: 16px/1 'Noto Sans KR';
-				font-weight: 500;
-				color: #555;
-				margin-bottom: 30px;
-				text-align: left;
-			}
-			#terms {
-				width: 100%;
-				height: 130px;
-				resize: none;
-				font: 12px/1.1 'arial';
-				color: #aaa;
-				background: rgba(241, 239, 239, 0.651);
-				margin-bottom: 10px;
-				padding: 20px;
-				box-sizing: border-box;
-				border: 1px solid #ddd;
-			}
-			.agreement {
-				text-align: left;
-				margin-bottom: 50px;
-				label[for='agree'] {
-					font-size: 13px;
+			form {
+				width: 50%;
+				margin: 50px auto 0;
+				padding: 50px 0;
+
+				h3 {
+					font: 16px/1 'Noto Sans KR';
+					font-weight: 500;
+					color: #555;
+					margin-bottom: 30px;
+					text-align: left;
 				}
-				p {
-					font: 11px/1.2 'arial';
-					color: red;
-					margin-top: 5px;
+				#terms {
+					width: 100%;
+					height: 130px;
+					resize: none;
+					font: 12px/1.1 'arial';
+					color: #aaa;
+					background: rgba(241, 239, 239, 0.651);
+					margin-bottom: 10px;
+					padding: 20px;
+					box-sizing: border-box;
+					border: 1px solid #ddd;
 				}
-			}
-			table {
-				width: 100%;
-				tr {
-					position: relative;
-					th {
-						border-top: 1px solid #ddd;
-						width: 30%;
-						font: 14px/1 'Noto Sans KR';
-						font-weight: 500;
-						color: #333;
-						text-align: left;
-						padding: 20px 0 25px;
-						box-sizing: border-box;
-						position: relative;
-
-						&::after {
-							content: '|';
-							display: inline;
-							color: rgb(219, 219, 219);
-							font-size: 20px;
-							position: absolute;
-							left: 140px;
-							margin-top: -3px;
-						}
-						&:last-child {
-							border-right: none;
-							border-bottom: none;
-							background: none;
-							text-align: center;
-							padding: 40px 0 0;
-							box-sizing: border-box;
-							&::after {
-								content: '';
-								clear: both;
-							}
-						}
-						input[type='submit'] {
-							width: 130px;
-							height: 42px;
-							border: none;
-							background: #000;
-							color: #fff;
-							font: bold 14px/1 'arial';
-							margin: 0 10px;
-							border-radius: 21px;
-							cursor: pointer;
-							transition: background 0.5s;
-
-							&:hover {
-								background: #fff;
-								border: 2px solid #000;
-								color: #000;
-							}
-						}
-						input[type='reset'] {
-							width: 150px;
-							height: 42px;
-							border: 1px solid #aaa;
-							box-sizing: border-box;
-							background: none;
-							color: #aaa;
-							font: bold 14px/1 'arial';
-							margin: 0 10px;
-							border-radius: 21px;
-							cursor: pointer;
-						}
+				.agreement {
+					text-align: left;
+					margin-bottom: 50px;
+					label[for='agree'] {
+						font-size: 13px;
 					}
-					td {
-						border: 1px solid #ddd;
-						border-left: none;
-						border-right: none;
-						color: #333;
-						box-sizing: border-box;
-						text-align: left;
+					p {
+						font: 11px/1.2 'arial';
+						color: red;
+						margin-top: 5px;
+					}
+				}
+				table {
+					width: 100%;
+					tr {
 						position: relative;
-
-						input::placeholder {
-							color: #ccc;
-						}
-						textarea::placeholder {
-							color: #ccc;
-						}
-						input[type='text'],
-						input[type='password'],
-						select {
-							border: none;
-							width: 100%;
-							height: 45px;
-							padding-left: 30px;
-							background: transparent;
-						}
-						input[type='checkbox'],
-						input[type='radio'] {
-							margin-right: 5px;
-						}
-						label {
-							margin-right: 20px;
+						th {
+							border-top: 1px solid #ddd;
+							width: 30%;
 							font: 14px/1 'Noto Sans KR';
-							color: #555;
-						}
-						textarea#comments {
-							width: 100%;
-							height: 150px;
-							background: transparent;
-							resize: none;
-							border: none;
-							padding: 70px 0 60px 30px;
+							font-weight: 500;
+							color: #333;
+							text-align: left;
+							padding: 20px 0 25px;
 							box-sizing: border-box;
-						}
-						p {
-							font: 11px/1.2 'arial';
-							color: red;
-							margin-top: 0px;
-							position: absolute;
-							top: 42px;
-							padding-left: 30px;
-						}
-					}
-					&:nth-of-type(4),
-					&:nth-of-type(5) {
-						td {
-							padding-left: 30px;
-							p {
-								padding-left: 0;
-								display: none;
+							position: relative;
+
+							&::after {
+								content: '|';
+								display: inline;
+								color: rgb(219, 219, 219);
+								font-size: 20px;
+								position: absolute;
+								left: 140px;
+								margin-top: -3px;
+							}
+							&:last-child {
+								border-right: none;
+								border-bottom: none;
+								background: none;
+								text-align: center;
+								padding: 40px 0 0;
+								box-sizing: border-box;
+								&::after {
+									content: '';
+									clear: both;
+								}
+							}
+							input[type='submit'] {
+								width: 130px;
+								height: 42px;
+								border: none;
+								background: #000;
+								color: #fff;
+								font: bold 14px/1 'arial';
+								margin: 0 10px;
+								border-radius: 21px;
+								cursor: pointer;
+								transition: background 0.5s;
+
+								&:hover {
+									background: #fff;
+									border: 2px solid #000;
+									color: #000;
+								}
+							}
+							input[type='reset'] {
+								width: 150px;
+								height: 42px;
+								border: 1px solid #aaa;
+								box-sizing: border-box;
+								background: none;
+								color: #aaa;
+								font: bold 14px/1 'arial';
+								margin: 0 10px;
+								border-radius: 21px;
+								cursor: pointer;
 							}
 						}
-					}
-					&:nth-of-type(8) {
-						p {
-							top: 90px;
+						td {
+							border: 1px solid #ddd;
+							border-left: none;
+							border-right: none;
+							color: #333;
+							box-sizing: border-box;
+							text-align: left;
+							position: relative;
+
+							input::placeholder {
+								color: #ccc;
+							}
+							textarea::placeholder {
+								color: #ccc;
+							}
+							input[type='text'],
+							input[type='password'],
+							select {
+								border: none;
+								width: 100%;
+								height: 45px;
+								padding-left: 30px;
+								background: transparent;
+							}
+							input[type='checkbox'],
+							input[type='radio'] {
+								margin-right: 5px;
+							}
+							label {
+								margin-right: 20px;
+								font: 14px/1 'Noto Sans KR';
+								color: #555;
+							}
+							textarea#comments {
+								width: 100%;
+								height: 150px;
+								background: transparent;
+								resize: none;
+								border: none;
+								padding: 70px 0 60px 30px;
+								box-sizing: border-box;
+							}
+							p {
+								font: 11px/1.2 'arial';
+								color: red;
+								margin-top: 0px;
+								position: absolute;
+								top: 42px;
+								padding-left: 30px;
+							}
+						}
+						&:nth-of-type(4),
+						&:nth-of-type(5) {
+							td {
+								padding-left: 30px;
+								p {
+									padding-left: 0;
+									display: none;
+								}
+							}
+						}
+						&:nth-of-type(8) {
+							p {
+								top: 90px;
+							}
 						}
 					}
 				}

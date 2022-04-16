@@ -46,7 +46,7 @@
                         <a href="#"><i class="fa-solid fa-cart-arrow-down"></i></a>
                     </span>
                 </h1>
-                
+
                 <ul id="gnbMo">
                     <li><a href="gallery.html">GALLERY</a></li>
                     <li><a href="youtube.html">YOUTUBE</a></li>
@@ -77,110 +77,117 @@
 
         <div class="inner2">
             <h2>Join us <span class="bar">회원가입</span></h2>
-            
-            <form action="result.html" method="get" id="join">
-                <fieldset>
-                    <legend class="h">회원가입양식</legend>
-                    <div class="wrap">
-                        <div class="group group1">
-                            <h3><label for="terms">1. 약관 동의</label></h3>
-                            <textarea name="terms" id="terms" cols="30" rows="10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, sequi nihil aliquid itaque rerum, porro mollitia incidunt reiciendis perspiciatis et unde, iure maiores reprehenderit id fugiat iusto accusantium consequuntur vel veniam optio asperiores. Sint, voluptates doloremque eveniet consequatur quaerat tenetur et tempore dolores modi iure vel officia, fugit facilis nam expedita ad ut ratione. Minima laboriosam quam doloribus, neque corporis repudiandae necessitatibus cum dolore soluta! Rerum corporis rem reiciendis atque neque quibusdam minima praesentium earum, beatae maxime, inventore officiis incidunt cumque quisquam illo commodi doloremque asperiores tempora ratione doloribus. Ea vitae esse laudantium mollitia consequatur accusamus accusantium illum eaque voluptatibus suscipit, sequi cumque asperiores enim repellat! Consequatur fugiat illo impedit? Velit neque reiciendis explicabo provident nisi sint aut ape. doloremque asperiores tempora ratione doloribus. Ea vitae esse laudantium mollitia consequatur accusamus accusantium illum eaque voluptatibus suscipit, sequi cumque asperiores enim repellat! Consequatur fugiat illo impedit? Velit neque reiciendis explicabo provident nisi sint aut ape.
-                            </textarea>
-                            <div class="agreement">
-                                <input type="checkbox" name="agree" id="agree">
-                                <label for="agree">약관에 동의합니다</label>
+
+            <div class="cover">
+                <form action="result.html" method="get" id="join">
+                    <fieldset>
+                        <legend class="h">회원가입양식</legend>
+                        <div class="wrap">
+                            <div class="group group1">
+                                <h3><label for="terms">1. 약관 동의</label></h3>
+                                <textarea name="terms" id="terms" cols="30" rows="10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, sequi nihil aliquid itaque rerum, porro mollitia incidunt reiciendis perspiciatis et unde, iure maiores reprehenderit id fugiat iusto accusantium consequuntur vel veniam optio asperiores. Sint, voluptates doloremque eveniet consequatur quaerat tenetur et tempore dolores modi iure vel officia, fugit facilis nam expedita ad ut ratione. Minima laboriosam quam doloribus, neque corporis repudiandae necessitatibus cum dolore soluta! Rerum corporis rem reiciendis atque neque quibusdam minima praesentium earum, beatae maxime, inventore officiis incidunt cumque quisquam illo commodi doloremque asperiores tempora ratione doloribus. Ea vitae esse laudantium mollitia consequatur accusamus accusantium illum eaque voluptatibus suscipit, sequi cumque asperiores enim repellat! Consequatur fugiat illo impedit? Velit neque reiciendis explicabo provident nisi sint aut ape. doloremque asperiores tempora ratione doloribus. Ea vitae esse laudantium mollitia consequatur accusamus accusantium illum eaque voluptatibus suscipit, sequi cumque asperiores enim repellat! Consequatur fugiat illo impedit? Velit neque reiciendis explicabo provident nisi sint aut ape.
+                                </textarea>
+                                <div class="agreement">
+                                    <input type="checkbox" name="agree" id="agree">
+                                    <label for="agree">약관에 동의합니다</label>
+                                </div>
+                            </div>
+
+                            <div class="group group2">
+                                <h3>2. 회원정보 입력</h3>
+                                <table>
+                                    <caption class="h">회원정보 입력 양식 테이블</caption>
+
+                                    <tr>
+                                        <th scope="row"><label for="userid">아이디</label></th>
+                                        <td>
+                                            <input type="text" name="userid" id="userid" placeholder="아이디를 입력해주세요"
+                                                required>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><label for="pwd1">비밀번호</label></th>
+                                        <td>
+                                            <input type="password" name="pwd1" id="pwd1" placeholder="비밀번호를 입력해주세요"
+                                                required>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><label for="pwd1">비밀번호 재입력</label></th>
+                                        <td>
+                                            <input type="password" name="pwd2" id="pwd2" placeholder="비밀번호를 한번 더 입력해주세요"
+                                                required>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><label for="interest">관심 분야</label></th>
+                                        <td>
+                                            <label for="women">
+                                                <input type="checkbox" name="interest" id="women" value="women">여성복
+                                            </label>
+                                            <label for="men">
+                                                <input type="checkbox" name="interest" id="men" value="men">남성복
+                                            </label>
+                                            <label for="beauty">
+                                                <input type="checkbox" name="interest" id="beauty" value="beauty">뷰티
+                                            </label>
+                                            <p>관심있는 항목을 선택하세요</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><label for="gender">성별</label></th>
+                                        <td>
+                                            <label for="female">
+                                                <input type="radio" name="gender" id="female" value="female">여성
+                                            </label>
+                                            <label for="male">
+                                                <input type="radio" name="gender" id="male" value="male">남성
+                                            </label>
+                                            <p>성별을 선택하세요</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><label for="email">이메일</label></th>
+                                        <td>
+                                            <input type="text" name="email" id="email" placeholder="이메일 주소를 입력해주세요">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><label for="path">가입 경로</label></th>
+                                        <td>
+                                            <select name="path" id="path">
+                                                <option value="">가입경로를 선택해주세요</option>
+                                                <option value="internet">인터넷</option>
+                                                <option value="magazine">잡지</option>
+                                                <option value="friend">지인 추천</option>
+                                                <option value="others">기타</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><label for="comments">고객 의견</label></th>
+                                        <td>
+                                            <textarea name="comments" id="comments" cols="30" rows="10"
+                                                placeholder="코멘트를 남겨주세요"></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="2">
+                                            <input type="reset" value="CANCEL">
+                                            <input type="submit" value="SEND">
+                                        </th>
+                                    </tr>
+                                </table>
                             </div>
                         </div>
-                       
-                        <div class="group group2">
-                            <h3>2. 회원정보 입력</h3>
-                        <table>
-                            <caption class="h">회원정보 입력 양식 테이블</caption>
-    
-                            <tr>
-                                <th scope="row"><label for="userid">아이디</label></th>
-                                <td>
-                                    <input type="text" name="userid" id="userid" placeholder="아이디를 입력해주세요" required>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row"><label for="pwd1">비밀번호</label></th>
-                                <td>
-                                    <input type="password" name="pwd1" id="pwd1" placeholder="비밀번호를 입력해주세요" required>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row"><label for="pwd1">비밀번호 재입력</label></th>
-                                <td>
-                                    <input type="password" name="pwd2" id="pwd2" placeholder="비밀번호를 한번 더 입력해주세요" required>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row"><label for="interest">관심 분야</label></th>
-                                <td>
-                                    <label for="women">
-                                        <input type="checkbox" name="interest" id="women" value="women">여성복
-                                    </label>
-                                    <label for="men">
-                                        <input type="checkbox" name="interest" id="men" value="men">남성복
-                                    </label>
-                                    <label for="beauty">
-                                        <input type="checkbox" name="interest" id="beauty" value="beauty">뷰티
-                                    </label>
-                                    <p>관심있는 항목을 선택하세요</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row"><label for="gender">성별</label></th>
-                                <td>
-                                    <label for="female">
-                                        <input type="radio" name="gender" id="female" value="female">여성
-                                    </label>
-                                    <label for="male">
-                                        <input type="radio" name="gender" id="male" value="male">남성
-                                    </label>
-                                    <p>성별을 선택하세요</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row"><label for="email">이메일</label></th>
-                                <td>
-                                    <input type="text" name="email" id="email" placeholder="이메일 주소를 입력해주세요">
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row"><label for="path">가입 경로</label></th>
-                                <td>
-                                    <select name="path" id="path">
-                                        <option value="">가입경로를 선택해주세요</option>
-                                        <option value="internet">인터넷</option>
-                                        <option value="magazine">잡지</option>
-                                        <option value="friend">지인 추천</option>
-                                        <option value="others">기타</option>
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row"><label for="comments">고객 의견</label></th>
-                                <td>
-                                    <textarea name="comments" id="comments" cols="30" rows="10" placeholder="코멘트를 남겨주세요"></textarea>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th colspan="2">
-                                    <input type="reset" value="CANCEL">
-                                    <input type="submit" value="SEND">
-                                </th>
-                            </tr>
-                        </table>
-                        </div>
-                    </div>
-                </fieldset>
-            </form>
+                    </fieldset>
+                </form>
+            </div>
+
         </div>
-        
+
         <div class="inner1">
-            <h2>About Join Life 
+            <h2>About Join Life
                 <!-- <span>ZARA 프로젝트</span> -->
             </h2>
             <div class="wrap">
@@ -210,7 +217,7 @@
                 </article>
             </div>
         </div>
-        
+
 
     </section>
 
