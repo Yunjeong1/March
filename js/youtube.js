@@ -55,7 +55,7 @@ function createPop(e) {
 	pop.innerHTML = `
                         <iframe src="https://youtube.com/embed/${vidId}" frameborder="0" width="100%" height="100%" allowfullscreen></iframe>
                         <span class="btnClose"><img src="img/close.png"></span>
-        `; //iframe 주소는 유투브 동영상-퍼가기 클릭하면 나옴
+        `;
 	body.append(pop);
 }
 
