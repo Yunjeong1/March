@@ -27,8 +27,9 @@ fetch(url)
                 <a href="#" class="btn" data-vid="${item.snippet.resourceId.videoId}">
 									<div class="cover">
 										<img src="${item.snippet.thumbnails.high.url}">
-										<i class="fa-solid fa-circle-play"></i>
 									</div>
+
+									<i class="fa-solid fa-circle-play"></i>
                 </a>
                 <div class="con">
                     <h2 data-vid="${item.snippet.resourceId.videoId}">${title}</h2>

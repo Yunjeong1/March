@@ -14,6 +14,7 @@ body {
 		flex-wrap: wrap;
 		justify-content: space-between;
 		align-items: center;
+
 		article {
 			width: 40%;
 			margin-bottom: 50px;
@@ -21,19 +22,31 @@ body {
 			justify-content: center;
 			align-items: center;
 			flex-direction: column;
+
 			> a {
 				display: block;
 				width: 50vh;
-
 				position: relative;
+
 				.cover {
+					float: left;
+					margin: 0.5em 10px 0.5em 0;
+					overflow: hidden;
+					border: 0px solid #ccc;
+					box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+					transition: 0.3s;
+
 					img {
 						width: 100%;
+						height: 100%;
 						object-fit: cover;
-						border-radius: 0px;
 						filter: grayscale(100%);
+						margin: -25px -0px -25px 0px;
+						border: none;
+						transform: scale(1.2);
 					}
 				}
+
 				i {
 					color: rgba(255, 255, 255, 0.8);
 					font-size: 45px;
@@ -47,6 +60,7 @@ body {
 					font-size: 55px;
 				}
 			}
+
 			&:nth-of-type(odd) {
 				margin-top: 30px;
 			}
@@ -73,6 +87,10 @@ body {
 					color: #aaa;
 					padding: 20px 0 0;
 				}
+			}
+
+			&:hover .cover {
+				box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
 			}
 		}
 	}
